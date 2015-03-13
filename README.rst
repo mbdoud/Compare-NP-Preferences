@@ -53,9 +53,9 @@ The configuration file for ``compare_preferences.py`` must contain the following
 Running ``run_phyloanalysis.py``
 --------------------------------
 
-The configuration file for ``run_phyloanalysis.py`` ...
+The configuration file for ``run_phyloanalysis.py`` must contain the following entry:
 
-
+ * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output_dir`` where preference files are saved and the ``/phylo_input`` directory containing phylogenetic tree files.
 
 
 
