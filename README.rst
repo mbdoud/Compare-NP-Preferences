@@ -15,7 +15,7 @@ The entire analysis can be completed by sequentially running five master scripts
 Running `mapmuts`_
 ------------------
 
-The configuration file for ``run_mapmuts.py`` must contain entries for four paths:
+The configuration file for ``run_mapmuts.py`` must contain the following entries:
 
   * ``adapter_dir`` specifies the directory containing adapter sequences used for trimming during sequence alignment (``R1_adapter_AR0XX.fa``).
   * ``refseq_dir`` specifies the directory containing the reference sequences used for alignment (``PR8_NP.fa`` and ``Aichi68-NP_amplicon.fa``).
@@ -25,7 +25,12 @@ The configuration file for ``run_mapmuts.py`` must contain entries for four path
 Running `dms_tools`_
 --------------------
 
-The configuration file for ``run_dmstools.py`` ...
+The configuration file for ``run_dmstools.py`` must contain the following entries:
+
+ * ``mapmuts_output_dir`` must be the same directory specified to ``run_mapmuts.py``.
+ * ``dmstools_output_dir`` specifies a directory in which the inferred amino-acid preferences are saved.
+ * ``previous_aichi_analysis_dir`` specifies a directory containing `previously published`_ `mapmuts`_ analysis for Aichi/1968 NP (analysis directory available `here`_).
+ * ``previous_ha_analysis_dir`` specifies a directory containing the `published`_ `mapmuts`_ analysis for `WSN-HA`_.
 
 Running ``make_correlation_plots.py``
 -------------------------------------
@@ -51,4 +56,6 @@ The configuration file for ``run_phyloanalysis.py`` ...
 .. _`Python`: http://www.python.org/
 .. _`phyloExpCM`: https://github.com/jbloom/phyloExpCM
 .. _`previously published`: http://dx.doi.org/10.1093/molbev/msu173
+.. _`here`: https://github.com/jbloom/mapmuts/tree/master/examples/2013Analysis_Influenza_NP_Aichi68
 .. _`WSN-HA`: https://github.com/jbloom/mapmuts/tree/master/examples/WSN_HA_2014Analysis
+.. _`published`: http://dx.doi.org/10.7554/eLife.03300
