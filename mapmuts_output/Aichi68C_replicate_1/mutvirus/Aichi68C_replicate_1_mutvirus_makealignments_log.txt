@@ -1,0 +1,216 @@
+Beginning execution of mapmuts_makealignments.py in directory /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/Aichi68C_replicate_1/mutvirus
+
+****************************************************
+Version information for mapmuts and associated programs.
+
+Time and date: Thu Mar  5 20:59:35 2015
+
+Platform: Linux-3.13.0-39-generic-x86_64-with-Ubuntu-14.04-trusty
+
+Python version: 2.7.6 (default, Mar 22 2014, 22:59:56) 
+[GCC 4.8.2]
+
+mapmuts version: 1.1
+
+numpy version: 1.8.2
+
+pymc version: 2.3.2
+
+scipy version: 0.13.3
+
+matplotlib version: 1.3.1
+
+pyPdf version: pyPdf is available, but no version string accessible
+
+pdflatex version: pdfTeX 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian)
+kpathsea version 6.1.1
+Copyright 2013 Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+Compiled with libpng 1.2.49; using libpng 1.2.50
+Compiled with zlib 1.2.8; using zlib 1.2.8
+Compiled with poppler version 0.24.5
+
+weblogo version: WebLogo 3.4 (2014-06-02)
+****************************************************
+
+Input data being read from infile makealignments_infile.txt
+
+Progress being logged to this file, Aichi68C_replicate_1_mutvirus_makealignments_log.txt
+
+Read the following key/value pairs from infile makealignments_infile.txt:
+maxrm 1
+maxa2m 1
+generange 62 1555
+a2file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R2_adapterUniversal_RC.fa
+r1files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/*R1*.gz
+write_unaligned True
+outfileprefix Aichi68C_replicate_1_mutvirus
+r2files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/*R2*.gz
+maxa1m 1
+maxn 5
+fullgenefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/ref_seqs//Aichi68-NP_amplicon.fa
+a1file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R1_adapter_AR022.fa
+applyfilter True
+gzipped True
+minq 25
+minoverlap 100
+samplename Aichi68C_replicate_1, mutvirus
+maxgenem 10
+upcase test
+
+Beginning execution of mapmuts.main.MakeAlignments.
+Current time is Thu Mar  5 20:59:37 2015.
+Current directory is /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/Aichi68C_replicate_1/mutvirus.
+
+The R1 reads will come from the following FASTQ files:
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R1_001.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R1_002.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R1_003.fastq.gz
+
+The R2 reads will come from the following FASTQ files:
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R2_001.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R2_002.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//Aichi68C_replicate_1/mutvirus/mutvir_CGTACG_L001_R2_003.fastq.gz
+
+applyfilter = True: all reads flagged Y  by the Illumina filter will be removed.
+
+minq = 25.00: any read pair where the average Q-score of either read is < this will be removed.
+
+upcase = 'test': converting fullgene, a1, and a2 to upper case.
+Testing case of first R1 and R2 reads... test passed, first reads upper case.
+
+The value of fullgene is:
+CATGATCGTCTCAGGGAGCAAAAGCAGGGTAGATAATCACTCACAGAGTGACATCGAAATCATGGCGTCCCAAGGCACCAAACGGTCTTATGAACAGATGGAAACTGATGGGGAACGCCAGAATGCAACTGAGATCAGAGCATCCGTCGGGAAGATGATTGATGGAATTGGACGATTCTACATCCAAATGTGCACTGAACTTAAACTCAGTGATTATGAGGGGCGACTGATCCAGAACAGCTTAACAATAGAGAGAATGGTGCTCTCTGCTTTTGACGAAAGAAGGAATAAATATCTGGAAGAACATCCCAGCGCGGGGAAGGATCCTAAGAAAACTGGAGGACCCATATACAAGAGAGTAGATAGAAAGTGGATGAGGGAACTCGTCCTTTATGACAAAGAAGAAATAAGGCGAATCTGGCGCCAAGCCAATAATGGTGATGATGCAACAGCTGGTCTGACTCACATGATGATCTGGCATTCCAATTTGAATGATACAACATACCAGAGGACAAGAGCTCTTGTTCGCACCGGCATGGATCCCAGGATGTGCTCTCTGATGCAGGGTTCGACTCTCCCTAGGAGGTCTGGAGCTGCAGGCGCTGCAGTCAAAGGAGTTGGGACAATGGTGATGGAGTTGATAAGGATGATCAAACGTGGGATCAATGATCGGAACTTCTGGAGAGGTGAAAATGGACGAAAAACAAGGAGTGCTTACGAGAGAATGTGCAACATTCTCAAAGGAAAATTTCAAACAGCTGCACAAAGGGCAATGATGGATCAAGTGAGAGAAAGTCGGAACCCAGGAAATGCTGAGATCGAAGATCTCATCTTTCTGGCACGGTCTGCACTCATATTGAGAGGGTCAGTTGCTCACAAATCTTGTCTGCCCGCCTGTGTGTATGGACCTGCCGTAGCCAGTGGCTACGACTTCGAAAAAGAGGGATACTCTTTAGTGGGAATAGACCCTTTCAAACTGCTTCAAAACAGCCAAGTATACAGCCTAATCAGACCGAACGAGAATCCAGCACACAAGAGTCAGCTGGTGTGGATGGCATGCAATTCTGCTGCATTTGAAGATCTAAGAGTATTAAGCTTCATCAGAGGGACCAAAGTATCCCCAAGGGGGAAACTTTCCACTAGAGGAGTACAAATTGCTTCAAATGAAAACATGGATGCTATGGAATCAAGTACTCTTGAACTGAGAAGCAGGTACTGGGCCATAAGAACCAGAAGTGGAGGAAACACTAATCAACAGAGGGCCTCTGCAGGTCAAATCAGTGTGCAACCTGCATTTTCTGTGCAAAGAAACCTCCCATTTGACAAACCAACCATCATGGCAGCATTCACTGGGAATACAGAGGGAAGAACATCAGACATGAGGGCAGAAATTATAAGGATGATGGAAGGTGCAAAACCAGAAGAAATGTCCTTCCAGGGGCGGGGAGTCTTCGAGCTCTCGGACGAAAGGGCAGCGAACCCGATCGTGCCCTCTTTTGACATGAGTAATGAAGGATCTTATTTCTTCGGAGACAATGCAGAGGAGTACGACAATTAAAGAAAAATACCCTTGTTTCTACTAATACGAGACGATCATG
+
+The value of generange is:
+(61, 1555)
+
+This means that the value of gene (the region of fullgene specified by generange) is:
+ATGGCGTCCCAAGGCACCAAACGGTCTTATGAACAGATGGAAACTGATGGGGAACGCCAGAATGCAACTGAGATCAGAGCATCCGTCGGGAAGATGATTGATGGAATTGGACGATTCTACATCCAAATGTGCACTGAACTTAAACTCAGTGATTATGAGGGGCGACTGATCCAGAACAGCTTAACAATAGAGAGAATGGTGCTCTCTGCTTTTGACGAAAGAAGGAATAAATATCTGGAAGAACATCCCAGCGCGGGGAAGGATCCTAAGAAAACTGGAGGACCCATATACAAGAGAGTAGATAGAAAGTGGATGAGGGAACTCGTCCTTTATGACAAAGAAGAAATAAGGCGAATCTGGCGCCAAGCCAATAATGGTGATGATGCAACAGCTGGTCTGACTCACATGATGATCTGGCATTCCAATTTGAATGATACAACATACCAGAGGACAAGAGCTCTTGTTCGCACCGGCATGGATCCCAGGATGTGCTCTCTGATGCAGGGTTCGACTCTCCCTAGGAGGTCTGGAGCTGCAGGCGCTGCAGTCAAAGGAGTTGGGACAATGGTGATGGAGTTGATAAGGATGATCAAACGTGGGATCAATGATCGGAACTTCTGGAGAGGTGAAAATGGACGAAAAACAAGGAGTGCTTACGAGAGAATGTGCAACATTCTCAAAGGAAAATTTCAAACAGCTGCACAAAGGGCAATGATGGATCAAGTGAGAGAAAGTCGGAACCCAGGAAATGCTGAGATCGAAGATCTCATCTTTCTGGCACGGTCTGCACTCATATTGAGAGGGTCAGTTGCTCACAAATCTTGTCTGCCCGCCTGTGTGTATGGACCTGCCGTAGCCAGTGGCTACGACTTCGAAAAAGAGGGATACTCTTTAGTGGGAATAGACCCTTTCAAACTGCTTCAAAACAGCCAAGTATACAGCCTAATCAGACCGAACGAGAATCCAGCACACAAGAGTCAGCTGGTGTGGATGGCATGCAATTCTGCTGCATTTGAAGATCTAAGAGTATTAAGCTTCATCAGAGGGACCAAAGTATCCCCAAGGGGGAAACTTTCCACTAGAGGAGTACAAATTGCTTCAAATGAAAACATGGATGCTATGGAATCAAGTACTCTTGAACTGAGAAGCAGGTACTGGGCCATAAGAACCAGAAGTGGAGGAAACACTAATCAACAGAGGGCCTCTGCAGGTCAAATCAGTGTGCAACCTGCATTTTCTGTGCAAAGAAACCTCCCATTTGACAAACCAACCATCATGGCAGCATTCACTGGGAATACAGAGGGAAGAACATCAGACATGAGGGCAGAAATTATAAGGATGATGGAAGGTGCAAAACCAGAAGAAATGTCCTTCCAGGGGCGGGGAGTCTTCGAGCTCTCGGACGAAAGGGCAGCGAACCCGATCGTGCCCTCTTTTGACATGAGTAATGAAGGATCTTATTTCTTCGGAGACAATGCAGAGGAGTACGACAAT
+
+The value of a1 (the adaptor at the 3' end of R1 reads) is:
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCACCGTACGATCTCGTATGCCGTCTTCTGCTTG
+
+The value of a2 (the adaptor at the 3' end of R2 reads) is:
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+
+The value of maxn (the maximum number of N / n nucleotides allowed in a read) is 5
+
+The value of minoverlap (minimum acceptable overlap between R1 and R2) is 100.
+
+The value of maxrm (maximum allowed mismatches between R1 and R2 in overlap) is 1.
+
+The value of maxa1m (maximum allowed mismatches between R1 and its adaptor a1) is 1.
+
+The value of maxa2m (maximum allowed mismatches between R2 and its adaptor a2) is 1.
+
+The value of maxgenem (maximum allowed mismatches of either read with fullgene after removing read adaptors) is 10.
+
+Unaligned reads that passed applyfilter will be written to Aichi68C_replicate_1_mutvirus_unaligned.fasta.gz
+
+Successfully aligned reads will be written to Aichi68C_replicate_1_mutvirus_alignments.txt.gz
+
+Beginning reading and aligning reads...
+Completed 100000 reads in 10.704 seconds.
+Completed 200000 reads in 21.377 seconds.
+Completed 300000 reads in 32.061 seconds.
+Completed 400000 reads in 42.803 seconds.
+Completed 500000 reads in 53.548 seconds.
+Completed 600000 reads in 64.283 seconds.
+Completed 700000 reads in 74.989 seconds.
+Completed 800000 reads in 85.717 seconds.
+Completed 900000 reads in 96.449 seconds.
+Completed 1000000 reads in 107.109 seconds.
+Completed 1100000 reads in 117.709 seconds.
+Completed 1200000 reads in 128.372 seconds.
+Completed 1300000 reads in 139.003 seconds.
+Completed 1400000 reads in 149.721 seconds.
+Completed 1500000 reads in 160.415 seconds.
+Completed 1600000 reads in 171.071 seconds.
+Completed 1700000 reads in 181.698 seconds.
+Completed 1800000 reads in 192.256 seconds.
+Completed 1900000 reads in 202.800 seconds.
+Completed 2000000 reads in 213.271 seconds.
+Completed 2100000 reads in 223.789 seconds.
+Completed 2200000 reads in 234.522 seconds.
+Completed 2300000 reads in 245.266 seconds.
+Completed 2400000 reads in 255.960 seconds.
+Completed 2500000 reads in 266.660 seconds.
+Completed 2600000 reads in 277.348 seconds.
+Completed 2700000 reads in 288.030 seconds.
+Completed 2800000 reads in 298.725 seconds.
+Completed 2900000 reads in 309.439 seconds.
+Completed 3000000 reads in 320.151 seconds.
+Completed 3100000 reads in 330.852 seconds.
+Completed 3200000 reads in 341.517 seconds.
+Completed 3300000 reads in 352.141 seconds.
+Completed 3400000 reads in 362.833 seconds.
+Completed 3500000 reads in 373.473 seconds.
+Completed 3600000 reads in 384.142 seconds.
+Completed 3700000 reads in 394.736 seconds.
+Completed 3800000 reads in 405.306 seconds.
+Completed 3900000 reads in 415.806 seconds.
+Completed 4000000 reads in 426.237 seconds.
+Completed 4100000 reads in 436.833 seconds.
+Completed 4200000 reads in 447.635 seconds.
+Completed 4300000 reads in 458.136 seconds.
+Completed 4400000 reads in 466.829 seconds.
+Completed 4500000 reads in 476.151 seconds.
+Completed 4600000 reads in 486.224 seconds.
+Completed 4700000 reads in 496.944 seconds.
+Completed 4800000 reads in 507.672 seconds.
+Completed 4900000 reads in 518.388 seconds.
+Completed 5000000 reads in 529.124 seconds.
+Completed 5100000 reads in 539.838 seconds.
+Completed 5200000 reads in 550.570 seconds.
+Completed 5300000 reads in 561.285 seconds.
+Completed 5400000 reads in 571.967 seconds.
+Completed 5500000 reads in 582.666 seconds.
+Completed 5600000 reads in 593.386 seconds.
+Completed 5700000 reads in 604.077 seconds.
+Completed 5800000 reads in 614.755 seconds.
+Completed 5900000 reads in 625.425 seconds.
+Completed 6000000 reads in 636.047 seconds.
+Completed 6100000 reads in 646.597 seconds.
+Completed 6200000 reads in 657.069 seconds.
+Completed 6300000 reads in 667.031 seconds.
+Completed 6400000 reads in 677.021 seconds.
+Completed 6500000 reads in 687.698 seconds.
+Completed 6600000 reads in 698.433 seconds.
+Completed 6700000 reads in 708.548 seconds.
+Completed 6800000 reads in 718.948 seconds.
+Completed 6900000 reads in 729.430 seconds.
+Completed 7000000 reads in 739.629 seconds.
+Completed 7100000 reads in 750.069 seconds.
+Completed 7200000 reads in 760.712 seconds.
+Completed 7300000 reads in 771.465 seconds.
+Completed 7400000 reads in 782.242 seconds.
+Completed 7500000 reads in 792.993 seconds.
+Completed 7600000 reads in 803.671 seconds.
+Completed 7700000 reads in 814.381 seconds.
+Completed 7800000 reads in 825.054 seconds.
+Completed 7900000 reads in 835.707 seconds.
+Completed 8000000 reads in 846.345 seconds.
+Completed 8100000 reads in 856.942 seconds.
+
+Now writing statistics to output files.
+Writing summary statistics to Aichi68C_replicate_1_mutvirus_alignmentstatistics.txt.
+Writing insert length distribution to Aichi68C_replicate_1_mutvirus_insertlengths.txt.
+Writing R1 mismatch distribution to Aichi68C_replicate_1_mutvirus_R1mismatches.txt.
+Writing R2 mismatch distribution to Aichi68C_replicate_1_mutvirus_R2mismatches.txt.
+
+Completed execution of mapmuts.main.MakeAlignments at Thu Mar  5 21:16:42 2015.
+Pylab / matplotlib appear to be available, so we will make the summary plots.
+
+pdflatex is available, so we will also make an overall summary PDF.
+
+Now running mapmuts.main.MakeAlignmentsPlots...
+Completed running mapmuts.main.MakeAlignmentsPlots.
+
+
+Execution completed at Thu Mar  5 21:16:46 2015.

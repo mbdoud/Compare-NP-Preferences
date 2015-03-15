@@ -1,0 +1,5 @@
+#SAMPLE	FRAC_synonymous	FRAC_nonsynonymous	FRAC_stop codon
+PR8\_replicate\_1 DNA	0.0002523	0.00075159	7.1847E-05
+PR8\_replicate\_1 mutDNA	0.00076027	0.0048621	0.00037648
+PR8\_replicate\_1 virus	0.00026592	0.00070042	4.9468E-05
+PR8\_replicate\_1 mutvirus	0.0004642	0.001355	4.4835E-05

@@ -1,0 +1,5 @@
+#SAMPLE	FRAC_1 nucleotide mutation	FRAC_2 nucleotide mutations	FRAC_3 nucleotide mutations
+PR8\_replicate\_1 DNA	0.0010738	1.6811E-06	2.6897E-07
+PR8\_replicate\_1 mutDNA	0.003315	0.0013763	0.0013076
+PR8\_replicate\_1 virus	0.0010136	1.9104E-06	2.9973E-07
+PR8\_replicate\_1 mutvirus	0.001336	0.00024641	0.00028172

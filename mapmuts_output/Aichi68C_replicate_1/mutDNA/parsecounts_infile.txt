@@ -1,0 +1,9 @@
+# input file for running script mapmuts_parsecounts.py for parsecounts
+generange 62 1555
+samplename Aichi68C_replicate_1, mutDNA
+r1exclude 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+r2exclude 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+alignmentfile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_1/mutDNA/Aichi68C_replicate_1_mutDNA_alignments.txt.gz
+outfileprefix Aichi68C_replicate_1_mutDNA
+upcase test
+fullgenefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/ref_seqs//Aichi68-NP_amplicon.fa

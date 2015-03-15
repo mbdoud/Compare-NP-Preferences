@@ -1,2 +1,6 @@
+*_alignments.txt.gz
+*_unaligned.fasta.gz
+slurm-*
+sbatch_*
 .DS_Store
 FASTQ_files/

@@ -1,0 +1,20 @@
+# input file for running script mapmuts_makealignments.py for makealignments
+maxa2m 1
+generange 46 1539
+write_unaligned True
+r2files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_2/virus/*R2*.gz
+maxa1m 1
+a1file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R1_adapter_AR025.fa
+gzipped True
+minq 25
+minoverlap 100
+maxgenem 10
+r1files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_2/virus/*R1*.gz
+a2file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R2_adapterUniversal_RC.fa
+maxrm 1
+outfileprefix PR8_replicate_2_virus
+fullgenefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/ref_seqs//PR8_NP.fa
+maxn 5
+upcase test
+applyfilter True
+samplename PR8_replicate_2, virus

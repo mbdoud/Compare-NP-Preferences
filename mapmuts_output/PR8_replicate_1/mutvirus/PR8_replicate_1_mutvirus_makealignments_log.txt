@@ -1,0 +1,233 @@
+Beginning execution of mapmuts_makealignments.py in directory /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/PR8_replicate_1/mutvirus
+
+****************************************************
+Version information for mapmuts and associated programs.
+
+Time and date: Thu Mar  5 20:59:34 2015
+
+Platform: Linux-3.13.0-39-generic-x86_64-with-Ubuntu-14.04-trusty
+
+Python version: 2.7.6 (default, Mar 22 2014, 22:59:56) 
+[GCC 4.8.2]
+
+mapmuts version: 1.1
+
+numpy version: 1.8.2
+
+pymc version: 2.3.2
+
+scipy version: 0.13.3
+
+matplotlib version: 1.3.1
+
+pyPdf version: pyPdf is available, but no version string accessible
+
+pdflatex version: pdfTeX 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian)
+kpathsea version 6.1.1
+Copyright 2013 Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+There is NO warranty.  Redistribution of this software is
+covered by the terms of both the pdfTeX copyright and
+the Lesser GNU General Public License.
+For more information about these matters, see the file
+named COPYING and the pdfTeX source.
+Primary author of pdfTeX: Peter Breitenlohner (eTeX)/Han The Thanh (pdfTeX).
+Compiled with libpng 1.2.49; using libpng 1.2.50
+Compiled with zlib 1.2.8; using zlib 1.2.8
+Compiled with poppler version 0.24.5
+
+weblogo version: WebLogo 3.4 (2014-06-02)
+****************************************************
+
+Input data being read from infile makealignments_infile.txt
+
+Progress being logged to this file, PR8_replicate_1_mutvirus_makealignments_log.txt
+
+Read the following key/value pairs from infile makealignments_infile.txt:
+maxrm 1
+maxa2m 1
+generange 46 1539
+a2file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R2_adapterUniversal_RC.fa
+r1files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/*R1*.gz
+write_unaligned True
+outfileprefix PR8_replicate_1_mutvirus
+r2files /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/*R2*.gz
+maxa1m 1
+maxn 5
+fullgenefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/ref_seqs//PR8_NP.fa
+a1file /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs//R1_adapter_AR011.fa
+applyfilter True
+gzipped True
+minq 25
+minoverlap 100
+samplename PR8_replicate_1, mutvirus
+maxgenem 10
+upcase test
+
+Beginning execution of mapmuts.main.MakeAlignments.
+Current time is Thu Mar  5 20:59:36 2015.
+Current directory is /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/PR8_replicate_1/mutvirus.
+
+The R1 reads will come from the following FASTQ files:
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R1_001.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R1_002.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R1_003.fastq.gz
+
+The R2 reads will come from the following FASTQ files:
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R2_001.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R2_002.fastq.gz
+/fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ//PR8_replicate_1/mutvirus/replicate_1_mutvirusGGCTAC_L001_R2_003.fastq.gz
+
+applyfilter = True: all reads flagged Y  by the Illumina filter will be removed.
+
+minq = 25.00: any read pair where the average Q-score of either read is < this will be removed.
+
+upcase = 'test': converting fullgene, a1, and a2 to upper case.
+Testing case of first R1 and R2 reads... test passed, first reads upper case.
+
+The value of fullgene is:
+AGCAAAAGCAGGGTAGATAATCACTCACTGAGTGACATCAAAATCATGGCGTCTCAAGGCACCAAACGATCTTACGAACAGATGGAGACTGATGGAGAACGCCAGAATGCCACTGAAATCAGAGCATCCGTCGGAAAAATGATTGGTGGAATTGGACGATTCTACATCCAAATGTGCACCGAACTCAAACTCAGTGATTATGAGGGACGGTTGATCCAAAACAGCTTAACAATAGAGAGAATGGTGCTCTCTGCTTTTGACGAAAGGAGAAATAAATACCTTGAAGAACATCCCAGTGCGGGGAAAGATCCTAAGAAAACTGGAGGACCTATATACAGGAGAGTAAACGGAAAGTGGATGAGAGAACTCATCCTTTATGACAAAGAAGAAATAAGGCGAATCTGGCGCCAAGCTAATAATGGTGACGATGCAACGGCTGGTCTGACTCACATGATGATCTGGCATTCCAATTTGAATGATGCAACTTATCAGAGGACAAGAGCTCTTGTTCGCACCGGAATGGATCCCAGGATGTGCTCTCTGATGCAAGGTTCAACTCTCCCTAGGAGGTCTGGAGCCGCAGGTGCTGCAGTCAAAGGAGTTGGAACAATGGTGATGGAATTGGTCAGAATGATCAAACGTGGGATCAATGATCGGAACTTCTGGAGGGGTGAGAATGGACGAAAAACAAGAATTGCTTATGAAAGAATGTGCAACATTCTCAAAGGGAAATTTCAAACTGCTGCACAAAAAGCAATGATGGATCAAGTGAGAGAGAGCCGGAACCCAGGGAATGCTGAGTTCGAAGATCTCACTTTTCTAGCACGGTCTGCACTCATATTGAGAGGGTCGGTTGCTCACAAGTCCTGCCTGCCTGCCTGTGTGTATGGACCTGCCGTAGCCAGTGGGTACGACTTTGAAAGGGAGGGATACTCTCTAGTCGGAATAGACCCTTTCAGACTGCTTCAAAACAGCCAAGTGTACAGCCTAATCAGACCAAATGAGAATCCAGCACACAAGAGTCAACTGGTGTGGATGGCATGCCATTCTGCCGCATTTGAAGATCTAAGAGTATTAAGCTTCATCAAAGGGACGAAGGTGCTCCCAAGAGGGAAGCTTTCCACTAGAGGAGTTCAAATTGCTTCCAATGAAAATATGGAGACTATGGAATCAAGTACACTTGAACTGAGAAGCAGGTACTGGGCCATAAGGACCAGAAGTGGAGGAAACACCAATCAACAGAGGGCATCTGCGGGCCAAATCAGCATACAACCTACGTTCTCAGTACAGAGAAATCTCCCTTTTGACAGAACAACCATTATGGCAGCATTCAATGGGAATACAGAGGGGAGAACATCTGACATGAGGACCGAAATCATAAGGATGATGGAAAGTGCAAGACCAGAAGATGTGTCTTTCCAGGGGCGGGGAGTCTTCGAGCTCTCGGACGAAAAGGCAGCGAGCCCGATCGTGCCTTCCTTTGACATGAGTAATGAAGGATCTTATTTCTTCGGAGACAATGCAGAGGAGTACGACAATTAAAGAAAAATACCCTTGTTTCTACT
+
+The value of generange is:
+(45, 1539)
+
+This means that the value of gene (the region of fullgene specified by generange) is:
+ATGGCGTCTCAAGGCACCAAACGATCTTACGAACAGATGGAGACTGATGGAGAACGCCAGAATGCCACTGAAATCAGAGCATCCGTCGGAAAAATGATTGGTGGAATTGGACGATTCTACATCCAAATGTGCACCGAACTCAAACTCAGTGATTATGAGGGACGGTTGATCCAAAACAGCTTAACAATAGAGAGAATGGTGCTCTCTGCTTTTGACGAAAGGAGAAATAAATACCTTGAAGAACATCCCAGTGCGGGGAAAGATCCTAAGAAAACTGGAGGACCTATATACAGGAGAGTAAACGGAAAGTGGATGAGAGAACTCATCCTTTATGACAAAGAAGAAATAAGGCGAATCTGGCGCCAAGCTAATAATGGTGACGATGCAACGGCTGGTCTGACTCACATGATGATCTGGCATTCCAATTTGAATGATGCAACTTATCAGAGGACAAGAGCTCTTGTTCGCACCGGAATGGATCCCAGGATGTGCTCTCTGATGCAAGGTTCAACTCTCCCTAGGAGGTCTGGAGCCGCAGGTGCTGCAGTCAAAGGAGTTGGAACAATGGTGATGGAATTGGTCAGAATGATCAAACGTGGGATCAATGATCGGAACTTCTGGAGGGGTGAGAATGGACGAAAAACAAGAATTGCTTATGAAAGAATGTGCAACATTCTCAAAGGGAAATTTCAAACTGCTGCACAAAAAGCAATGATGGATCAAGTGAGAGAGAGCCGGAACCCAGGGAATGCTGAGTTCGAAGATCTCACTTTTCTAGCACGGTCTGCACTCATATTGAGAGGGTCGGTTGCTCACAAGTCCTGCCTGCCTGCCTGTGTGTATGGACCTGCCGTAGCCAGTGGGTACGACTTTGAAAGGGAGGGATACTCTCTAGTCGGAATAGACCCTTTCAGACTGCTTCAAAACAGCCAAGTGTACAGCCTAATCAGACCAAATGAGAATCCAGCACACAAGAGTCAACTGGTGTGGATGGCATGCCATTCTGCCGCATTTGAAGATCTAAGAGTATTAAGCTTCATCAAAGGGACGAAGGTGCTCCCAAGAGGGAAGCTTTCCACTAGAGGAGTTCAAATTGCTTCCAATGAAAATATGGAGACTATGGAATCAAGTACACTTGAACTGAGAAGCAGGTACTGGGCCATAAGGACCAGAAGTGGAGGAAACACCAATCAACAGAGGGCATCTGCGGGCCAAATCAGCATACAACCTACGTTCTCAGTACAGAGAAATCTCCCTTTTGACAGAACAACCATTATGGCAGCATTCAATGGGAATACAGAGGGGAGAACATCTGACATGAGGACCGAAATCATAAGGATGATGGAAAGTGCAAGACCAGAAGATGTGTCTTTCCAGGGGCGGGGAGTCTTCGAGCTCTCGGACGAAAAGGCAGCGAGCCCGATCGTGCCTTCCTTTGACATGAGTAATGAAGGATCTTATTTCTTCGGAGACAATGCAGAGGAGTACGACAAT
+
+The value of a1 (the adaptor at the 3' end of R1 reads) is:
+AGATCGGAAGAGCACACGTCTGAACTCCAGTCACGGCTACATCTCGTATGCCGTCTTCTGCTTG
+
+The value of a2 (the adaptor at the 3' end of R2 reads) is:
+AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+
+The value of maxn (the maximum number of N / n nucleotides allowed in a read) is 5
+
+The value of minoverlap (minimum acceptable overlap between R1 and R2) is 100.
+
+The value of maxrm (maximum allowed mismatches between R1 and R2 in overlap) is 1.
+
+The value of maxa1m (maximum allowed mismatches between R1 and its adaptor a1) is 1.
+
+The value of maxa2m (maximum allowed mismatches between R2 and its adaptor a2) is 1.
+
+The value of maxgenem (maximum allowed mismatches of either read with fullgene after removing read adaptors) is 10.
+
+Unaligned reads that passed applyfilter will be written to PR8_replicate_1_mutvirus_unaligned.fasta.gz
+
+Successfully aligned reads will be written to PR8_replicate_1_mutvirus_alignments.txt.gz
+
+Beginning reading and aligning reads...
+Completed 100000 reads in 10.545 seconds.
+Completed 200000 reads in 21.078 seconds.
+Completed 300000 reads in 31.588 seconds.
+Completed 400000 reads in 42.107 seconds.
+Completed 500000 reads in 52.647 seconds.
+Completed 600000 reads in 63.184 seconds.
+Completed 700000 reads in 73.696 seconds.
+Completed 800000 reads in 84.240 seconds.
+Completed 900000 reads in 94.768 seconds.
+Completed 1000000 reads in 105.304 seconds.
+Completed 1100000 reads in 115.847 seconds.
+Completed 1200000 reads in 126.373 seconds.
+Completed 1300000 reads in 136.926 seconds.
+Completed 1400000 reads in 147.458 seconds.
+Completed 1500000 reads in 157.941 seconds.
+Completed 1600000 reads in 168.431 seconds.
+Completed 1700000 reads in 178.906 seconds.
+Completed 1800000 reads in 189.345 seconds.
+Completed 1900000 reads in 199.818 seconds.
+Completed 2000000 reads in 210.239 seconds.
+Completed 2100000 reads in 220.628 seconds.
+Completed 2200000 reads in 231.005 seconds.
+Completed 2300000 reads in 241.348 seconds.
+Completed 2400000 reads in 251.646 seconds.
+Completed 2500000 reads in 261.904 seconds.
+Completed 2600000 reads in 272.431 seconds.
+Completed 2700000 reads in 282.934 seconds.
+Completed 2800000 reads in 293.464 seconds.
+Completed 2900000 reads in 304.020 seconds.
+Completed 3000000 reads in 314.528 seconds.
+Completed 3100000 reads in 325.039 seconds.
+Completed 3200000 reads in 335.598 seconds.
+Completed 3300000 reads in 346.106 seconds.
+Completed 3400000 reads in 356.662 seconds.
+Completed 3500000 reads in 367.218 seconds.
+Completed 3600000 reads in 377.756 seconds.
+Completed 3700000 reads in 388.294 seconds.
+Completed 3800000 reads in 398.796 seconds.
+Completed 3900000 reads in 409.266 seconds.
+Completed 4000000 reads in 419.840 seconds.
+Completed 4100000 reads in 430.699 seconds.
+Completed 4200000 reads in 441.175 seconds.
+Completed 4300000 reads in 451.651 seconds.
+Completed 4400000 reads in 462.078 seconds.
+Completed 4500000 reads in 472.469 seconds.
+Completed 4600000 reads in 482.846 seconds.
+Completed 4700000 reads in 493.184 seconds.
+Completed 4800000 reads in 503.405 seconds.
+Completed 4900000 reads in 513.538 seconds.
+Completed 5000000 reads in 524.086 seconds.
+Completed 5100000 reads in 534.647 seconds.
+Completed 5200000 reads in 544.108 seconds.
+Completed 5300000 reads in 552.524 seconds.
+Completed 5400000 reads in 561.585 seconds.
+Completed 5500000 reads in 571.003 seconds.
+Completed 5600000 reads in 581.594 seconds.
+Completed 5700000 reads in 592.188 seconds.
+Completed 5800000 reads in 602.801 seconds.
+Completed 5900000 reads in 613.417 seconds.
+Completed 6000000 reads in 624.018 seconds.
+Completed 6100000 reads in 634.614 seconds.
+Completed 6200000 reads in 645.174 seconds.
+Completed 6300000 reads in 655.804 seconds.
+Completed 6400000 reads in 666.416 seconds.
+Completed 6500000 reads in 676.988 seconds.
+Completed 6600000 reads in 687.544 seconds.
+Completed 6700000 reads in 698.062 seconds.
+Completed 6800000 reads in 708.627 seconds.
+Completed 6900000 reads in 719.168 seconds.
+Completed 7000000 reads in 729.675 seconds.
+Completed 7100000 reads in 740.168 seconds.
+Completed 7200000 reads in 750.570 seconds.
+Completed 7300000 reads in 760.979 seconds.
+Completed 7400000 reads in 771.364 seconds.
+Completed 7500000 reads in 781.712 seconds.
+Completed 7600000 reads in 790.813 seconds.
+Completed 7700000 reads in 801.088 seconds.
+Completed 7800000 reads in 811.656 seconds.
+Completed 7900000 reads in 822.218 seconds.
+Completed 8000000 reads in 832.971 seconds.
+Completed 8100000 reads in 842.855 seconds.
+Completed 8200000 reads in 853.227 seconds.
+Completed 8300000 reads in 863.569 seconds.
+Completed 8400000 reads in 873.447 seconds.
+Completed 8500000 reads in 883.984 seconds.
+Completed 8600000 reads in 894.083 seconds.
+Completed 8700000 reads in 904.712 seconds.
+Completed 8800000 reads in 915.304 seconds.
+Completed 8900000 reads in 925.938 seconds.
+Completed 9000000 reads in 936.528 seconds.
+Completed 9100000 reads in 947.134 seconds.
+Completed 9200000 reads in 957.711 seconds.
+Completed 9300000 reads in 968.316 seconds.
+Completed 9400000 reads in 978.861 seconds.
+Completed 9500000 reads in 989.372 seconds.
+Completed 9600000 reads in 999.876 seconds.
+Completed 9700000 reads in 1010.370 seconds.
+Completed 9800000 reads in 1020.688 seconds.
+
+Now writing statistics to output files.
+Writing summary statistics to PR8_replicate_1_mutvirus_alignmentstatistics.txt.
+Writing insert length distribution to PR8_replicate_1_mutvirus_insertlengths.txt.
+Writing R1 mismatch distribution to PR8_replicate_1_mutvirus_R1mismatches.txt.
+Writing R2 mismatch distribution to PR8_replicate_1_mutvirus_R2mismatches.txt.
+
+Completed execution of mapmuts.main.MakeAlignments at Thu Mar  5 21:18:00 2015.
+Pylab / matplotlib appear to be available, so we will make the summary plots.
+
+pdflatex is available, so we will also make an overall summary PDF.
+
+Now running mapmuts.main.MakeAlignmentsPlots...
+Completed running mapmuts.main.MakeAlignmentsPlots.
+
+
+Execution completed at Thu Mar  5 21:18:04 2015.

@@ -1,0 +1,10 @@
+# input file for running script mapmuts_countparsedmuts.py for countparsedmuts_total_Aichi68C
+plotfileprefix countparsedmuts_total_Aichi68C
+maxn 50
+legendloc right
+writecounts True
+sites 2 498
+DNA /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_1/DNA/Aichi68C_replicate_1_DNA_codoncounts.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_2/DNA/Aichi68C_replicate_2_DNA_codoncounts.txt
+mutDNA /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_1/mutDNA/Aichi68C_replicate_1_mutDNA_codoncounts.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_2/mutDNA/Aichi68C_replicate_2_mutDNA_codoncounts.txt
+virus /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_1/virus/Aichi68C_replicate_1_virus_codoncounts.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_2/virus/Aichi68C_replicate_2_virus_codoncounts.txt
+mutvirus /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_1/mutvirus/Aichi68C_replicate_1_mutvirus_codoncounts.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//Aichi68C_replicate_2/mutvirus/Aichi68C_replicate_2_mutvirus_codoncounts.txt

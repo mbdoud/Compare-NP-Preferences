@@ -1,0 +1,10 @@
+# input file for running script mapmuts_countparsedmuts.py for countparsedmuts
+plotfileprefix countparsedmuts
+maxn 50
+legendloc right
+writecounts False
+sites 2 498
+DNA /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_2/DNA/PR8_replicate_2_DNA_codoncounts.txt
+mutDNA /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_2/mutDNA/PR8_replicate_2_mutDNA_codoncounts.txt
+virus /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_2/virus/PR8_replicate_2_virus_codoncounts.txt
+mutvirus /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_2/mutvirus/PR8_replicate_2_mutvirus_codoncounts.txt

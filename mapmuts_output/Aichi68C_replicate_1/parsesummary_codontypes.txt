@@ -1,0 +1,5 @@
+#SAMPLE	FRAC_synonymous	FRAC_nonsynonymous	FRAC_stop codon
+Aichi68C\_replicate\_1 DNA	0.00021404	0.00057694	4.5652E-05
+Aichi68C\_replicate\_1 mutDNA	0.00045972	0.0041225	0.00020757
+Aichi68C\_replicate\_1 virus	0.00027538	0.0007646	5.8304E-05
+Aichi68C\_replicate\_1 mutvirus	0.00043268	0.0017886	6.6909E-05
