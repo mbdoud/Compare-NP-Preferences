@@ -1,6 +1,9 @@
-======================
-Compare-NP-Preferences
-======================
+=============================================================================
+Analysis of Amino-Acid Preferences in Two Homologs of Influenza Nucleoprotein
+=============================================================================
+
+.. contents::
+  :depth: 2
 
 Summary
 -------
@@ -13,7 +16,7 @@ Running the analysis scripts
 The entire analysis can be completed by sequentially running five master scripts: ``run_mapmuts.py``, ``run_dmstools.py``, ``make_correlation_plots.py``, ``compare_preferences.py``, and ``run_phyloanalysis.py``. Each of these master scripts are run at the command line with one argument, the name of a configuration file, which specifies paths to various directories that are used by that script (eg. ``python run_mapmuts.py mapmuts_config_file.txt``). Within each configuration file, each line must contain a directory name and the corresponding path, separated by a space (eg. ``FASTQ_directory /home/user/NP_homologs/FASTQ_files`` )
 
 Running `mapmuts`_
-------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The configuration file for ``run_mapmuts.py`` must contain the following entries:
 
@@ -23,7 +26,7 @@ The configuration file for ``run_mapmuts.py`` must contain the following entries
   * ``mapmuts_output_dir`` specifies a directory in which the alignments and mutation parsing done by `mapmuts`_ will be saved. This directory is created if it doesn't already exist, and any files in this directory may be overwritten.
 
 Running `dms_tools`_
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The configuration file for ``run_dmstools.py`` must contain the following entries:
 
@@ -33,7 +36,7 @@ The configuration file for ``run_dmstools.py`` must contain the following entrie
  * ``previous_ha_analysis_dir`` specifies a directory containing the `published`_ `mapmuts`_ analysis for `WSN-HA`_.
 
 Running ``make_correlation_plots.py``
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The configuration file for ``make_correlation_plots.py`` must contain the following entries:
 
@@ -42,7 +45,7 @@ The configuration file for ``make_correlation_plots.py`` must contain the follow
  * ``plot_output_dir`` specifies a directory in which to save various correlation plots. This directory is created if it doesn't already exist, and any files in this directory may be overwritten.
 
 Running ``compare_preferences.py``
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The configuration file for ``compare_preferences.py`` must contain the following entries:
 
@@ -51,11 +54,43 @@ The configuration file for ``compare_preferences.py`` must contain the following
  * ``output_directory`` specifies a directory in which to save the amino-acid preference RMSD analyses. This directory is created if it doesn't already exist, and any files in this directory may be overwritten.
 
 Running ``run_phyloanalysis.py``
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The configuration file for ``run_phyloanalysis.py`` must contain the following entry:
 
  * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output_dir`` where preference files are saved and the ``/phylo_input`` directory containing phylogenetic tree files.
+
+Description of the analysis and results
+---------------------------------------
+
+Making alignments
+~~~~~~~~~~~~~~~~~
+
+Parsing mutations
+~~~~~~~~~~~~~~~~~
+
+Inferring site-specific amino-acid preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Calculating and visualizing correlations in amino-acid preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Quantifying differences in preferences between two groups of replicate experiments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Generating null models of differences in the measured amino-acid preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Analyzing differences in preferences within sites of functional, structural, and evolutionary importance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using amino-acid preferences to build codon substitution models
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Analyzing performance of amino-acid preference-based substitution models
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 
 
