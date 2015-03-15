@@ -66,8 +66,30 @@ Description of the analysis and results
 Making alignments
 ~~~~~~~~~~~~~~~~~
 
+For each amplicon (*DNA*, *mutDNA*, *virus*, *mutvirus*) of each replicate (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*), the master script ``run_mapmuts.py`` calls the `mapmuts`_ script ``mapmuts_makealignments.py`` which aligns paired reads to each other and to a reference sequence. The parameters for **r1files**, **r2files**, and **a1file** are unique to each sample, and **generange** and **fullgenefile** are unique to each homolog. The following alignment parameters are common to all samples (See the `mapmuts documentation`_ for a full description of the alignment method and these parameters):
+
+  * maxa2m 1
+  * maxa1m 1
+  * minq 25
+  * minoverlap 100
+  * maxgenem 10
+  * maxrm 1
+  * maxn 5
+
+Alignments of paired reads to the reference sequences that meet these criteria are saved in subdirectories of the `mapmuts`_ output directory in the form ``/mapmuts_output/replicate/amplicon/replicate_amplicon_alignments.txt.gz``. ``mapmuts_alignmentsummaryplot.py`` makes a summary plot of the number of read pairs aligned, as well as the number of read pairs that fail to pass various criteria, for each sample:
+
+.. figure:: /mapmuts_output/mapmuts_plots/alignmentsummaryplot.jpg
+  :width: 25%
+  :align: center
+  :alt: alignmentsummaryplot.jpg
+
+Only the read pairs that met all alignment criteria are used in the subsequent analysis.
+
 Parsing mutations
 ~~~~~~~~~~~~~~~~~
+
+``run_mapmuts.py`` calls the `mapmuts`_ script ``mapmuts_parsecounts.py`` to parse each sample's ``_alignments.txt.gz`` file and count and classify observed mutations within the coding region of the gene (See the `mapmuts documentation`_ for a complete description of this script). The parameters **r1exclude** and **r2exclude** are set to ``1 2 3 4 5 6 7 8 9 10 11 12 13 14 15`` for all samples to ignore the first 15 base-pairs of each read from the subsequent analysis since these positions in the reads typically have higher error rates.
+
 
 Inferring site-specific amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,6 +117,7 @@ Analyzing performance of amino-acid preference-based substitution models
 
 
 .. _`mapmuts`: https://github.com/jbloom/mapmuts
+.. _`mapmuts documentation`: http://jbloom.github.io/mapmuts/
 .. _`dms_tools`: https://github.com/jbloom/dms_tools
 .. _`Python`: http://www.python.org/
 .. _`phyloExpCM`: https://github.com/jbloom/phyloExpCM
