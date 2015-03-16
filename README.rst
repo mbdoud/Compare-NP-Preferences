@@ -63,6 +63,8 @@ The configuration file for ``run_phyloanalysis.py`` must contain the following e
 Description of the analysis and results
 ---------------------------------------
 
+The following sections provide a high-level overview of the analyses performed. For more detail on the experimental methods and the analyses performed, refer to the paper and the source code within this repository.
+
 Making alignments
 ~~~~~~~~~~~~~~~~~
 
@@ -101,21 +103,48 @@ Parsing mutations
 Inferring site-specific amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_. ``dms_merge.py`` is used to average the replicate amino-acid preference inferences across experimental replicates into a mean preferences file for each experiment, and ``dms_logoplot.py`` is used to visualize these mean amino-acid preferences as logoplot-styled visualizations, where the height of each amino acid represents the preference of that amino acid at that site. For example, the mean preferences across PR8 replicates are shown below:
+``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_. ``dms_merge.py`` is used to average the replicate amino-acid preference inferences across experimental replicates into a mean preferences file for each experiment, and ``dms_logoplot.py`` is used to visualize these mean amino-acid preferences as logoplot-styled visualizations, where the height of each amino acid represents the preference of that amino acid at that site. For example, the mean preferences for sites 2 through 498 (all sites except for the start codon were mutated in the *mutDNA* library) for the PR/1934 NP are shown below:
 
 .. figure:: dmstools_output/logoplot_mean_PR1934.jpg
   :width: 50%
-  :aligh: center
+  :align: center
   :alt: dmstools_output/logoplot_mean_PR1934.jpg
-
-Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. 
-
 
 Calculating and visualizing correlations in amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The script ``make_correlation_plots.py`` plots the correlation in amino-acid preferences between mean preferences averaged for several experiments. Amino-acid preferences for Aichi/1968 measured in 8 biological replicates have been `previously published`_ and the correlation between the mean preferences from that experiment and the mean preferences as measured in 2 addditional biological replicates measured in this study is shown below:
+
+.. figure:: correlation_plots/aichi_aichi_correlation.jpg
+  :width: 50%
+  :align: center
+  :alt: correlation_plots/aichi_aichi_correlation.jpg
+  
+The correlation between the mean PR/1934 preferences and the overall mean Aichi/1968 preferences is nearly as good:
+
+.. figure:: correlation_plots/pr8_aichi_correlation.jpg
+  :width: 50%
+  :align: center
+  :alt: correlation_plots/pr8_aichi_correlation.jpg
+
+As expected, there is no correlation between the mean PR/1934 preferences and preferences in a non-homologous protein, the influenza hemagglutinin `WSN-HA`_:
+
+.. figure:: correlation_plots/pr8_ha_correlation.jpg
+  :width: 50%
+  :align: center
+  :alt: correlation_plots/pr8_ha_correlation.jpg
+
+The above correlations were generated using the mean preferences from each experiment, but the heatmap below shows that the general pattern of preferences being just as correlated between homologs as within a given homolog is also observed in the biological replicate experiments. Each column and row corresponds to preferences measured in a unique biological replicate experiment, and the tiles are shaded by the Pearson's correlation coefficient calculated for each pair of replicates:
+
+.. figure:: correlation_plots/Allsites_correlation_heatmap.jpg
+  :width: 50%
+  :align: center
+  :alt: correlation_plots/Allsites_correlation_heatmap.jpg
+
 Quantifying differences in preferences between two groups of replicate experiments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. The analysis in ``compare_prefs.py`` quantifies this site-specific experimental noise and accounts for it when quantifying the changes in preferences observed between homologs.
 
 Generating null models of differences in the measured amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
