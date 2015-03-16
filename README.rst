@@ -101,7 +101,14 @@ Parsing mutations
 Inferring site-specific amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_.
+``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_. ``dms_merge.py`` is used to average the replicate amino-acid preference inferences across experimental replicates into a mean preferences file for each experiment, and ``dms_logoplot.py`` is used to visualize these mean amino-acid preferences as logoplot-styled visualizations, where the height of each amino acid represents the preference of that amino acid at that site. For example, the mean preferences across PR8 replicates are shown below:
+
+.. figure:: dmstools_output/logoplot_mean_PR1934.jpg
+  :width: 50%
+  :aligh: center
+  :alt: dmstools_output/logoplot_mean_PR1934.jpg
+
+Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. 
 
 
 Calculating and visualizing correlations in amino-acid preferences
