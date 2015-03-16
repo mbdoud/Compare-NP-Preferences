@@ -101,7 +101,7 @@ Parsing mutations
 Inferring site-specific amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `infer preferences algorithm`_ described in the `dms_tools documentation`_.
+``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_.
 
 
 Calculating and visualizing correlations in amino-acid preferences
@@ -129,7 +129,7 @@ Analyzing performance of amino-acid preference-based substitution models
 .. _`mapmuts`: https://github.com/jbloom/mapmuts
 .. _`mapmuts documentation`: http://jbloom.github.io/mapmuts/
 .. _`dms_tools`: https://github.com/jbloom/dms_tools
-.. _`infer preferences algorithm`: http://jbloom.github.io/dms_tools/inferprefs_algorithm.html
+.. _`algorithm to infer site-specific preferences`: http://jbloom.github.io/dms_tools/inferprefs_algorithm.html
 .. _`dms_tools documentation`: http://jbloom.github.io/dms_tools/
 .. _`Python`: http://www.python.org/
 .. _`phyloExpCM`: https://github.com/jbloom/phyloExpCM
