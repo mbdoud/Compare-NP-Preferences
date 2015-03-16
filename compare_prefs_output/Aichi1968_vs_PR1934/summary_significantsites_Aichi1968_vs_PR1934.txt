@@ -1,0 +1,28 @@
+Sites significant using both null distributions:
+408, 411, 470, 
+Sites significant using either null distribution:
+80, 253, 257, 355, 401, 408, 410, 411, 415, 429, 438, 439, 462, 470, 
+Sites significant only under simulation null (and not under randomization):
+80, 253, 257, 355, 401, 410, 415, 429, 438, 439, 462, 
+Sites significant only under randomization null (and not under simulation):
+
+
+
+All sites significant under simulation null:
+80, 253, 257, 355, 401, 408, 410, 411, 415, 429, 438, 439, 462, 470, 
+
+
+All sites significant under randomization null:
+408, 411, 470, 
+
+
+Variable sites with significant RMSD_corrected:
+253, 257, 408, 411, 470, 
+
+
+Variable sites with non-significant RMSD_corrected:
+34, 98, 101, 102, 109, 146, 194, 217, 236, 293, 305, 334, 348, 353, 372, 373, 422, 423, 430, 442, 450, 452, 455, 456, 473, 
+
+
+Significant RMSD sites that are conserved between strains:
+80, 355, 401, 410, 415, 429, 438, 439, 462, 

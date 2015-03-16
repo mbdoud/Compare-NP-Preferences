@@ -1,0 +1,11 @@
+# input file for running script /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/scripts/calculate_rmsd.py for Aichi1968_previous_study_vs_Aichi1968_current_study_calculate_RMSD
+group_2_name Aichi/1968 current study
+sites 2 498
+group_1_name Aichi/1968 previous study
+sites_type range
+group_2_files /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68C_replicate_1_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68C_replicate_2_prefs.txt
+group_1_files /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68A_replicate_1_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68A_replicate_2_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68A_replicate_3_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68A_replicate_4_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68B_replicate_1_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68B_replicate_2_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68B_replicate_3_prefs.txt /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//Aichi68B_replicate_4_prefs.txt
+comparisons 1,2
+number_of_groups 2
+distance_function Jensen-Shannon
+outfileprefix RMSD
