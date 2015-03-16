@@ -1,0 +1,3629 @@
+2015-03-13 11:21:07,956 - INFO - Beginning execution of dms_inferprefs in directory /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output
+
+2015-03-13 11:21:07,957 - INFO - Progress is being logged to /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//PR8_replicate_3_prefs.log
+
+2015-03-13 11:21:07,957 - INFO - Version information for dms_tools and associated packages.
+	Time and date: Fri Mar 13 11:21:06 2015
+	Platform: Linux-3.13.0-39-generic-x86_64-with-Ubuntu-14.04-trusty
+	Python version: 2.7.6 (default, Mar 22 2014, 22:59:56)  [GCC 4.8.2]
+	dms_tools version: 1.1.2
+	Bio version: 1.63
+	numpy version: 1.8.2
+	scipy version: 0.13.3
+	matplotlib version: 1.3.1
+	cython version: 0.20.1post0
+	pystan version: 2.6.0.0
+	weblogolib version: 3.4
+	PyPDF2 version: 1.24
+2015-03-13 11:21:07,957 - INFO - Parsed the following arguments:
+	err_alpha = 1.0
+	pi_alpha = 1.0
+	ncpus = 6
+	n_post = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_3/mutvirus/PR8_replicate_3_mutvirus_codoncounts.txt
+	errpre = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_3/DNA/PR8_replicate_3_DNA_codoncounts.txt
+	excludestop = True
+	outfile = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//PR8_replicate_3_prefs.txt
+	seed = 1
+	chartype = codon_to_aa
+	mu_alpha = 1.0
+	ratio_estimation = None
+	sites = None
+	logfile = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//PR8_replicate_3_prefs.log
+	errpost = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_3/virus/PR8_replicate_3_virus_codoncounts.txt
+	n_pre = /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output//PR8_replicate_3/mutDNA/PR8_replicate_3_mutDNA_codoncounts.txt
+
+2015-03-13 11:21:08,160 - INFO - There are counts for 498 sites, which are:
+	1 (wildtype identity of ATG)
+	2 (wildtype identity of GCG)
+	3 (wildtype identity of TCT)
+	4 (wildtype identity of CAA)
+	5 (wildtype identity of GGC)
+	6 (wildtype identity of ACC)
+	7 (wildtype identity of AAA)
+	8 (wildtype identity of CGA)
+	9 (wildtype identity of TCT)
+	10 (wildtype identity of TAC)
+	11 (wildtype identity of GAA)
+	12 (wildtype identity of CAG)
+	13 (wildtype identity of ATG)
+	14 (wildtype identity of GAG)
+	15 (wildtype identity of ACT)
+	16 (wildtype identity of GAT)
+	17 (wildtype identity of GGA)
+	18 (wildtype identity of GAA)
+	19 (wildtype identity of CGC)
+	20 (wildtype identity of CAG)
+	21 (wildtype identity of AAT)
+	22 (wildtype identity of GCC)
+	23 (wildtype identity of ACT)
+	24 (wildtype identity of GAA)
+	25 (wildtype identity of ATC)
+	26 (wildtype identity of AGA)
+	27 (wildtype identity of GCA)
+	28 (wildtype identity of TCC)
+	29 (wildtype identity of GTC)
+	30 (wildtype identity of GGA)
+	31 (wildtype identity of AAA)
+	32 (wildtype identity of ATG)
+	33 (wildtype identity of ATT)
+	34 (wildtype identity of GGT)
+	35 (wildtype identity of GGA)
+	36 (wildtype identity of ATT)
+	37 (wildtype identity of GGA)
+	38 (wildtype identity of CGA)
+	39 (wildtype identity of TTC)
+	40 (wildtype identity of TAC)
+	41 (wildtype identity of ATC)
+	42 (wildtype identity of CAA)
+	43 (wildtype identity of ATG)
+	44 (wildtype identity of TGC)
+	45 (wildtype identity of ACC)
+	46 (wildtype identity of GAA)
+	47 (wildtype identity of CTC)
+	48 (wildtype identity of AAA)
+	49 (wildtype identity of CTC)
+	50 (wildtype identity of AGT)
+	51 (wildtype identity of GAT)
+	52 (wildtype identity of TAT)
+	53 (wildtype identity of GAG)
+	54 (wildtype identity of GGA)
+	55 (wildtype identity of CGG)
+	56 (wildtype identity of TTG)
+	57 (wildtype identity of ATC)
+	58 (wildtype identity of CAA)
+	59 (wildtype identity of AAC)
+	60 (wildtype identity of AGC)
+	61 (wildtype identity of TTA)
+	62 (wildtype identity of ACA)
+	63 (wildtype identity of ATA)
+	64 (wildtype identity of GAG)
+	65 (wildtype identity of AGA)
+	66 (wildtype identity of ATG)
+	67 (wildtype identity of GTG)
+	68 (wildtype identity of CTC)
+	69 (wildtype identity of TCT)
+	70 (wildtype identity of GCT)
+	71 (wildtype identity of TTT)
+	72 (wildtype identity of GAC)
+	73 (wildtype identity of GAA)
+	74 (wildtype identity of AGG)
+	75 (wildtype identity of AGA)
+	76 (wildtype identity of AAT)
+	77 (wildtype identity of AAA)
+	78 (wildtype identity of TAC)
+	79 (wildtype identity of CTT)
+	80 (wildtype identity of GAA)
+	81 (wildtype identity of GAA)
+	82 (wildtype identity of CAT)
+	83 (wildtype identity of CCC)
+	84 (wildtype identity of AGT)
+	85 (wildtype identity of GCG)
+	86 (wildtype identity of GGG)
+	87 (wildtype identity of AAA)
+	88 (wildtype identity of GAT)
+	89 (wildtype identity of CCT)
+	90 (wildtype identity of AAG)
+	91 (wildtype identity of AAA)
+	92 (wildtype identity of ACT)
+	93 (wildtype identity of GGA)
+	94 (wildtype identity of GGA)
+	95 (wildtype identity of CCT)
+	96 (wildtype identity of ATA)
+	97 (wildtype identity of TAC)
+	98 (wildtype identity of AGG)
+	99 (wildtype identity of AGA)
+	100 (wildtype identity of GTA)
+	101 (wildtype identity of AAC)
+	102 (wildtype identity of GGA)
+	103 (wildtype identity of AAG)
+	104 (wildtype identity of TGG)
+	105 (wildtype identity of ATG)
+	106 (wildtype identity of AGA)
+	107 (wildtype identity of GAA)
+	108 (wildtype identity of CTC)
+	109 (wildtype identity of ATC)
+	110 (wildtype identity of CTT)
+	111 (wildtype identity of TAT)
+	112 (wildtype identity of GAC)
+	113 (wildtype identity of AAA)
+	114 (wildtype identity of GAA)
+	115 (wildtype identity of GAA)
+	116 (wildtype identity of ATA)
+	117 (wildtype identity of AGG)
+	118 (wildtype identity of CGA)
+	119 (wildtype identity of ATC)
+	120 (wildtype identity of TGG)
+	121 (wildtype identity of CGC)
+	122 (wildtype identity of CAA)
+	123 (wildtype identity of GCT)
+	124 (wildtype identity of AAT)
+	125 (wildtype identity of AAT)
+	126 (wildtype identity of GGT)
+	127 (wildtype identity of GAC)
+	128 (wildtype identity of GAT)
+	129 (wildtype identity of GCA)
+	130 (wildtype identity of ACG)
+	131 (wildtype identity of GCT)
+	132 (wildtype identity of GGT)
+	133 (wildtype identity of CTG)
+	134 (wildtype identity of ACT)
+	135 (wildtype identity of CAC)
+	136 (wildtype identity of ATG)
+	137 (wildtype identity of ATG)
+	138 (wildtype identity of ATC)
+	139 (wildtype identity of TGG)
+	140 (wildtype identity of CAT)
+	141 (wildtype identity of TCC)
+	142 (wildtype identity of AAT)
+	143 (wildtype identity of TTG)
+	144 (wildtype identity of AAT)
+	145 (wildtype identity of GAT)
+	146 (wildtype identity of GCA)
+	147 (wildtype identity of ACT)
+	148 (wildtype identity of TAT)
+	149 (wildtype identity of CAG)
+	150 (wildtype identity of AGG)
+	151 (wildtype identity of ACA)
+	152 (wildtype identity of AGA)
+	153 (wildtype identity of GCT)
+	154 (wildtype identity of CTT)
+	155 (wildtype identity of GTT)
+	156 (wildtype identity of CGC)
+	157 (wildtype identity of ACC)
+	158 (wildtype identity of GGA)
+	159 (wildtype identity of ATG)
+	160 (wildtype identity of GAT)
+	161 (wildtype identity of CCC)
+	162 (wildtype identity of AGG)
+	163 (wildtype identity of ATG)
+	164 (wildtype identity of TGC)
+	165 (wildtype identity of TCT)
+	166 (wildtype identity of CTG)
+	167 (wildtype identity of ATG)
+	168 (wildtype identity of CAA)
+	169 (wildtype identity of GGT)
+	170 (wildtype identity of TCA)
+	171 (wildtype identity of ACT)
+	172 (wildtype identity of CTC)
+	173 (wildtype identity of CCT)
+	174 (wildtype identity of AGG)
+	175 (wildtype identity of AGG)
+	176 (wildtype identity of TCT)
+	177 (wildtype identity of GGA)
+	178 (wildtype identity of GCC)
+	179 (wildtype identity of GCA)
+	180 (wildtype identity of GGT)
+	181 (wildtype identity of GCT)
+	182 (wildtype identity of GCA)
+	183 (wildtype identity of GTC)
+	184 (wildtype identity of AAA)
+	185 (wildtype identity of GGA)
+	186 (wildtype identity of GTT)
+	187 (wildtype identity of GGA)
+	188 (wildtype identity of ACA)
+	189 (wildtype identity of ATG)
+	190 (wildtype identity of GTG)
+	191 (wildtype identity of ATG)
+	192 (wildtype identity of GAA)
+	193 (wildtype identity of TTG)
+	194 (wildtype identity of GTC)
+	195 (wildtype identity of AGA)
+	196 (wildtype identity of ATG)
+	197 (wildtype identity of ATC)
+	198 (wildtype identity of AAA)
+	199 (wildtype identity of CGT)
+	200 (wildtype identity of GGG)
+	201 (wildtype identity of ATC)
+	202 (wildtype identity of AAT)
+	203 (wildtype identity of GAT)
+	204 (wildtype identity of CGG)
+	205 (wildtype identity of AAC)
+	206 (wildtype identity of TTC)
+	207 (wildtype identity of TGG)
+	208 (wildtype identity of AGG)
+	209 (wildtype identity of GGT)
+	210 (wildtype identity of GAG)
+	211 (wildtype identity of AAT)
+	212 (wildtype identity of GGA)
+	213 (wildtype identity of CGA)
+	214 (wildtype identity of AAA)
+	215 (wildtype identity of ACA)
+	216 (wildtype identity of AGA)
+	217 (wildtype identity of ATT)
+	218 (wildtype identity of GCT)
+	219 (wildtype identity of TAT)
+	220 (wildtype identity of GAA)
+	221 (wildtype identity of AGA)
+	222 (wildtype identity of ATG)
+	223 (wildtype identity of TGC)
+	224 (wildtype identity of AAC)
+	225 (wildtype identity of ATT)
+	226 (wildtype identity of CTC)
+	227 (wildtype identity of AAA)
+	228 (wildtype identity of GGG)
+	229 (wildtype identity of AAA)
+	230 (wildtype identity of TTT)
+	231 (wildtype identity of CAA)
+	232 (wildtype identity of ACT)
+	233 (wildtype identity of GCT)
+	234 (wildtype identity of GCA)
+	235 (wildtype identity of CAA)
+	236 (wildtype identity of AAA)
+	237 (wildtype identity of GCA)
+	238 (wildtype identity of ATG)
+	239 (wildtype identity of ATG)
+	240 (wildtype identity of GAT)
+	241 (wildtype identity of CAA)
+	242 (wildtype identity of GTG)
+	243 (wildtype identity of AGA)
+	244 (wildtype identity of GAG)
+	245 (wildtype identity of AGC)
+	246 (wildtype identity of CGG)
+	247 (wildtype identity of AAC)
+	248 (wildtype identity of CCA)
+	249 (wildtype identity of GGG)
+	250 (wildtype identity of AAT)
+	251 (wildtype identity of GCT)
+	252 (wildtype identity of GAG)
+	253 (wildtype identity of TTC)
+	254 (wildtype identity of GAA)
+	255 (wildtype identity of GAT)
+	256 (wildtype identity of CTC)
+	257 (wildtype identity of ACT)
+	258 (wildtype identity of TTT)
+	259 (wildtype identity of CTA)
+	260 (wildtype identity of GCA)
+	261 (wildtype identity of CGG)
+	262 (wildtype identity of TCT)
+	263 (wildtype identity of GCA)
+	264 (wildtype identity of CTC)
+	265 (wildtype identity of ATA)
+	266 (wildtype identity of TTG)
+	267 (wildtype identity of AGA)
+	268 (wildtype identity of GGG)
+	269 (wildtype identity of TCG)
+	270 (wildtype identity of GTT)
+	271 (wildtype identity of GCT)
+	272 (wildtype identity of CAC)
+	273 (wildtype identity of AAG)
+	274 (wildtype identity of TCC)
+	275 (wildtype identity of TGC)
+	276 (wildtype identity of CTG)
+	277 (wildtype identity of CCT)
+	278 (wildtype identity of GCC)
+	279 (wildtype identity of TGT)
+	280 (wildtype identity of GTG)
+	281 (wildtype identity of TAT)
+	282 (wildtype identity of GGA)
+	283 (wildtype identity of CCT)
+	284 (wildtype identity of GCC)
+	285 (wildtype identity of GTA)
+	286 (wildtype identity of GCC)
+	287 (wildtype identity of AGT)
+	288 (wildtype identity of GGG)
+	289 (wildtype identity of TAC)
+	290 (wildtype identity of GAC)
+	291 (wildtype identity of TTT)
+	292 (wildtype identity of GAA)
+	293 (wildtype identity of AGG)
+	294 (wildtype identity of GAG)
+	295 (wildtype identity of GGA)
+	296 (wildtype identity of TAC)
+	297 (wildtype identity of TCT)
+	298 (wildtype identity of CTA)
+	299 (wildtype identity of GTC)
+	300 (wildtype identity of GGA)
+	301 (wildtype identity of ATA)
+	302 (wildtype identity of GAC)
+	303 (wildtype identity of CCT)
+	304 (wildtype identity of TTC)
+	305 (wildtype identity of AGA)
+	306 (wildtype identity of CTG)
+	307 (wildtype identity of CTT)
+	308 (wildtype identity of CAA)
+	309 (wildtype identity of AAC)
+	310 (wildtype identity of AGC)
+	311 (wildtype identity of CAA)
+	312 (wildtype identity of GTG)
+	313 (wildtype identity of TAC)
+	314 (wildtype identity of AGC)
+	315 (wildtype identity of CTA)
+	316 (wildtype identity of ATC)
+	317 (wildtype identity of AGA)
+	318 (wildtype identity of CCA)
+	319 (wildtype identity of AAT)
+	320 (wildtype identity of GAG)
+	321 (wildtype identity of AAT)
+	322 (wildtype identity of CCA)
+	323 (wildtype identity of GCA)
+	324 (wildtype identity of CAC)
+	325 (wildtype identity of AAG)
+	326 (wildtype identity of AGT)
+	327 (wildtype identity of CAA)
+	328 (wildtype identity of CTG)
+	329 (wildtype identity of GTG)
+	330 (wildtype identity of TGG)
+	331 (wildtype identity of ATG)
+	332 (wildtype identity of GCA)
+	333 (wildtype identity of TGC)
+	334 (wildtype identity of CAT)
+	335 (wildtype identity of TCT)
+	336 (wildtype identity of GCC)
+	337 (wildtype identity of GCA)
+	338 (wildtype identity of TTT)
+	339 (wildtype identity of GAA)
+	340 (wildtype identity of GAT)
+	341 (wildtype identity of CTA)
+	342 (wildtype identity of AGA)
+	343 (wildtype identity of GTA)
+	344 (wildtype identity of TTA)
+	345 (wildtype identity of AGC)
+	346 (wildtype identity of TTC)
+	347 (wildtype identity of ATC)
+	348 (wildtype identity of AAA)
+	349 (wildtype identity of GGG)
+	350 (wildtype identity of ACG)
+	351 (wildtype identity of AAG)
+	352 (wildtype identity of GTG)
+	353 (wildtype identity of CTC)
+	354 (wildtype identity of CCA)
+	355 (wildtype identity of AGA)
+	356 (wildtype identity of GGG)
+	357 (wildtype identity of AAG)
+	358 (wildtype identity of CTT)
+	359 (wildtype identity of TCC)
+	360 (wildtype identity of ACT)
+	361 (wildtype identity of AGA)
+	362 (wildtype identity of GGA)
+	363 (wildtype identity of GTT)
+	364 (wildtype identity of CAA)
+	365 (wildtype identity of ATT)
+	366 (wildtype identity of GCT)
+	367 (wildtype identity of TCC)
+	368 (wildtype identity of AAT)
+	369 (wildtype identity of GAA)
+	370 (wildtype identity of AAT)
+	371 (wildtype identity of ATG)
+	372 (wildtype identity of GAG)
+	373 (wildtype identity of ACT)
+	374 (wildtype identity of ATG)
+	375 (wildtype identity of GAA)
+	376 (wildtype identity of TCA)
+	377 (wildtype identity of AGT)
+	378 (wildtype identity of ACA)
+	379 (wildtype identity of CTT)
+	380 (wildtype identity of GAA)
+	381 (wildtype identity of CTG)
+	382 (wildtype identity of AGA)
+	383 (wildtype identity of AGC)
+	384 (wildtype identity of AGG)
+	385 (wildtype identity of TAC)
+	386 (wildtype identity of TGG)
+	387 (wildtype identity of GCC)
+	388 (wildtype identity of ATA)
+	389 (wildtype identity of AGG)
+	390 (wildtype identity of ACC)
+	391 (wildtype identity of AGA)
+	392 (wildtype identity of AGT)
+	393 (wildtype identity of GGA)
+	394 (wildtype identity of GGA)
+	395 (wildtype identity of AAC)
+	396 (wildtype identity of ACC)
+	397 (wildtype identity of AAT)
+	398 (wildtype identity of CAA)
+	399 (wildtype identity of CAG)
+	400 (wildtype identity of AGG)
+	401 (wildtype identity of GCA)
+	402 (wildtype identity of TCT)
+	403 (wildtype identity of GCG)
+	404 (wildtype identity of GGC)
+	405 (wildtype identity of CAA)
+	406 (wildtype identity of ATC)
+	407 (wildtype identity of AGC)
+	408 (wildtype identity of ATA)
+	409 (wildtype identity of CAA)
+	410 (wildtype identity of CCT)
+	411 (wildtype identity of ACG)
+	412 (wildtype identity of TTC)
+	413 (wildtype identity of TCA)
+	414 (wildtype identity of GTA)
+	415 (wildtype identity of CAG)
+	416 (wildtype identity of AGA)
+	417 (wildtype identity of AAT)
+	418 (wildtype identity of CTC)
+	419 (wildtype identity of CCT)
+	420 (wildtype identity of TTT)
+	421 (wildtype identity of GAC)
+	422 (wildtype identity of AGA)
+	423 (wildtype identity of ACA)
+	424 (wildtype identity of ACC)
+	425 (wildtype identity of ATT)
+	426 (wildtype identity of ATG)
+	427 (wildtype identity of GCA)
+	428 (wildtype identity of GCA)
+	429 (wildtype identity of TTC)
+	430 (wildtype identity of AAT)
+	431 (wildtype identity of GGG)
+	432 (wildtype identity of AAT)
+	433 (wildtype identity of ACA)
+	434 (wildtype identity of GAG)
+	435 (wildtype identity of GGG)
+	436 (wildtype identity of AGA)
+	437 (wildtype identity of ACA)
+	438 (wildtype identity of TCT)
+	439 (wildtype identity of GAC)
+	440 (wildtype identity of ATG)
+	441 (wildtype identity of AGG)
+	442 (wildtype identity of ACC)
+	443 (wildtype identity of GAA)
+	444 (wildtype identity of ATC)
+	445 (wildtype identity of ATA)
+	446 (wildtype identity of AGG)
+	447 (wildtype identity of ATG)
+	448 (wildtype identity of ATG)
+	449 (wildtype identity of GAA)
+	450 (wildtype identity of AGT)
+	451 (wildtype identity of GCA)
+	452 (wildtype identity of AGA)
+	453 (wildtype identity of CCA)
+	454 (wildtype identity of GAA)
+	455 (wildtype identity of GAT)
+	456 (wildtype identity of GTG)
+	457 (wildtype identity of TCT)
+	458 (wildtype identity of TTC)
+	459 (wildtype identity of CAG)
+	460 (wildtype identity of GGG)
+	461 (wildtype identity of CGG)
+	462 (wildtype identity of GGA)
+	463 (wildtype identity of GTC)
+	464 (wildtype identity of TTC)
+	465 (wildtype identity of GAG)
+	466 (wildtype identity of CTC)
+	467 (wildtype identity of TCG)
+	468 (wildtype identity of GAC)
+	469 (wildtype identity of GAA)
+	470 (wildtype identity of AAG)
+	471 (wildtype identity of GCA)
+	472 (wildtype identity of GCG)
+	473 (wildtype identity of AGC)
+	474 (wildtype identity of CCG)
+	475 (wildtype identity of ATC)
+	476 (wildtype identity of GTG)
+	477 (wildtype identity of CCT)
+	478 (wildtype identity of TCC)
+	479 (wildtype identity of TTT)
+	480 (wildtype identity of GAC)
+	481 (wildtype identity of ATG)
+	482 (wildtype identity of AGT)
+	483 (wildtype identity of AAT)
+	484 (wildtype identity of GAA)
+	485 (wildtype identity of GGA)
+	486 (wildtype identity of TCT)
+	487 (wildtype identity of TAT)
+	488 (wildtype identity of TTC)
+	489 (wildtype identity of TTC)
+	490 (wildtype identity of GGA)
+	491 (wildtype identity of GAC)
+	492 (wildtype identity of AAT)
+	493 (wildtype identity of GCA)
+	494 (wildtype identity of GAG)
+	495 (wildtype identity of GAG)
+	496 (wildtype identity of TAC)
+	497 (wildtype identity of GAC)
+	498 (wildtype identity of AAT)
+
+2015-03-13 11:21:08,199 - INFO - Average per-site error rate in pre-selection control:
+	0.000994411 for characters that require 1 nucleotide changes
+	2.51988e-05 for characters that require 2 nucleotide changes
+	2.20736e-05 for characters that require 3 nucleotide changes
+
+2015-03-13 11:21:08,314 - INFO - Average per-site mutation rate: 0.00426722
+
+2015-03-13 11:21:08,353 - INFO - Average per-site error rate in post-selection control:
+	0.000986798 for characters that require 1 nucleotide changes
+	1.48525e-05 for characters that require 2 nucleotide changes
+	1.02302e-05 for characters that require 3 nucleotide changes
+
+2015-03-13 11:21:08,353 - INFO - Compiling PyStan model...
+2015-03-13 11:22:03,775 - INFO - Completed compiling PyStan model.
+
+2015-03-13 11:22:03,805 - INFO - Now beginning inference for each site...
+
+2015-03-13 11:24:49,801 - INFO - Getting results for site 2...
+2015-03-13 11:24:49,802 - INFO - Finished inference for site 2. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1051
+	MCMC is deemed to have converged at Fri Mar 13 11:24:49 2015.
+
+2015-03-13 11:25:05,822 - INFO - Getting results for site 4...
+2015-03-13 11:25:05,823 - INFO - Finished inference for site 4. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 673
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:25:05 2015.
+
+2015-03-13 11:25:21,843 - INFO - Getting results for site 5...
+2015-03-13 11:25:21,844 - INFO - Finished inference for site 5. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 979
+	MCMC is deemed to have converged at Fri Mar 13 11:25:21 2015.
+
+2015-03-13 11:25:23,847 - INFO - Getting results for site 6...
+2015-03-13 11:25:23,847 - INFO - Finished inference for site 6. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1257
+	MCMC is deemed to have converged at Fri Mar 13 11:25:23 2015.
+
+2015-03-13 11:27:05,974 - INFO - Getting results for site 7...
+2015-03-13 11:27:05,975 - INFO - Finished inference for site 7. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:24:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 5484
+	MCMC is deemed to have converged at Fri Mar 13 11:27:05 2015.
+
+2015-03-13 11:27:54,035 - INFO - Getting results for site 10...
+2015-03-13 11:27:54,036 - INFO - Finished inference for site 10. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:25:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1799
+		There are 4 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:27:53 2015.
+
+2015-03-13 11:28:53,108 - INFO - Getting results for site 9...
+2015-03-13 11:28:53,109 - INFO - Finished inference for site 9. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:25:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1383
+	MCMC is deemed to have converged at Fri Mar 13 11:28:52 2015.
+
+2015-03-13 11:28:57,114 - INFO - Getting results for site 8...
+2015-03-13 11:28:57,114 - INFO - Finished inference for site 8. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:25:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2011
+	MCMC is deemed to have converged at Fri Mar 13 11:28:56 2015.
+
+2015-03-13 11:29:57,189 - INFO - Getting results for site 11...
+2015-03-13 11:29:57,190 - INFO - Finished inference for site 11. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:27:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1069
+	MCMC is deemed to have converged at Fri Mar 13 11:29:56 2015.
+
+2015-03-13 11:30:38,241 - INFO - Getting results for site 12...
+2015-03-13 11:30:38,241 - INFO - Finished inference for site 12. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:27:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1041
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:30:38 2015.
+
+2015-03-13 11:31:11,283 - INFO - Getting results for site 13...
+2015-03-13 11:31:11,283 - INFO - Finished inference for site 13. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:28:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1909
+	MCMC is deemed to have converged at Fri Mar 13 11:31:10 2015.
+
+2015-03-13 11:34:10,504 - INFO - Getting results for site 17...
+2015-03-13 11:34:10,504 - INFO - Finished inference for site 17. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:31:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1509
+		There are 9 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:34:09 2015.
+
+2015-03-13 11:35:46,624 - INFO - Getting results for site 15...
+2015-03-13 11:35:46,624 - INFO - Finished inference for site 15. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:29:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 571
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:35:46 2015.
+
+2015-03-13 11:36:28,676 - INFO - Getting results for site 1...
+2015-03-13 11:36:28,677 - INFO - Finished inference for site 1. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:03 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.07 and mean Neff = 71
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.02 and mean Neff = 233
+	MCMC is deemed to have converged at Fri Mar 13 11:36:27 2015.
+
+2015-03-13 11:38:00,790 - INFO - Getting results for site 18...
+2015-03-13 11:38:00,791 - INFO - Finished inference for site 18. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:34:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1597
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:38:00 2015.
+
+2015-03-13 11:38:19,814 - INFO - Getting results for site 14...
+2015-03-13 11:38:19,815 - INFO - Finished inference for site 14. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:28:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1424
+	MCMC is deemed to have converged at Fri Mar 13 11:38:19 2015.
+
+2015-03-13 11:39:41,917 - INFO - Getting results for site 20...
+2015-03-13 11:39:41,917 - INFO - Finished inference for site 20. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:36:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 661
+	MCMC is deemed to have converged at Fri Mar 13 11:39:41 2015.
+
+2015-03-13 11:39:45,923 - INFO - Getting results for site 19...
+2015-03-13 11:39:45,923 - INFO - Finished inference for site 19. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:35:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 853
+	MCMC is deemed to have converged at Fri Mar 13 11:39:45 2015.
+
+2015-03-13 11:40:46,998 - INFO - Getting results for site 22...
+2015-03-13 11:40:47,000 - INFO - Finished inference for site 22. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:38:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 759
+	MCMC is deemed to have converged at Fri Mar 13 11:40:46 2015.
+
+2015-03-13 11:42:39,139 - INFO - Getting results for site 25...
+2015-03-13 11:42:39,139 - INFO - Finished inference for site 25. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:40:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1378
+	MCMC is deemed to have converged at Fri Mar 13 11:42:38 2015.
+
+2015-03-13 11:42:44,146 - INFO - Getting results for site 3...
+2015-03-13 11:42:44,146 - INFO - Finished inference for site 3. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:22:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 906
+	MCMC is deemed to have converged at Fri Mar 13 11:42:43 2015.
+
+2015-03-13 11:45:02,316 - INFO - Getting results for site 21...
+2015-03-13 11:45:02,316 - INFO - Finished inference for site 21. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:38:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 708
+	MCMC is deemed to have converged at Fri Mar 13 11:45:02 2015.
+
+2015-03-13 11:45:33,355 - INFO - Getting results for site 27...
+2015-03-13 11:45:33,356 - INFO - Finished inference for site 27. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:42:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 440
+	MCMC is deemed to have converged at Fri Mar 13 11:45:33 2015.
+
+2015-03-13 11:46:18,412 - INFO - Getting results for site 24...
+2015-03-13 11:46:18,413 - INFO - Finished inference for site 24. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:39:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1749
+	MCMC is deemed to have converged at Fri Mar 13 11:46:17 2015.
+
+2015-03-13 11:46:45,446 - INFO - Getting results for site 26...
+2015-03-13 11:46:45,447 - INFO - Finished inference for site 26. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:42:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 808
+	MCMC is deemed to have converged at Fri Mar 13 11:46:45 2015.
+
+2015-03-13 11:49:00,616 - INFO - Getting results for site 29...
+2015-03-13 11:49:00,616 - INFO - Finished inference for site 29. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:45:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 666
+	MCMC is deemed to have converged at Fri Mar 13 11:48:59 2015.
+
+2015-03-13 11:49:12,631 - INFO - Getting results for site 31...
+2015-03-13 11:49:12,631 - INFO - Finished inference for site 31. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:46:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 356
+	MCMC is deemed to have converged at Fri Mar 13 11:49:12 2015.
+
+2015-03-13 11:49:42,669 - INFO - Getting results for site 30...
+2015-03-13 11:49:42,670 - INFO - Finished inference for site 30. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:46:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 607
+	MCMC is deemed to have converged at Fri Mar 13 11:49:42 2015.
+
+2015-03-13 11:51:40,820 - INFO - Getting results for site 16...
+2015-03-13 11:51:40,820 - INFO - Finished inference for site 16. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:30:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1485
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:51:40 2015.
+
+2015-03-13 11:52:26,879 - INFO - Getting results for site 32...
+2015-03-13 11:52:26,879 - INFO - Finished inference for site 32. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:48:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 908
+	MCMC is deemed to have converged at Fri Mar 13 11:52:26 2015.
+
+2015-03-13 11:53:20,946 - INFO - Getting results for site 33...
+2015-03-13 11:53:20,947 - INFO - Finished inference for site 33. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:49:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 650
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 11:53:20 2015.
+
+2015-03-13 11:53:26,954 - INFO - Getting results for site 34...
+2015-03-13 11:53:26,955 - INFO - Finished inference for site 34. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:49:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 426
+	MCMC is deemed to have converged at Fri Mar 13 11:53:26 2015.
+
+2015-03-13 11:54:59,070 - INFO - Getting results for site 36...
+2015-03-13 11:54:59,071 - INFO - Finished inference for site 36. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:52:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 238
+	MCMC is deemed to have converged at Fri Mar 13 11:54:58 2015.
+
+2015-03-13 11:55:43,127 - INFO - Getting results for site 35...
+2015-03-13 11:55:43,127 - INFO - Finished inference for site 35. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:51:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 264
+	MCMC is deemed to have converged at Fri Mar 13 11:55:43 2015.
+
+2015-03-13 11:57:31,261 - INFO - Getting results for site 37...
+2015-03-13 11:57:31,261 - INFO - Finished inference for site 37. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:53:20 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 153
+	MCMC is deemed to have converged at Fri Mar 13 11:57:30 2015.
+
+2015-03-13 11:57:44,278 - INFO - Getting results for site 39...
+2015-03-13 11:57:44,279 - INFO - Finished inference for site 39. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:54:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 259
+	MCMC is deemed to have converged at Fri Mar 13 11:57:43 2015.
+
+2015-03-13 11:58:22,328 - INFO - Getting results for site 38...
+2015-03-13 11:58:22,329 - INFO - Finished inference for site 38. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:53:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 197
+	MCMC is deemed to have converged at Fri Mar 13 11:58:22 2015.
+
+2015-03-13 12:00:12,466 - INFO - Getting results for site 41...
+2015-03-13 12:00:12,467 - INFO - Finished inference for site 41. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:57:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 488
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:00:12 2015.
+
+2015-03-13 12:00:29,488 - INFO - Getting results for site 23...
+2015-03-13 12:00:29,488 - INFO - Finished inference for site 23. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:39:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1287
+	MCMC is deemed to have converged at Fri Mar 13 12:00:28 2015.
+
+2015-03-13 12:00:46,510 - INFO - Getting results for site 40...
+2015-03-13 12:00:46,511 - INFO - Finished inference for site 40. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:55:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 530
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:00:45 2015.
+
+2015-03-13 12:01:34,572 - INFO - Getting results for site 43...
+2015-03-13 12:01:34,572 - INFO - Finished inference for site 43. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:58:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 514
+	MCMC is deemed to have converged at Fri Mar 13 12:01:34 2015.
+
+2015-03-13 12:01:43,584 - INFO - Getting results for site 42...
+2015-03-13 12:01:43,585 - INFO - Finished inference for site 42. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:57:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 944
+	MCMC is deemed to have converged at Fri Mar 13 12:01:42 2015.
+
+2015-03-13 12:03:20,704 - INFO - Getting results for site 45...
+2015-03-13 12:03:20,705 - INFO - Finished inference for site 45. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:00:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 296
+	MCMC is deemed to have converged at Fri Mar 13 12:03:20 2015.
+
+2015-03-13 12:03:51,744 - INFO - Getting results for site 44...
+2015-03-13 12:03:51,744 - INFO - Finished inference for site 44. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:00:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 431
+	MCMC is deemed to have converged at Fri Mar 13 12:03:51 2015.
+
+2015-03-13 12:04:30,793 - INFO - Getting results for site 28...
+2015-03-13 12:04:30,794 - INFO - Finished inference for site 28. Here is the summary:
+	Beginning MCMC at Fri Mar 13 11:45:02 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 958
+	MCMC is deemed to have converged at Fri Mar 13 12:04:30 2015.
+
+2015-03-13 12:04:47,816 - INFO - Getting results for site 47...
+2015-03-13 12:04:47,817 - INFO - Finished inference for site 47. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:01:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 504
+	MCMC is deemed to have converged at Fri Mar 13 12:04:47 2015.
+
+2015-03-13 12:04:52,823 - INFO - Getting results for site 48...
+2015-03-13 12:04:52,824 - INFO - Finished inference for site 48. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:01:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 776
+	MCMC is deemed to have converged at Fri Mar 13 12:04:52 2015.
+
+2015-03-13 12:05:10,848 - INFO - Getting results for site 46...
+2015-03-13 12:05:10,849 - INFO - Finished inference for site 46. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:00:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 496
+	MCMC is deemed to have converged at Fri Mar 13 12:05:10 2015.
+
+2015-03-13 12:05:30,874 - INFO - Getting results for site 49...
+2015-03-13 12:05:30,874 - INFO - Finished inference for site 49. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:03:20 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 719
+	MCMC is deemed to have converged at Fri Mar 13 12:05:30 2015.
+
+2015-03-13 12:06:26,944 - INFO - Getting results for site 50...
+2015-03-13 12:06:26,945 - INFO - Finished inference for site 50. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:03:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1662
+	MCMC is deemed to have converged at Fri Mar 13 12:06:26 2015.
+
+2015-03-13 12:06:58,984 - INFO - Getting results for site 51...
+2015-03-13 12:06:58,985 - INFO - Finished inference for site 51. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:04:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 545
+	MCMC is deemed to have converged at Fri Mar 13 12:06:58 2015.
+
+2015-03-13 12:07:35,032 - INFO - Getting results for site 53...
+2015-03-13 12:07:35,032 - INFO - Finished inference for site 53. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:04:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 777
+	MCMC is deemed to have converged at Fri Mar 13 12:07:34 2015.
+
+2015-03-13 12:08:05,070 - INFO - Getting results for site 54...
+2015-03-13 12:08:05,070 - INFO - Finished inference for site 54. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:05:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 477
+	MCMC is deemed to have converged at Fri Mar 13 12:08:04 2015.
+
+2015-03-13 12:09:27,173 - INFO - Getting results for site 55...
+2015-03-13 12:09:27,174 - INFO - Finished inference for site 55. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:05:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 867
+	MCMC is deemed to have converged at Fri Mar 13 12:09:26 2015.
+
+2015-03-13 12:09:28,175 - INFO - Getting results for site 56...
+2015-03-13 12:09:28,175 - INFO - Finished inference for site 56. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:06:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 862
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:09:27 2015.
+
+2015-03-13 12:10:03,220 - INFO - Getting results for site 57...
+2015-03-13 12:10:03,220 - INFO - Finished inference for site 57. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:06:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1420
+	MCMC is deemed to have converged at Fri Mar 13 12:10:02 2015.
+
+2015-03-13 12:10:27,251 - INFO - Getting results for site 52...
+2015-03-13 12:10:27,251 - INFO - Finished inference for site 52. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:04:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 826
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:10:26 2015.
+
+2015-03-13 12:10:48,279 - INFO - Getting results for site 59...
+2015-03-13 12:10:48,280 - INFO - Finished inference for site 59. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:08:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 962
+	MCMC is deemed to have converged at Fri Mar 13 12:10:47 2015.
+
+2015-03-13 12:11:37,342 - INFO - Getting results for site 58...
+2015-03-13 12:11:37,342 - INFO - Finished inference for site 58. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:07:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 692
+	MCMC is deemed to have converged at Fri Mar 13 12:11:36 2015.
+
+2015-03-13 12:12:21,397 - INFO - Getting results for site 61...
+2015-03-13 12:12:21,397 - INFO - Finished inference for site 61. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:09:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 922
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:12:21 2015.
+
+2015-03-13 12:12:46,429 - INFO - Getting results for site 60...
+2015-03-13 12:12:46,430 - INFO - Finished inference for site 60. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:09:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 512
+	MCMC is deemed to have converged at Fri Mar 13 12:12:45 2015.
+
+2015-03-13 12:13:41,497 - INFO - Getting results for site 62...
+2015-03-13 12:13:41,498 - INFO - Finished inference for site 62. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:10:02 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 802
+	MCMC is deemed to have converged at Fri Mar 13 12:13:41 2015.
+
+2015-03-13 12:14:43,575 - INFO - Getting results for site 63...
+2015-03-13 12:14:43,576 - INFO - Finished inference for site 63. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:10:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 499
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:14:43 2015.
+
+2015-03-13 12:15:36,643 - INFO - Getting results for site 67...
+2015-03-13 12:15:36,643 - INFO - Finished inference for site 67. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:12:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.06 and mean Neff = 116
+	MCMC is deemed to have converged at Fri Mar 13 12:15:36 2015.
+
+2015-03-13 12:15:54,666 - INFO - Getting results for site 65...
+2015-03-13 12:15:54,667 - INFO - Finished inference for site 65. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:11:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1275
+	MCMC is deemed to have converged at Fri Mar 13 12:15:54 2015.
+
+2015-03-13 12:17:36,794 - INFO - Getting results for site 68...
+2015-03-13 12:17:36,795 - INFO - Finished inference for site 68. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:13:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 629
+	MCMC is deemed to have converged at Fri Mar 13 12:17:36 2015.
+
+2015-03-13 12:17:36,795 - INFO - Getting results for site 69...
+2015-03-13 12:17:36,795 - INFO - Finished inference for site 69. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:14:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 661
+	MCMC is deemed to have converged at Fri Mar 13 12:17:36 2015.
+
+2015-03-13 12:17:57,821 - INFO - Getting results for site 66...
+2015-03-13 12:17:57,821 - INFO - Finished inference for site 66. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:12:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 262
+	MCMC is deemed to have converged at Fri Mar 13 12:17:57 2015.
+
+2015-03-13 12:18:23,855 - INFO - Getting results for site 71...
+2015-03-13 12:18:23,855 - INFO - Finished inference for site 71. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:15:54 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 591
+	MCMC is deemed to have converged at Fri Mar 13 12:18:23 2015.
+
+2015-03-13 12:18:56,898 - INFO - Getting results for site 64...
+2015-03-13 12:18:56,898 - INFO - Finished inference for site 64. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:10:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 747
+	MCMC is deemed to have converged at Fri Mar 13 12:18:55 2015.
+
+2015-03-13 12:20:12,993 - INFO - Getting results for site 70...
+2015-03-13 12:20:12,994 - INFO - Finished inference for site 70. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:15:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 339
+	MCMC is deemed to have converged at Fri Mar 13 12:20:12 2015.
+
+2015-03-13 12:21:19,076 - INFO - Getting results for site 72...
+2015-03-13 12:21:19,077 - INFO - Finished inference for site 72. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:17:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 812
+	MCMC is deemed to have converged at Fri Mar 13 12:21:18 2015.
+
+2015-03-13 12:21:37,100 - INFO - Getting results for site 76...
+2015-03-13 12:21:37,101 - INFO - Finished inference for site 76. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:18:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 691
+	MCMC is deemed to have converged at Fri Mar 13 12:21:36 2015.
+
+2015-03-13 12:23:23,233 - INFO - Getting results for site 73...
+2015-03-13 12:23:23,234 - INFO - Finished inference for site 73. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:17:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 247
+	MCMC is deemed to have converged at Fri Mar 13 12:23:22 2015.
+
+2015-03-13 12:23:37,250 - INFO - Getting results for site 77...
+2015-03-13 12:23:37,251 - INFO - Finished inference for site 77. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:20:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 470
+	MCMC is deemed to have converged at Fri Mar 13 12:23:36 2015.
+
+2015-03-13 12:24:56,350 - INFO - Getting results for site 79...
+2015-03-13 12:24:56,350 - INFO - Finished inference for site 79. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:21:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 841
+	MCMC is deemed to have converged at Fri Mar 13 12:24:56 2015.
+
+2015-03-13 12:25:57,428 - INFO - Getting results for site 78...
+2015-03-13 12:25:57,428 - INFO - Finished inference for site 78. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:21:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 997
+	MCMC is deemed to have converged at Fri Mar 13 12:25:56 2015.
+
+2015-03-13 12:26:51,497 - INFO - Getting results for site 75...
+2015-03-13 12:26:51,497 - INFO - Finished inference for site 75. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:18:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 364
+	MCMC is deemed to have converged at Fri Mar 13 12:26:51 2015.
+
+2015-03-13 12:27:25,539 - INFO - Getting results for site 80...
+2015-03-13 12:27:25,540 - INFO - Finished inference for site 80. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:23:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 628
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:27:24 2015.
+
+2015-03-13 12:27:38,557 - INFO - Getting results for site 82...
+2015-03-13 12:27:38,557 - INFO - Finished inference for site 82. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:24:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 581
+	MCMC is deemed to have converged at Fri Mar 13 12:27:38 2015.
+
+2015-03-13 12:29:09,673 - INFO - Getting results for site 84...
+2015-03-13 12:29:09,673 - INFO - Finished inference for site 84. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:26:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 287
+	MCMC is deemed to have converged at Fri Mar 13 12:29:08 2015.
+
+2015-03-13 12:30:10,750 - INFO - Getting results for site 83...
+2015-03-13 12:30:10,750 - INFO - Finished inference for site 83. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:25:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 494
+	MCMC is deemed to have converged at Fri Mar 13 12:30:09 2015.
+
+2015-03-13 12:31:06,822 - INFO - Getting results for site 86...
+2015-03-13 12:31:06,822 - INFO - Finished inference for site 86. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:27:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 846
+	MCMC is deemed to have converged at Fri Mar 13 12:31:06 2015.
+
+2015-03-13 12:31:52,881 - INFO - Getting results for site 74...
+2015-03-13 12:31:52,881 - INFO - Finished inference for site 74. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:17:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 372
+	MCMC is deemed to have converged at Fri Mar 13 12:31:52 2015.
+
+2015-03-13 12:32:05,898 - INFO - Getting results for site 87...
+2015-03-13 12:32:05,899 - INFO - Finished inference for site 87. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:29:08 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 790
+	MCMC is deemed to have converged at Fri Mar 13 12:32:05 2015.
+
+2015-03-13 12:32:54,960 - INFO - Getting results for site 88...
+2015-03-13 12:32:54,961 - INFO - Finished inference for site 88. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:30:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1509
+	MCMC is deemed to have converged at Fri Mar 13 12:32:54 2015.
+
+2015-03-13 12:35:05,123 - INFO - Getting results for site 91...
+2015-03-13 12:35:05,124 - INFO - Finished inference for site 91. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:32:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 521
+	MCMC is deemed to have converged at Fri Mar 13 12:35:04 2015.
+
+2015-03-13 12:35:41,169 - INFO - Getting results for site 85...
+2015-03-13 12:35:41,169 - INFO - Finished inference for site 85. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:27:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 651
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:35:40 2015.
+
+2015-03-13 12:36:40,243 - INFO - Getting results for site 89...
+2015-03-13 12:36:40,244 - INFO - Finished inference for site 89. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:31:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 888
+	MCMC is deemed to have converged at Fri Mar 13 12:36:40 2015.
+
+2015-03-13 12:37:46,328 - INFO - Getting results for site 92...
+2015-03-13 12:37:46,328 - INFO - Finished inference for site 92. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:32:54 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 323
+	MCMC is deemed to have converged at Fri Mar 13 12:37:45 2015.
+
+2015-03-13 12:38:22,374 - INFO - Getting results for site 93...
+2015-03-13 12:38:22,374 - INFO - Finished inference for site 93. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:35:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 628
+	MCMC is deemed to have converged at Fri Mar 13 12:38:21 2015.
+
+2015-03-13 12:38:50,410 - INFO - Getting results for site 90...
+2015-03-13 12:38:50,410 - INFO - Finished inference for site 90. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:31:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3512
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:38:50 2015.
+
+2015-03-13 12:39:16,442 - INFO - Getting results for site 94...
+2015-03-13 12:39:16,442 - INFO - Finished inference for site 94. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:35:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 470
+	MCMC is deemed to have converged at Fri Mar 13 12:39:16 2015.
+
+2015-03-13 12:40:22,526 - INFO - Getting results for site 95...
+2015-03-13 12:40:22,527 - INFO - Finished inference for site 95. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:36:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 252
+	MCMC is deemed to have converged at Fri Mar 13 12:40:22 2015.
+
+2015-03-13 12:40:32,540 - INFO - Getting results for site 96...
+2015-03-13 12:40:32,541 - INFO - Finished inference for site 96. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:37:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1127
+	MCMC is deemed to have converged at Fri Mar 13 12:40:32 2015.
+
+2015-03-13 12:42:14,668 - INFO - Getting results for site 97...
+2015-03-13 12:42:14,669 - INFO - Finished inference for site 97. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:38:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 561
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:42:13 2015.
+
+2015-03-13 12:42:24,683 - INFO - Getting results for site 98...
+2015-03-13 12:42:24,683 - INFO - Finished inference for site 98. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:38:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 381
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:42:24 2015.
+
+2015-03-13 12:42:31,692 - INFO - Getting results for site 81...
+2015-03-13 12:42:31,692 - INFO - Finished inference for site 81. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:23:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 1014
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:42:30 2015.
+
+2015-03-13 12:43:11,742 - INFO - Getting results for site 99...
+2015-03-13 12:43:11,743 - INFO - Finished inference for site 99. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:39:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 723
+	MCMC is deemed to have converged at Fri Mar 13 12:43:11 2015.
+
+2015-03-13 12:43:40,780 - INFO - Getting results for site 101...
+2015-03-13 12:43:40,780 - INFO - Finished inference for site 101. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:40:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 287
+	MCMC is deemed to have converged at Fri Mar 13 12:43:39 2015.
+
+2015-03-13 12:43:45,788 - INFO - Getting results for site 100...
+2015-03-13 12:43:45,789 - INFO - Finished inference for site 100. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:40:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 420
+	MCMC is deemed to have converged at Fri Mar 13 12:43:44 2015.
+
+2015-03-13 12:44:13,825 - INFO - Getting results for site 102...
+2015-03-13 12:44:13,825 - INFO - Finished inference for site 102. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:42:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 277
+	MCMC is deemed to have converged at Fri Mar 13 12:44:13 2015.
+
+2015-03-13 12:45:37,929 - INFO - Getting results for site 104...
+2015-03-13 12:45:37,930 - INFO - Finished inference for site 104. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:42:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 446
+	MCMC is deemed to have converged at Fri Mar 13 12:45:37 2015.
+
+2015-03-13 12:46:12,974 - INFO - Getting results for site 105...
+2015-03-13 12:46:12,975 - INFO - Finished inference for site 105. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:43:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 396
+	MCMC is deemed to have converged at Fri Mar 13 12:46:12 2015.
+
+2015-03-13 12:46:22,987 - INFO - Getting results for site 103...
+2015-03-13 12:46:22,987 - INFO - Finished inference for site 103. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:42:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 487
+	MCMC is deemed to have converged at Fri Mar 13 12:46:22 2015.
+
+2015-03-13 12:47:44,090 - INFO - Getting results for site 108...
+2015-03-13 12:47:44,090 - INFO - Finished inference for site 108. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:44:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 267
+	MCMC is deemed to have converged at Fri Mar 13 12:47:43 2015.
+
+2015-03-13 12:49:25,216 - INFO - Getting results for site 109...
+2015-03-13 12:49:25,217 - INFO - Finished inference for site 109. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:45:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 282
+	MCMC is deemed to have converged at Fri Mar 13 12:49:24 2015.
+
+2015-03-13 12:50:20,303 - INFO - Getting results for site 111...
+2015-03-13 12:50:20,304 - INFO - Finished inference for site 111. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:46:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 262
+	MCMC is deemed to have converged at Fri Mar 13 12:50:20 2015.
+
+2015-03-13 12:51:10,368 - INFO - Getting results for site 110...
+2015-03-13 12:51:10,368 - INFO - Finished inference for site 110. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:46:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 155
+	MCMC is deemed to have converged at Fri Mar 13 12:51:10 2015.
+
+2015-03-13 12:51:19,382 - INFO - Getting results for site 112...
+2015-03-13 12:51:19,382 - INFO - Finished inference for site 112. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:47:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 345
+	MCMC is deemed to have converged at Fri Mar 13 12:51:19 2015.
+
+2015-03-13 12:52:27,466 - INFO - Getting results for site 113...
+2015-03-13 12:52:27,467 - INFO - Finished inference for site 113. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:49:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 478
+	MCMC is deemed to have converged at Fri Mar 13 12:52:26 2015.
+
+2015-03-13 12:53:25,539 - INFO - Getting results for site 107...
+2015-03-13 12:53:25,540 - INFO - Finished inference for site 107. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:43:44 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.06 and mean Neff = 181
+	MCMC is deemed to have converged at Fri Mar 13 12:53:24 2015.
+
+2015-03-13 12:53:42,561 - INFO - Getting results for site 115...
+2015-03-13 12:53:42,561 - INFO - Finished inference for site 115. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:51:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 407
+	MCMC is deemed to have converged at Fri Mar 13 12:53:41 2015.
+
+2015-03-13 12:54:00,586 - INFO - Getting results for site 116...
+2015-03-13 12:54:00,586 - INFO - Finished inference for site 116. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:51:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 569
+	MCMC is deemed to have converged at Fri Mar 13 12:53:59 2015.
+
+2015-03-13 12:56:31,775 - INFO - Getting results for site 119...
+2015-03-13 12:56:31,775 - INFO - Finished inference for site 119. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:53:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 420
+	MCMC is deemed to have converged at Fri Mar 13 12:56:31 2015.
+
+2015-03-13 12:56:41,789 - INFO - Getting results for site 118...
+2015-03-13 12:56:41,789 - INFO - Finished inference for site 118. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:53:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 370
+	MCMC is deemed to have converged at Fri Mar 13 12:56:41 2015.
+
+2015-03-13 12:57:07,822 - INFO - Getting results for site 120...
+2015-03-13 12:57:07,823 - INFO - Finished inference for site 120. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:53:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 374
+	MCMC is deemed to have converged at Fri Mar 13 12:57:06 2015.
+
+2015-03-13 12:59:24,996 - INFO - Getting results for site 123...
+2015-03-13 12:59:24,996 - INFO - Finished inference for site 123. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:57:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 968
+	MCMC is deemed to have converged at Fri Mar 13 12:59:24 2015.
+
+2015-03-13 12:59:45,022 - INFO - Getting results for site 122...
+2015-03-13 12:59:45,023 - INFO - Finished inference for site 122. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:56:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1146
+		There are 4 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 12:59:44 2015.
+
+2015-03-13 13:00:21,068 - INFO - Getting results for site 114...
+2015-03-13 13:00:21,069 - INFO - Finished inference for site 114. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:50:20 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 187
+	MCMC is deemed to have converged at Fri Mar 13 13:00:20 2015.
+
+2015-03-13 13:01:08,129 - INFO - Getting results for site 106...
+2015-03-13 13:01:08,129 - INFO - Finished inference for site 106. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:43:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 190
+	MCMC is deemed to have converged at Fri Mar 13 13:01:07 2015.
+
+2015-03-13 13:01:32,162 - INFO - Getting results for site 124...
+2015-03-13 13:01:32,163 - INFO - Finished inference for site 124. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:59:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3366
+	MCMC is deemed to have converged at Fri Mar 13 13:01:31 2015.
+
+2015-03-13 13:01:54,192 - INFO - Getting results for site 125...
+2015-03-13 13:01:54,192 - INFO - Finished inference for site 125. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:59:44 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1950
+	MCMC is deemed to have converged at Fri Mar 13 13:01:53 2015.
+
+2015-03-13 13:02:34,242 - INFO - Getting results for site 126...
+2015-03-13 13:02:34,243 - INFO - Finished inference for site 126. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:00:20 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3230
+	MCMC is deemed to have converged at Fri Mar 13 13:02:33 2015.
+
+2015-03-13 13:03:01,277 - INFO - Getting results for site 127...
+2015-03-13 13:03:01,277 - INFO - Finished inference for site 127. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:01:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2656
+	MCMC is deemed to have converged at Fri Mar 13 13:03:00 2015.
+
+2015-03-13 13:03:33,319 - INFO - Getting results for site 128...
+2015-03-13 13:03:33,324 - INFO - Finished inference for site 128. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:01:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1812
+	MCMC is deemed to have converged at Fri Mar 13 13:03:32 2015.
+
+2015-03-13 13:05:31,472 - INFO - Getting results for site 131...
+2015-03-13 13:05:31,472 - INFO - Finished inference for site 131. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:03:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 666
+		There are 3 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:05:30 2015.
+
+2015-03-13 13:05:53,502 - INFO - Getting results for site 129...
+2015-03-13 13:05:53,502 - INFO - Finished inference for site 129. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:01:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 864
+	MCMC is deemed to have converged at Fri Mar 13 13:05:52 2015.
+
+2015-03-13 13:08:06,670 - INFO - Getting results for site 134...
+2015-03-13 13:08:06,670 - INFO - Finished inference for site 134. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:05:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 755
+	MCMC is deemed to have converged at Fri Mar 13 13:08:05 2015.
+
+2015-03-13 13:08:18,686 - INFO - Getting results for site 130...
+2015-03-13 13:08:18,686 - INFO - Finished inference for site 130. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:02:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 723
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:08:17 2015.
+
+2015-03-13 13:09:38,788 - INFO - Getting results for site 132...
+2015-03-13 13:09:38,788 - INFO - Finished inference for site 132. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:03:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 621
+	MCMC is deemed to have converged at Fri Mar 13 13:09:38 2015.
+
+2015-03-13 13:09:51,806 - INFO - Getting results for site 133...
+2015-03-13 13:09:51,806 - INFO - Finished inference for site 133. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:05:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 992
+	MCMC is deemed to have converged at Fri Mar 13 13:09:50 2015.
+
+2015-03-13 13:10:17,840 - INFO - Getting results for site 117...
+2015-03-13 13:10:17,840 - INFO - Finished inference for site 117. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:52:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 404
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:10:17 2015.
+
+2015-03-13 13:10:42,872 - INFO - Getting results for site 135...
+2015-03-13 13:10:42,872 - INFO - Finished inference for site 135. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:08:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 751
+	MCMC is deemed to have converged at Fri Mar 13 13:10:42 2015.
+
+2015-03-13 13:10:51,883 - INFO - Getting results for site 136...
+2015-03-13 13:10:51,884 - INFO - Finished inference for site 136. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:08:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1276
+	MCMC is deemed to have converged at Fri Mar 13 13:10:51 2015.
+
+2015-03-13 13:12:58,042 - INFO - Getting results for site 121...
+2015-03-13 13:12:58,043 - INFO - Finished inference for site 121. Here is the summary:
+	Beginning MCMC at Fri Mar 13 12:56:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 513
+	MCMC is deemed to have converged at Fri Mar 13 13:12:57 2015.
+
+2015-03-13 13:13:23,075 - INFO - Getting results for site 138...
+2015-03-13 13:13:23,076 - INFO - Finished inference for site 138. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:09:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 358
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:13:22 2015.
+
+2015-03-13 13:13:40,099 - INFO - Getting results for site 137...
+2015-03-13 13:13:40,100 - INFO - Finished inference for site 137. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:09:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1060
+	MCMC is deemed to have converged at Fri Mar 13 13:13:40 2015.
+
+2015-03-13 13:13:40,100 - INFO - Getting results for site 141...
+2015-03-13 13:13:40,100 - INFO - Finished inference for site 141. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:10:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 509
+	MCMC is deemed to have converged at Fri Mar 13 13:13:39 2015.
+
+2015-03-13 13:13:58,124 - INFO - Getting results for site 140...
+2015-03-13 13:13:58,124 - INFO - Finished inference for site 140. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:10:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 462
+	MCMC is deemed to have converged at Fri Mar 13 13:13:57 2015.
+
+2015-03-13 13:14:01,128 - INFO - Getting results for site 139...
+2015-03-13 13:14:01,128 - INFO - Finished inference for site 139. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:10:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 303
+	MCMC is deemed to have converged at Fri Mar 13 13:14:00 2015.
+
+2015-03-13 13:15:58,275 - INFO - Getting results for site 142...
+2015-03-13 13:15:58,275 - INFO - Finished inference for site 142. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:12:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 577
+	MCMC is deemed to have converged at Fri Mar 13 13:15:57 2015.
+
+2015-03-13 13:16:47,337 - INFO - Getting results for site 143...
+2015-03-13 13:16:47,337 - INFO - Finished inference for site 143. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:13:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 380
+	MCMC is deemed to have converged at Fri Mar 13 13:16:46 2015.
+
+2015-03-13 13:16:50,341 - INFO - Getting results for site 146...
+2015-03-13 13:16:50,342 - INFO - Finished inference for site 146. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:13:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 272
+	MCMC is deemed to have converged at Fri Mar 13 13:16:49 2015.
+
+2015-03-13 13:16:51,343 - INFO - Getting results for site 144...
+2015-03-13 13:16:51,343 - INFO - Finished inference for site 144. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:13:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 372
+	MCMC is deemed to have converged at Fri Mar 13 13:16:50 2015.
+
+2015-03-13 13:17:57,426 - INFO - Getting results for site 147...
+2015-03-13 13:17:57,427 - INFO - Finished inference for site 147. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:14:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.08 and mean Neff = 146
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:17:57 2015.
+
+2015-03-13 13:19:17,528 - INFO - Getting results for site 150...
+2015-03-13 13:19:17,529 - INFO - Finished inference for site 150. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:16:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 351
+	MCMC is deemed to have converged at Fri Mar 13 13:19:17 2015.
+
+2015-03-13 13:19:41,561 - INFO - Getting results for site 151...
+2015-03-13 13:19:41,561 - INFO - Finished inference for site 151. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:16:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 688
+	MCMC is deemed to have converged at Fri Mar 13 13:19:41 2015.
+
+2015-03-13 13:19:44,565 - INFO - Getting results for site 145...
+2015-03-13 13:19:44,565 - INFO - Finished inference for site 145. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:13:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1082
+	MCMC is deemed to have converged at Fri Mar 13 13:19:44 2015.
+
+2015-03-13 13:20:07,595 - INFO - Getting results for site 149...
+2015-03-13 13:20:07,596 - INFO - Finished inference for site 149. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:16:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 834
+	MCMC is deemed to have converged at Fri Mar 13 13:20:07 2015.
+
+2015-03-13 13:20:37,634 - INFO - Getting results for site 148...
+2015-03-13 13:20:37,634 - INFO - Finished inference for site 148. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:15:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 274
+	MCMC is deemed to have converged at Fri Mar 13 13:20:37 2015.
+
+2015-03-13 13:22:33,779 - INFO - Getting results for site 154...
+2015-03-13 13:22:33,779 - INFO - Finished inference for site 154. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:19:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 539
+	MCMC is deemed to have converged at Fri Mar 13 13:22:33 2015.
+
+2015-03-13 13:22:56,820 - INFO - Getting results for site 153...
+2015-03-13 13:22:56,821 - INFO - Finished inference for site 153. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:19:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 545
+	MCMC is deemed to have converged at Fri Mar 13 13:22:56 2015.
+
+2015-03-13 13:23:17,848 - INFO - Getting results for site 157...
+2015-03-13 13:23:17,849 - INFO - Finished inference for site 157. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:20:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1098
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:23:17 2015.
+
+2015-03-13 13:26:16,070 - INFO - Getting results for site 160...
+2015-03-13 13:26:16,070 - INFO - Finished inference for site 160. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:23:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2256
+	MCMC is deemed to have converged at Fri Mar 13 13:26:15 2015.
+
+2015-03-13 13:26:22,078 - INFO - Getting results for site 158...
+2015-03-13 13:26:22,079 - INFO - Finished inference for site 158. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:22:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1600
+	MCMC is deemed to have converged at Fri Mar 13 13:26:21 2015.
+
+2015-03-13 13:26:29,088 - INFO - Getting results for site 156...
+2015-03-13 13:26:29,088 - INFO - Finished inference for site 156. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:20:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1462
+	MCMC is deemed to have converged at Fri Mar 13 13:26:29 2015.
+
+2015-03-13 13:27:30,166 - INFO - Getting results for site 155...
+2015-03-13 13:27:30,166 - INFO - Finished inference for site 155. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:19:44 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2475
+	MCMC is deemed to have converged at Fri Mar 13 13:27:29 2015.
+
+2015-03-13 13:28:44,258 - INFO - Getting results for site 152...
+2015-03-13 13:28:44,259 - INFO - Finished inference for site 152. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:17:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1097
+	MCMC is deemed to have converged at Fri Mar 13 13:28:43 2015.
+
+2015-03-13 13:29:01,282 - INFO - Getting results for site 161...
+2015-03-13 13:29:01,282 - INFO - Finished inference for site 161. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:26:15 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 816
+	MCMC is deemed to have converged at Fri Mar 13 13:29:00 2015.
+
+2015-03-13 13:29:06,289 - INFO - Getting results for site 163...
+2015-03-13 13:29:06,289 - INFO - Finished inference for site 163. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:26:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 734
+	MCMC is deemed to have converged at Fri Mar 13 13:29:05 2015.
+
+2015-03-13 13:31:06,440 - INFO - Getting results for site 164...
+2015-03-13 13:31:06,441 - INFO - Finished inference for site 164. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:27:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1456
+	MCMC is deemed to have converged at Fri Mar 13 13:31:05 2015.
+
+2015-03-13 13:32:23,537 - INFO - Getting results for site 162...
+2015-03-13 13:32:23,538 - INFO - Finished inference for site 162. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:26:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 5540
+	MCMC is deemed to have converged at Fri Mar 13 13:32:22 2015.
+
+2015-03-13 13:32:26,542 - INFO - Getting results for site 165...
+2015-03-13 13:32:26,542 - INFO - Finished inference for site 165. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:28:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 727
+	MCMC is deemed to have converged at Fri Mar 13 13:32:25 2015.
+
+2015-03-13 13:32:51,573 - INFO - Getting results for site 166...
+2015-03-13 13:32:51,573 - INFO - Finished inference for site 166. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:29:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1565
+	MCMC is deemed to have converged at Fri Mar 13 13:32:51 2015.
+
+2015-03-13 13:33:35,629 - INFO - Getting results for site 168...
+2015-03-13 13:33:35,629 - INFO - Finished inference for site 168. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:31:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 915
+	MCMC is deemed to have converged at Fri Mar 13 13:33:35 2015.
+
+2015-03-13 13:34:17,683 - INFO - Getting results for site 167...
+2015-03-13 13:34:17,683 - INFO - Finished inference for site 167. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:29:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 885
+	MCMC is deemed to have converged at Fri Mar 13 13:34:17 2015.
+
+2015-03-13 13:34:58,735 - INFO - Getting results for site 170...
+2015-03-13 13:34:58,736 - INFO - Finished inference for site 170. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:32:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1360
+	MCMC is deemed to have converged at Fri Mar 13 13:34:58 2015.
+
+2015-03-13 13:35:32,779 - INFO - Getting results for site 169...
+2015-03-13 13:35:32,779 - INFO - Finished inference for site 169. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:32:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 545
+	MCMC is deemed to have converged at Fri Mar 13 13:35:32 2015.
+
+2015-03-13 13:37:53,954 - INFO - Getting results for site 173...
+2015-03-13 13:37:53,955 - INFO - Finished inference for site 173. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:34:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 764
+	MCMC is deemed to have converged at Fri Mar 13 13:37:53 2015.
+
+2015-03-13 13:38:07,975 - INFO - Getting results for site 172...
+2015-03-13 13:38:07,976 - INFO - Finished inference for site 172. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:33:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1595
+	MCMC is deemed to have converged at Fri Mar 13 13:38:07 2015.
+
+2015-03-13 13:38:58,038 - INFO - Getting results for site 175...
+2015-03-13 13:38:58,038 - INFO - Finished inference for site 175. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:35:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 942
+	MCMC is deemed to have converged at Fri Mar 13 13:38:57 2015.
+
+2015-03-13 13:39:31,080 - INFO - Getting results for site 171...
+2015-03-13 13:39:31,081 - INFO - Finished inference for site 171. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:32:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 363
+	MCMC is deemed to have converged at Fri Mar 13 13:39:30 2015.
+
+2015-03-13 13:40:38,167 - INFO - Getting results for site 176...
+2015-03-13 13:40:38,167 - INFO - Finished inference for site 176. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:37:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 671
+	MCMC is deemed to have converged at Fri Mar 13 13:40:37 2015.
+
+2015-03-13 13:40:49,181 - INFO - Getting results for site 178...
+2015-03-13 13:40:49,181 - INFO - Finished inference for site 178. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:38:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2873
+	MCMC is deemed to have converged at Fri Mar 13 13:40:48 2015.
+
+2015-03-13 13:41:39,246 - INFO - Getting results for site 177...
+2015-03-13 13:41:39,246 - INFO - Finished inference for site 177. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:38:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 691
+	MCMC is deemed to have converged at Fri Mar 13 13:41:38 2015.
+
+2015-03-13 13:42:51,337 - INFO - Getting results for site 159...
+2015-03-13 13:42:51,337 - INFO - Finished inference for site 159. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:22:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1446
+	MCMC is deemed to have converged at Fri Mar 13 13:42:50 2015.
+
+2015-03-13 13:42:51,338 - INFO - Getting results for site 181...
+2015-03-13 13:42:51,338 - INFO - Finished inference for site 181. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:40:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2107
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:42:50 2015.
+
+2015-03-13 13:43:07,359 - INFO - Getting results for site 180...
+2015-03-13 13:43:07,359 - INFO - Finished inference for site 180. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:40:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 470
+	MCMC is deemed to have converged at Fri Mar 13 13:43:06 2015.
+
+2015-03-13 13:43:36,395 - INFO - Getting results for site 179...
+2015-03-13 13:43:36,396 - INFO - Finished inference for site 179. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:39:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 616
+	MCMC is deemed to have converged at Fri Mar 13 13:43:36 2015.
+
+2015-03-13 13:45:35,547 - INFO - Getting results for site 185...
+2015-03-13 13:45:35,547 - INFO - Finished inference for site 185. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:43:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 720
+	MCMC is deemed to have converged at Fri Mar 13 13:45:35 2015.
+
+2015-03-13 13:45:39,553 - INFO - Getting results for site 174...
+2015-03-13 13:45:39,553 - INFO - Finished inference for site 174. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:34:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1125
+	MCMC is deemed to have converged at Fri Mar 13 13:45:38 2015.
+
+2015-03-13 13:45:39,553 - INFO - Getting results for site 184...
+2015-03-13 13:45:39,553 - INFO - Finished inference for site 184. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:42:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1397
+	MCMC is deemed to have converged at Fri Mar 13 13:45:39 2015.
+
+2015-03-13 13:45:54,573 - INFO - Getting results for site 182...
+2015-03-13 13:45:54,574 - INFO - Finished inference for site 182. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:41:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 993
+	MCMC is deemed to have converged at Fri Mar 13 13:45:53 2015.
+
+2015-03-13 13:45:59,580 - INFO - Getting results for site 183...
+2015-03-13 13:45:59,581 - INFO - Finished inference for site 183. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:42:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 648
+	MCMC is deemed to have converged at Fri Mar 13 13:45:59 2015.
+
+2015-03-13 13:47:37,704 - INFO - Getting results for site 186...
+2015-03-13 13:47:37,705 - INFO - Finished inference for site 186. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:43:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 632
+	MCMC is deemed to have converged at Fri Mar 13 13:47:37 2015.
+
+2015-03-13 13:47:59,733 - INFO - Getting results for site 187...
+2015-03-13 13:47:59,734 - INFO - Finished inference for site 187. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:45:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 578
+	MCMC is deemed to have converged at Fri Mar 13 13:47:59 2015.
+
+2015-03-13 13:48:48,796 - INFO - Getting results for site 191...
+2015-03-13 13:48:48,796 - INFO - Finished inference for site 191. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:45:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 815
+	MCMC is deemed to have converged at Fri Mar 13 13:48:47 2015.
+
+2015-03-13 13:48:58,810 - INFO - Getting results for site 189...
+2015-03-13 13:48:58,810 - INFO - Finished inference for site 189. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:45:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 538
+	MCMC is deemed to have converged at Fri Mar 13 13:48:58 2015.
+
+2015-03-13 13:49:55,882 - INFO - Getting results for site 192...
+2015-03-13 13:49:55,882 - INFO - Finished inference for site 192. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:47:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 325
+	MCMC is deemed to have converged at Fri Mar 13 13:49:55 2015.
+
+2015-03-13 13:51:59,038 - INFO - Getting results for site 194...
+2015-03-13 13:51:59,038 - INFO - Finished inference for site 194. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:48:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 419
+	MCMC is deemed to have converged at Fri Mar 13 13:51:58 2015.
+
+2015-03-13 13:52:18,064 - INFO - Getting results for site 195...
+2015-03-13 13:52:18,064 - INFO - Finished inference for site 195. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:48:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 798
+	MCMC is deemed to have converged at Fri Mar 13 13:52:18 2015.
+
+2015-03-13 13:52:26,075 - INFO - Getting results for site 193...
+2015-03-13 13:52:26,075 - INFO - Finished inference for site 193. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:47:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 216
+	MCMC is deemed to have converged at Fri Mar 13 13:52:25 2015.
+
+2015-03-13 13:53:38,167 - INFO - Getting results for site 190...
+2015-03-13 13:53:38,167 - INFO - Finished inference for site 190. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:45:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 760
+	MCMC is deemed to have converged at Fri Mar 13 13:53:37 2015.
+
+2015-03-13 13:54:41,248 - INFO - Getting results for site 197...
+2015-03-13 13:54:41,248 - INFO - Finished inference for site 197. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:51:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 913
+	MCMC is deemed to have converged at Fri Mar 13 13:54:40 2015.
+
+2015-03-13 13:54:42,250 - INFO - Getting results for site 198...
+2015-03-13 13:54:42,250 - INFO - Finished inference for site 198. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:52:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 627
+	MCMC is deemed to have converged at Fri Mar 13 13:54:41 2015.
+
+2015-03-13 13:54:54,265 - INFO - Getting results for site 188...
+2015-03-13 13:54:54,265 - INFO - Finished inference for site 188. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:45:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 392
+	MCMC is deemed to have converged at Fri Mar 13 13:54:53 2015.
+
+2015-03-13 13:55:59,348 - INFO - Getting results for site 199...
+2015-03-13 13:55:59,348 - INFO - Finished inference for site 199. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:52:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 811
+	MCMC is deemed to have converged at Fri Mar 13 13:55:58 2015.
+
+2015-03-13 13:56:56,420 - INFO - Getting results for site 201...
+2015-03-13 13:56:56,421 - INFO - Finished inference for site 201. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:54:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 917
+		There are 3 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 13:56:55 2015.
+
+2015-03-13 13:58:18,522 - INFO - Getting results for site 203...
+2015-03-13 13:58:18,523 - INFO - Finished inference for site 203. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:54:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1584
+	MCMC is deemed to have converged at Fri Mar 13 13:58:17 2015.
+
+2015-03-13 13:58:24,531 - INFO - Getting results for site 202...
+2015-03-13 13:58:24,531 - INFO - Finished inference for site 202. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:54:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1105
+	MCMC is deemed to have converged at Fri Mar 13 13:58:23 2015.
+
+2015-03-13 13:58:48,563 - INFO - Getting results for site 200...
+2015-03-13 13:58:48,564 - INFO - Finished inference for site 200. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:53:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 290
+	MCMC is deemed to have converged at Fri Mar 13 13:58:47 2015.
+
+2015-03-13 13:58:54,572 - INFO - Getting results for site 196...
+2015-03-13 13:58:54,572 - INFO - Finished inference for site 196. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:49:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 554
+	MCMC is deemed to have converged at Fri Mar 13 13:58:53 2015.
+
+2015-03-13 14:00:49,716 - INFO - Getting results for site 207...
+2015-03-13 14:00:49,717 - INFO - Finished inference for site 207. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:58:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1080
+	MCMC is deemed to have converged at Fri Mar 13 14:00:49 2015.
+
+2015-03-13 14:01:40,782 - INFO - Getting results for site 208...
+2015-03-13 14:01:40,782 - INFO - Finished inference for site 208. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:58:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1086
+	MCMC is deemed to have converged at Fri Mar 13 14:01:39 2015.
+
+2015-03-13 14:01:42,785 - INFO - Getting results for site 209...
+2015-03-13 14:01:42,785 - INFO - Finished inference for site 209. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:58:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 571
+	MCMC is deemed to have converged at Fri Mar 13 14:01:42 2015.
+
+2015-03-13 14:01:54,800 - INFO - Getting results for site 206...
+2015-03-13 14:01:54,800 - INFO - Finished inference for site 206. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:58:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 550
+	MCMC is deemed to have converged at Fri Mar 13 14:01:54 2015.
+
+2015-03-13 14:01:59,807 - INFO - Getting results for site 205...
+2015-03-13 14:01:59,807 - INFO - Finished inference for site 205. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:56:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1788
+	MCMC is deemed to have converged at Fri Mar 13 14:01:59 2015.
+
+2015-03-13 14:02:07,819 - INFO - Getting results for site 204...
+2015-03-13 14:02:07,820 - INFO - Finished inference for site 204. Here is the summary:
+	Beginning MCMC at Fri Mar 13 13:55:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1301
+	MCMC is deemed to have converged at Fri Mar 13 14:02:07 2015.
+
+2015-03-13 14:03:19,910 - INFO - Getting results for site 210...
+2015-03-13 14:03:19,911 - INFO - Finished inference for site 210. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:00:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 515
+	MCMC is deemed to have converged at Fri Mar 13 14:03:19 2015.
+
+2015-03-13 14:04:12,977 - INFO - Getting results for site 212...
+2015-03-13 14:04:12,978 - INFO - Finished inference for site 212. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:01:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 516
+	MCMC is deemed to have converged at Fri Mar 13 14:04:12 2015.
+
+2015-03-13 14:05:02,041 - INFO - Getting results for site 215...
+2015-03-13 14:05:02,042 - INFO - Finished inference for site 215. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:02:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 399
+	MCMC is deemed to have converged at Fri Mar 13 14:05:01 2015.
+
+2015-03-13 14:05:15,058 - INFO - Getting results for site 214...
+2015-03-13 14:05:15,059 - INFO - Finished inference for site 214. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:01:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1776
+	MCMC is deemed to have converged at Fri Mar 13 14:05:14 2015.
+
+2015-03-13 14:05:35,085 - INFO - Getting results for site 211...
+2015-03-13 14:05:35,085 - INFO - Finished inference for site 211. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:01:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 760
+	MCMC is deemed to have converged at Fri Mar 13 14:05:34 2015.
+
+2015-03-13 14:05:51,105 - INFO - Getting results for site 213...
+2015-03-13 14:05:51,106 - INFO - Finished inference for site 213. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:01:54 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 776
+	MCMC is deemed to have converged at Fri Mar 13 14:05:50 2015.
+
+2015-03-13 14:07:08,203 - INFO - Getting results for site 216...
+2015-03-13 14:07:08,203 - INFO - Finished inference for site 216. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:03:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 316
+	MCMC is deemed to have converged at Fri Mar 13 14:07:08 2015.
+
+2015-03-13 14:07:46,251 - INFO - Getting results for site 219...
+2015-03-13 14:07:46,252 - INFO - Finished inference for site 219. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:05:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 529
+	MCMC is deemed to have converged at Fri Mar 13 14:07:45 2015.
+
+2015-03-13 14:07:48,254 - INFO - Getting results for site 218...
+2015-03-13 14:07:48,254 - INFO - Finished inference for site 218. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:05:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 279
+	MCMC is deemed to have converged at Fri Mar 13 14:07:48 2015.
+
+2015-03-13 14:10:43,475 - INFO - Getting results for site 222...
+2015-03-13 14:10:43,476 - INFO - Finished inference for site 222. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:07:08 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 248
+	MCMC is deemed to have converged at Fri Mar 13 14:10:42 2015.
+
+2015-03-13 14:11:16,516 - INFO - Getting results for site 217...
+2015-03-13 14:11:16,517 - INFO - Finished inference for site 217. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:04:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 362
+	MCMC is deemed to have converged at Fri Mar 13 14:11:15 2015.
+
+2015-03-13 14:12:13,589 - INFO - Getting results for site 223...
+2015-03-13 14:12:13,589 - INFO - Finished inference for site 223. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:07:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 247
+	MCMC is deemed to have converged at Fri Mar 13 14:12:13 2015.
+
+2015-03-13 14:13:40,699 - INFO - Getting results for site 221...
+2015-03-13 14:13:40,699 - INFO - Finished inference for site 221. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:05:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 159
+	MCMC is deemed to have converged at Fri Mar 13 14:13:39 2015.
+
+2015-03-13 14:13:47,710 - INFO - Getting results for site 225...
+2015-03-13 14:13:47,710 - INFO - Finished inference for site 225. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:10:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 202
+	MCMC is deemed to have converged at Fri Mar 13 14:13:47 2015.
+
+2015-03-13 14:14:24,758 - INFO - Getting results for site 220...
+2015-03-13 14:14:24,758 - INFO - Finished inference for site 220. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:05:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 218
+	MCMC is deemed to have converged at Fri Mar 13 14:14:23 2015.
+
+2015-03-13 14:15:42,854 - INFO - Getting results for site 226...
+2015-03-13 14:15:42,855 - INFO - Finished inference for site 226. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:11:15 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 201
+	MCMC is deemed to have converged at Fri Mar 13 14:15:41 2015.
+
+2015-03-13 14:15:52,868 - INFO - Getting results for site 227...
+2015-03-13 14:15:52,868 - INFO - Finished inference for site 227. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:12:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1085
+	MCMC is deemed to have converged at Fri Mar 13 14:15:51 2015.
+
+2015-03-13 14:16:25,910 - INFO - Getting results for site 228...
+2015-03-13 14:16:25,910 - INFO - Finished inference for site 228. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:13:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 215
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:16:25 2015.
+
+2015-03-13 14:17:05,962 - INFO - Getting results for site 229...
+2015-03-13 14:17:05,963 - INFO - Finished inference for site 229. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:13:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 535
+	MCMC is deemed to have converged at Fri Mar 13 14:17:05 2015.
+
+2015-03-13 14:17:09,968 - INFO - Getting results for site 224...
+2015-03-13 14:17:09,968 - INFO - Finished inference for site 224. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:07:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.06 and mean Neff = 179
+		There are 7 characters where R is nan
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.02 and mean Neff = 411
+		There are 6 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:17:09 2015.
+
+2015-03-13 14:18:32,071 - INFO - Getting results for site 231...
+2015-03-13 14:18:32,072 - INFO - Finished inference for site 231. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:15:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 501
+	MCMC is deemed to have converged at Fri Mar 13 14:18:31 2015.
+
+2015-03-13 14:19:05,115 - INFO - Getting results for site 230...
+2015-03-13 14:19:05,116 - INFO - Finished inference for site 230. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:14:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 657
+	MCMC is deemed to have converged at Fri Mar 13 14:19:04 2015.
+
+2015-03-13 14:19:10,122 - INFO - Getting results for site 232...
+2015-03-13 14:19:10,123 - INFO - Finished inference for site 232. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:15:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 494
+	MCMC is deemed to have converged at Fri Mar 13 14:19:09 2015.
+
+2015-03-13 14:20:23,216 - INFO - Getting results for site 233...
+2015-03-13 14:20:23,216 - INFO - Finished inference for site 233. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:16:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 377
+	MCMC is deemed to have converged at Fri Mar 13 14:20:22 2015.
+
+2015-03-13 14:20:47,247 - INFO - Getting results for site 234...
+2015-03-13 14:20:47,248 - INFO - Finished inference for site 234. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:17:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 312
+	MCMC is deemed to have converged at Fri Mar 13 14:20:46 2015.
+
+2015-03-13 14:21:11,279 - INFO - Getting results for site 235...
+2015-03-13 14:21:11,280 - INFO - Finished inference for site 235. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:17:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 294
+	MCMC is deemed to have converged at Fri Mar 13 14:21:10 2015.
+
+2015-03-13 14:21:30,306 - INFO - Getting results for site 237...
+2015-03-13 14:21:30,306 - INFO - Finished inference for site 237. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:19:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 330
+	MCMC is deemed to have converged at Fri Mar 13 14:21:29 2015.
+
+2015-03-13 14:21:43,323 - INFO - Getting results for site 236...
+2015-03-13 14:21:43,323 - INFO - Finished inference for site 236. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:18:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 343
+	MCMC is deemed to have converged at Fri Mar 13 14:21:43 2015.
+
+2015-03-13 14:22:49,407 - INFO - Getting results for site 239...
+2015-03-13 14:22:49,407 - INFO - Finished inference for site 239. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:20:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 878
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:22:48 2015.
+
+2015-03-13 14:23:18,444 - INFO - Getting results for site 238...
+2015-03-13 14:23:18,444 - INFO - Finished inference for site 238. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:19:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 742
+	MCMC is deemed to have converged at Fri Mar 13 14:23:17 2015.
+
+2015-03-13 14:23:30,460 - INFO - Getting results for site 242...
+2015-03-13 14:23:30,461 - INFO - Finished inference for site 242. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:21:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 941
+	MCMC is deemed to have converged at Fri Mar 13 14:23:29 2015.
+
+2015-03-13 14:23:41,477 - INFO - Getting results for site 240...
+2015-03-13 14:23:41,477 - INFO - Finished inference for site 240. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:20:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1034
+	MCMC is deemed to have converged at Fri Mar 13 14:23:40 2015.
+
+2015-03-13 14:24:24,532 - INFO - Getting results for site 241...
+2015-03-13 14:24:24,532 - INFO - Finished inference for site 241. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:21:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1021
+	MCMC is deemed to have converged at Fri Mar 13 14:24:23 2015.
+
+2015-03-13 14:25:35,622 - INFO - Getting results for site 245...
+2015-03-13 14:25:35,623 - INFO - Finished inference for site 245. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:23:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1149
+	MCMC is deemed to have converged at Fri Mar 13 14:25:34 2015.
+
+2015-03-13 14:25:37,626 - INFO - Getting results for site 243...
+2015-03-13 14:25:37,626 - INFO - Finished inference for site 243. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:21:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3311
+	MCMC is deemed to have converged at Fri Mar 13 14:25:36 2015.
+
+2015-03-13 14:25:59,654 - INFO - Getting results for site 246...
+2015-03-13 14:25:59,655 - INFO - Finished inference for site 246. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:23:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 847
+	MCMC is deemed to have converged at Fri Mar 13 14:25:59 2015.
+
+2015-03-13 14:26:43,711 - INFO - Getting results for site 244...
+2015-03-13 14:26:43,711 - INFO - Finished inference for site 244. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:22:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1737
+	MCMC is deemed to have converged at Fri Mar 13 14:26:43 2015.
+
+2015-03-13 14:27:02,737 - INFO - Getting results for site 248...
+2015-03-13 14:27:02,737 - INFO - Finished inference for site 248. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:24:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1140
+	MCMC is deemed to have converged at Fri Mar 13 14:27:01 2015.
+
+2015-03-13 14:28:27,846 - INFO - Getting results for site 247...
+2015-03-13 14:28:27,846 - INFO - Finished inference for site 247. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:23:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 956
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:28:27 2015.
+
+2015-03-13 14:29:09,898 - INFO - Getting results for site 249...
+2015-03-13 14:29:09,898 - INFO - Finished inference for site 249. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:25:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 744
+	MCMC is deemed to have converged at Fri Mar 13 14:29:09 2015.
+
+2015-03-13 14:29:25,919 - INFO - Getting results for site 250...
+2015-03-13 14:29:25,919 - INFO - Finished inference for site 250. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:25:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1925
+	MCMC is deemed to have converged at Fri Mar 13 14:29:24 2015.
+
+2015-03-13 14:29:30,928 - INFO - Getting results for site 251...
+2015-03-13 14:29:30,928 - INFO - Finished inference for site 251. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:25:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2435
+	MCMC is deemed to have converged at Fri Mar 13 14:29:30 2015.
+
+2015-03-13 14:30:32,005 - INFO - Getting results for site 253...
+2015-03-13 14:30:32,006 - INFO - Finished inference for site 253. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:27:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 631
+	MCMC is deemed to have converged at Fri Mar 13 14:30:31 2015.
+
+2015-03-13 14:31:15,060 - INFO - Getting results for site 252...
+2015-03-13 14:31:15,061 - INFO - Finished inference for site 252. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:26:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 473
+	MCMC is deemed to have converged at Fri Mar 13 14:31:14 2015.
+
+2015-03-13 14:32:36,163 - INFO - Getting results for site 255...
+2015-03-13 14:32:36,163 - INFO - Finished inference for site 255. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:29:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 576
+	MCMC is deemed to have converged at Fri Mar 13 14:32:35 2015.
+
+2015-03-13 14:32:41,170 - INFO - Getting results for site 254...
+2015-03-13 14:32:41,170 - INFO - Finished inference for site 254. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:28:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 448
+	MCMC is deemed to have converged at Fri Mar 13 14:32:41 2015.
+
+2015-03-13 14:32:49,179 - INFO - Getting results for site 256...
+2015-03-13 14:32:49,181 - INFO - Finished inference for site 256. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:29:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 614
+	MCMC is deemed to have converged at Fri Mar 13 14:32:48 2015.
+
+2015-03-13 14:33:18,218 - INFO - Getting results for site 258...
+2015-03-13 14:33:18,219 - INFO - Finished inference for site 258. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:30:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 961
+	MCMC is deemed to have converged at Fri Mar 13 14:33:18 2015.
+
+2015-03-13 14:34:30,312 - INFO - Getting results for site 257...
+2015-03-13 14:34:30,312 - INFO - Finished inference for site 257. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:29:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 412
+	MCMC is deemed to have converged at Fri Mar 13 14:34:29 2015.
+
+2015-03-13 14:34:33,316 - INFO - Getting results for site 259...
+2015-03-13 14:34:33,317 - INFO - Finished inference for site 259. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:31:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 596
+	MCMC is deemed to have converged at Fri Mar 13 14:34:32 2015.
+
+2015-03-13 14:35:15,371 - INFO - Getting results for site 261...
+2015-03-13 14:35:15,371 - INFO - Finished inference for site 261. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:32:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 177
+	MCMC is deemed to have converged at Fri Mar 13 14:35:14 2015.
+
+2015-03-13 14:35:31,393 - INFO - Getting results for site 262...
+2015-03-13 14:35:31,393 - INFO - Finished inference for site 262. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:32:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 404
+	MCMC is deemed to have converged at Fri Mar 13 14:35:30 2015.
+
+2015-03-13 14:35:53,422 - INFO - Getting results for site 260...
+2015-03-13 14:35:53,422 - INFO - Finished inference for site 260. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:32:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 532
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:35:52 2015.
+
+2015-03-13 14:36:01,444 - INFO - Getting results for site 263...
+2015-03-13 14:36:01,445 - INFO - Finished inference for site 263. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:33:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 284
+	MCMC is deemed to have converged at Fri Mar 13 14:36:01 2015.
+
+2015-03-13 14:37:07,530 - INFO - Getting results for site 264...
+2015-03-13 14:37:07,530 - INFO - Finished inference for site 264. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:34:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 999
+	MCMC is deemed to have converged at Fri Mar 13 14:37:06 2015.
+
+2015-03-13 14:38:04,603 - INFO - Getting results for site 266...
+2015-03-13 14:38:04,603 - INFO - Finished inference for site 266. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:35:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1905
+	MCMC is deemed to have converged at Fri Mar 13 14:38:04 2015.
+
+2015-03-13 14:38:16,620 - INFO - Getting results for site 267...
+2015-03-13 14:38:16,620 - INFO - Finished inference for site 267. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:35:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 368
+	MCMC is deemed to have converged at Fri Mar 13 14:38:15 2015.
+
+2015-03-13 14:38:50,664 - INFO - Getting results for site 269...
+2015-03-13 14:38:50,665 - INFO - Finished inference for site 269. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:36:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 431
+	MCMC is deemed to have converged at Fri Mar 13 14:38:50 2015.
+
+2015-03-13 14:39:27,713 - INFO - Getting results for site 270...
+2015-03-13 14:39:27,714 - INFO - Finished inference for site 270. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:37:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 415
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:39:27 2015.
+
+2015-03-13 14:39:34,723 - INFO - Getting results for site 265...
+2015-03-13 14:39:34,723 - INFO - Finished inference for site 265. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:34:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1510
+	MCMC is deemed to have converged at Fri Mar 13 14:39:33 2015.
+
+2015-03-13 14:39:59,755 - INFO - Getting results for site 268...
+2015-03-13 14:39:59,755 - INFO - Finished inference for site 268. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:35:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 248
+	MCMC is deemed to have converged at Fri Mar 13 14:39:59 2015.
+
+2015-03-13 14:41:11,847 - INFO - Getting results for site 271...
+2015-03-13 14:41:11,848 - INFO - Finished inference for site 271. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:38:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 532
+		There are 17 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:41:11 2015.
+
+2015-03-13 14:41:45,893 - INFO - Getting results for site 273...
+2015-03-13 14:41:45,893 - INFO - Finished inference for site 273. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:38:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1182
+	MCMC is deemed to have converged at Fri Mar 13 14:41:45 2015.
+
+2015-03-13 14:41:47,896 - INFO - Getting results for site 275...
+2015-03-13 14:41:47,896 - INFO - Finished inference for site 275. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:39:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1362
+	MCMC is deemed to have converged at Fri Mar 13 14:41:47 2015.
+
+2015-03-13 14:41:53,904 - INFO - Getting results for site 272...
+2015-03-13 14:41:53,904 - INFO - Finished inference for site 272. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:38:15 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1535
+	MCMC is deemed to have converged at Fri Mar 13 14:41:53 2015.
+
+2015-03-13 14:43:13,004 - INFO - Getting results for site 276...
+2015-03-13 14:43:13,004 - INFO - Finished inference for site 276. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:39:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 428
+	MCMC is deemed to have converged at Fri Mar 13 14:43:12 2015.
+
+2015-03-13 14:43:46,048 - INFO - Getting results for site 277...
+2015-03-13 14:43:46,048 - INFO - Finished inference for site 277. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:41:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 200
+	MCMC is deemed to have converged at Fri Mar 13 14:43:45 2015.
+
+2015-03-13 14:44:33,107 - INFO - Getting results for site 280...
+2015-03-13 14:44:33,108 - INFO - Finished inference for site 280. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:41:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 719
+	MCMC is deemed to have converged at Fri Mar 13 14:44:32 2015.
+
+2015-03-13 14:44:45,124 - INFO - Getting results for site 279...
+2015-03-13 14:44:45,124 - INFO - Finished inference for site 279. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:41:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 546
+	MCMC is deemed to have converged at Fri Mar 13 14:44:44 2015.
+
+2015-03-13 14:45:53,211 - INFO - Getting results for site 278...
+2015-03-13 14:45:53,211 - INFO - Finished inference for site 278. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:41:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 487
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:45:52 2015.
+
+2015-03-13 14:46:50,283 - INFO - Getting results for site 283...
+2015-03-13 14:46:50,283 - INFO - Finished inference for site 283. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:44:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1816
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:46:49 2015.
+
+2015-03-13 14:47:28,332 - INFO - Getting results for site 284...
+2015-03-13 14:47:28,333 - INFO - Finished inference for site 284. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:44:44 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 795
+	MCMC is deemed to have converged at Fri Mar 13 14:47:28 2015.
+
+2015-03-13 14:48:01,377 - INFO - Getting results for site 282...
+2015-03-13 14:48:01,377 - INFO - Finished inference for site 282. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:43:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3338
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:48:00 2015.
+
+2015-03-13 14:48:39,425 - INFO - Getting results for site 285...
+2015-03-13 14:48:39,425 - INFO - Finished inference for site 285. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:45:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 600
+	MCMC is deemed to have converged at Fri Mar 13 14:48:39 2015.
+
+2015-03-13 14:48:42,430 - INFO - Getting results for site 274...
+2015-03-13 14:48:42,430 - INFO - Finished inference for site 274. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:39:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 655
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:48:42 2015.
+
+2015-03-13 14:50:59,607 - INFO - Getting results for site 286...
+2015-03-13 14:50:59,608 - INFO - Finished inference for site 286. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:46:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 245
+	MCMC is deemed to have converged at Fri Mar 13 14:50:58 2015.
+
+2015-03-13 14:51:07,618 - INFO - Getting results for site 288...
+2015-03-13 14:51:07,619 - INFO - Finished inference for site 288. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:48:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 340
+	MCMC is deemed to have converged at Fri Mar 13 14:51:07 2015.
+
+2015-03-13 14:52:08,697 - INFO - Getting results for site 289...
+2015-03-13 14:52:08,697 - INFO - Finished inference for site 289. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:48:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 836
+	MCMC is deemed to have converged at Fri Mar 13 14:52:08 2015.
+
+2015-03-13 14:52:28,725 - INFO - Getting results for site 290...
+2015-03-13 14:52:28,725 - INFO - Finished inference for site 290. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:48:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 445
+	MCMC is deemed to have converged at Fri Mar 13 14:52:28 2015.
+
+2015-03-13 14:53:34,811 - INFO - Getting results for site 292...
+2015-03-13 14:53:34,812 - INFO - Finished inference for site 292. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:51:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 399
+	MCMC is deemed to have converged at Fri Mar 13 14:53:34 2015.
+
+2015-03-13 14:54:48,907 - INFO - Getting results for site 293...
+2015-03-13 14:54:48,908 - INFO - Finished inference for site 293. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:52:08 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 359
+	MCMC is deemed to have converged at Fri Mar 13 14:54:48 2015.
+
+2015-03-13 14:55:30,961 - INFO - Getting results for site 291...
+2015-03-13 14:55:30,961 - INFO - Finished inference for site 291. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:50:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 675
+	MCMC is deemed to have converged at Fri Mar 13 14:55:30 2015.
+
+2015-03-13 14:56:03,004 - INFO - Getting results for site 294...
+2015-03-13 14:56:03,004 - INFO - Finished inference for site 294. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:52:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 488
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 14:56:02 2015.
+
+2015-03-13 14:56:47,060 - INFO - Getting results for site 295...
+2015-03-13 14:56:47,061 - INFO - Finished inference for site 295. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:53:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 287
+	MCMC is deemed to have converged at Fri Mar 13 14:56:46 2015.
+
+2015-03-13 14:58:10,167 - INFO - Getting results for site 296...
+2015-03-13 14:58:10,168 - INFO - Finished inference for site 296. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:54:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 299
+	MCMC is deemed to have converged at Fri Mar 13 14:58:10 2015.
+
+2015-03-13 14:58:19,180 - INFO - Getting results for site 297...
+2015-03-13 14:58:19,181 - INFO - Finished inference for site 297. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:55:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 602
+	MCMC is deemed to have converged at Fri Mar 13 14:58:18 2015.
+
+2015-03-13 14:58:25,189 - INFO - Getting results for site 281...
+2015-03-13 14:58:25,189 - INFO - Finished inference for site 281. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:43:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 593
+	MCMC is deemed to have converged at Fri Mar 13 14:58:24 2015.
+
+2015-03-13 15:00:17,331 - INFO - Getting results for site 299...
+2015-03-13 15:00:17,332 - INFO - Finished inference for site 299. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:56:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 604
+	MCMC is deemed to have converged at Fri Mar 13 15:00:16 2015.
+
+2015-03-13 15:00:23,340 - INFO - Getting results for site 298...
+2015-03-13 15:00:23,341 - INFO - Finished inference for site 298. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:56:02 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 813
+	MCMC is deemed to have converged at Fri Mar 13 15:00:23 2015.
+
+2015-03-13 15:01:29,425 - INFO - Getting results for site 301...
+2015-03-13 15:01:29,425 - INFO - Finished inference for site 301. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:58:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 231
+	MCMC is deemed to have converged at Fri Mar 13 15:01:28 2015.
+
+2015-03-13 15:01:30,427 - INFO - Getting results for site 302...
+2015-03-13 15:01:30,427 - INFO - Finished inference for site 302. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:58:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 286
+	MCMC is deemed to have converged at Fri Mar 13 15:01:29 2015.
+
+2015-03-13 15:02:13,482 - INFO - Getting results for site 287...
+2015-03-13 15:02:13,483 - INFO - Finished inference for site 287. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:47:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.11 and mean Neff = 152
+		There are 1 characters where R is nan
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.07 and mean Neff = 264
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:02:12 2015.
+
+2015-03-13 15:02:27,502 - INFO - Getting results for site 300...
+2015-03-13 15:02:27,502 - INFO - Finished inference for site 300. Here is the summary:
+	Beginning MCMC at Fri Mar 13 14:58:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 320
+	MCMC is deemed to have converged at Fri Mar 13 15:02:27 2015.
+
+2015-03-13 15:03:32,585 - INFO - Getting results for site 304...
+2015-03-13 15:03:32,586 - INFO - Finished inference for site 304. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:00:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1065
+	MCMC is deemed to have converged at Fri Mar 13 15:03:31 2015.
+
+2015-03-13 15:04:11,636 - INFO - Getting results for site 305...
+2015-03-13 15:04:11,636 - INFO - Finished inference for site 305. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:01:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 469
+	MCMC is deemed to have converged at Fri Mar 13 15:04:10 2015.
+
+2015-03-13 15:04:30,660 - INFO - Getting results for site 307...
+2015-03-13 15:04:30,661 - INFO - Finished inference for site 307. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:02:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 751
+	MCMC is deemed to have converged at Fri Mar 13 15:04:30 2015.
+
+2015-03-13 15:05:24,730 - INFO - Getting results for site 308...
+2015-03-13 15:05:24,731 - INFO - Finished inference for site 308. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:02:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1109
+	MCMC is deemed to have converged at Fri Mar 13 15:05:24 2015.
+
+2015-03-13 15:07:07,862 - INFO - Getting results for site 303...
+2015-03-13 15:07:07,863 - INFO - Finished inference for site 303. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:00:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 423
+	MCMC is deemed to have converged at Fri Mar 13 15:07:07 2015.
+
+2015-03-13 15:07:18,877 - INFO - Getting results for site 310...
+2015-03-13 15:07:18,877 - INFO - Finished inference for site 310. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:04:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 399
+	MCMC is deemed to have converged at Fri Mar 13 15:07:18 2015.
+
+2015-03-13 15:07:41,907 - INFO - Getting results for site 312...
+2015-03-13 15:07:41,908 - INFO - Finished inference for site 312. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:05:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 516
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:07:41 2015.
+
+2015-03-13 15:07:50,920 - INFO - Getting results for site 311...
+2015-03-13 15:07:50,921 - INFO - Finished inference for site 311. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:04:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1620
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:07:50 2015.
+
+2015-03-13 15:09:35,053 - INFO - Getting results for site 313...
+2015-03-13 15:09:35,054 - INFO - Finished inference for site 313. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:07:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 986
+	MCMC is deemed to have converged at Fri Mar 13 15:09:34 2015.
+
+2015-03-13 15:09:56,081 - INFO - Getting results for site 315...
+2015-03-13 15:09:56,082 - INFO - Finished inference for site 315. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:07:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1514
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:09:55 2015.
+
+2015-03-13 15:12:01,240 - INFO - Getting results for site 316...
+2015-03-13 15:12:01,240 - INFO - Finished inference for site 316. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:07:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1426
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:12:00 2015.
+
+2015-03-13 15:12:44,296 - INFO - Getting results for site 314...
+2015-03-13 15:12:44,296 - INFO - Finished inference for site 314. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:07:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 432
+	MCMC is deemed to have converged at Fri Mar 13 15:12:43 2015.
+
+2015-03-13 15:13:10,330 - INFO - Getting results for site 318...
+2015-03-13 15:13:10,338 - INFO - Finished inference for site 318. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:09:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 919
+	MCMC is deemed to have converged at Fri Mar 13 15:13:09 2015.
+
+2015-03-13 15:14:03,406 - INFO - Getting results for site 317...
+2015-03-13 15:14:03,407 - INFO - Finished inference for site 317. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:09:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2767
+	MCMC is deemed to have converged at Fri Mar 13 15:14:03 2015.
+
+2015-03-13 15:18:51,769 - INFO - Getting results for site 322...
+2015-03-13 15:18:51,769 - INFO - Finished inference for site 322. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:14:03 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 608
+	MCMC is deemed to have converged at Fri Mar 13 15:18:51 2015.
+
+2015-03-13 15:24:01,158 - INFO - Getting results for site 323...
+2015-03-13 15:24:01,159 - INFO - Finished inference for site 323. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:18:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 484
+	MCMC is deemed to have converged at Fri Mar 13 15:24:00 2015.
+
+2015-03-13 15:27:31,425 - INFO - Getting results for site 321...
+2015-03-13 15:27:31,425 - INFO - Finished inference for site 321. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:13:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 5319
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:27:30 2015.
+
+2015-03-13 15:27:41,439 - INFO - Getting results for site 324...
+2015-03-13 15:27:41,439 - INFO - Finished inference for site 324. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:24:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 887
+	MCMC is deemed to have converged at Fri Mar 13 15:27:40 2015.
+
+2015-03-13 15:29:22,567 - INFO - Getting results for site 319...
+2015-03-13 15:29:22,568 - INFO - Finished inference for site 319. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:12:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2351
+		There are 9 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:29:21 2015.
+
+2015-03-13 15:30:23,646 - INFO - Getting results for site 309...
+2015-03-13 15:30:23,647 - INFO - Finished inference for site 309. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:03:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1624
+	MCMC is deemed to have converged at Fri Mar 13 15:30:23 2015.
+
+2015-03-13 15:30:35,663 - INFO - Getting results for site 326...
+2015-03-13 15:30:35,663 - INFO - Finished inference for site 326. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:27:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 370
+	MCMC is deemed to have converged at Fri Mar 13 15:30:35 2015.
+
+2015-03-13 15:32:32,810 - INFO - Getting results for site 327...
+2015-03-13 15:32:32,810 - INFO - Finished inference for site 327. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:29:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 269
+	MCMC is deemed to have converged at Fri Mar 13 15:32:32 2015.
+
+2015-03-13 15:35:27,030 - INFO - Getting results for site 325...
+2015-03-13 15:35:27,030 - INFO - Finished inference for site 325. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:27:30 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 493
+	MCMC is deemed to have converged at Fri Mar 13 15:35:26 2015.
+
+2015-03-13 15:36:40,124 - INFO - Getting results for site 329...
+2015-03-13 15:36:40,125 - INFO - Finished inference for site 329. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:30:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 513
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:36:39 2015.
+
+2015-03-13 15:37:37,199 - INFO - Getting results for site 331...
+2015-03-13 15:37:37,200 - INFO - Finished inference for site 331. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:35:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2499
+	MCMC is deemed to have converged at Fri Mar 13 15:37:37 2015.
+
+2015-03-13 15:38:54,299 - INFO - Getting results for site 332...
+2015-03-13 15:38:54,300 - INFO - Finished inference for site 332. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:36:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 5171
+	MCMC is deemed to have converged at Fri Mar 13 15:38:53 2015.
+
+2015-03-13 15:40:15,404 - INFO - Getting results for site 333...
+2015-03-13 15:40:15,404 - INFO - Finished inference for site 333. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:37:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 780
+	MCMC is deemed to have converged at Fri Mar 13 15:40:14 2015.
+
+2015-03-13 15:40:52,451 - INFO - Getting results for site 330...
+2015-03-13 15:40:52,452 - INFO - Finished inference for site 330. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:32:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 819
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:40:52 2015.
+
+2015-03-13 15:41:41,515 - INFO - Getting results for site 334...
+2015-03-13 15:41:41,515 - INFO - Finished inference for site 334. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:38:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 744
+	MCMC is deemed to have converged at Fri Mar 13 15:41:40 2015.
+
+2015-03-13 15:43:38,664 - INFO - Getting results for site 336...
+2015-03-13 15:43:38,664 - INFO - Finished inference for site 336. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:40:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 659
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:43:38 2015.
+
+2015-03-13 15:43:53,684 - INFO - Getting results for site 335...
+2015-03-13 15:43:53,685 - INFO - Finished inference for site 335. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:40:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 833
+	MCMC is deemed to have converged at Fri Mar 13 15:43:52 2015.
+
+2015-03-13 15:45:10,784 - INFO - Getting results for site 337...
+2015-03-13 15:45:10,784 - INFO - Finished inference for site 337. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:41:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 425
+	MCMC is deemed to have converged at Fri Mar 13 15:45:10 2015.
+
+2015-03-13 15:46:22,880 - INFO - Getting results for site 339...
+2015-03-13 15:46:22,880 - INFO - Finished inference for site 339. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:43:53 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 736
+	MCMC is deemed to have converged at Fri Mar 13 15:46:22 2015.
+
+2015-03-13 15:46:48,913 - INFO - Getting results for site 338...
+2015-03-13 15:46:48,913 - INFO - Finished inference for site 338. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:43:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 369
+	MCMC is deemed to have converged at Fri Mar 13 15:46:48 2015.
+
+2015-03-13 15:47:48,992 - INFO - Getting results for site 340...
+2015-03-13 15:47:48,992 - INFO - Finished inference for site 340. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:45:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 437
+	MCMC is deemed to have converged at Fri Mar 13 15:47:48 2015.
+
+2015-03-13 15:48:56,079 - INFO - Getting results for site 341...
+2015-03-13 15:48:56,079 - INFO - Finished inference for site 341. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:46:22 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 389
+	MCMC is deemed to have converged at Fri Mar 13 15:48:55 2015.
+
+2015-03-13 15:49:12,100 - INFO - Getting results for site 306...
+2015-03-13 15:49:12,100 - INFO - Finished inference for site 306. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:01:29 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 2.21 and mean Neff = 22
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.00 and mean Neff = 1146
+	MCMC is deemed to have converged at Fri Mar 13 15:49:11 2015.
+
+2015-03-13 15:50:08,172 - INFO - Getting results for site 320...
+2015-03-13 15:50:08,173 - INFO - Finished inference for site 320. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:12:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1263
+	MCMC is deemed to have converged at Fri Mar 13 15:50:07 2015.
+
+2015-03-13 15:50:08,173 - INFO - Getting results for site 342...
+2015-03-13 15:50:08,173 - INFO - Finished inference for site 342. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:46:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 472
+	MCMC is deemed to have converged at Fri Mar 13 15:50:07 2015.
+
+2015-03-13 15:50:26,197 - INFO - Getting results for site 343...
+2015-03-13 15:50:26,198 - INFO - Finished inference for site 343. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:47:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 326
+	MCMC is deemed to have converged at Fri Mar 13 15:50:26 2015.
+
+2015-03-13 15:52:36,365 - INFO - Getting results for site 344...
+2015-03-13 15:52:36,366 - INFO - Finished inference for site 344. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:48:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 666
+	MCMC is deemed to have converged at Fri Mar 13 15:52:35 2015.
+
+2015-03-13 15:53:02,400 - INFO - Getting results for site 345...
+2015-03-13 15:53:02,400 - INFO - Finished inference for site 345. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:49:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 389
+	MCMC is deemed to have converged at Fri Mar 13 15:53:01 2015.
+
+2015-03-13 15:54:09,484 - INFO - Getting results for site 347...
+2015-03-13 15:54:09,484 - INFO - Finished inference for site 347. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:50:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 219
+	MCMC is deemed to have converged at Fri Mar 13 15:54:09 2015.
+
+2015-03-13 15:54:27,508 - INFO - Getting results for site 348...
+2015-03-13 15:54:27,509 - INFO - Finished inference for site 348. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:50:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1172
+	MCMC is deemed to have converged at Fri Mar 13 15:54:26 2015.
+
+2015-03-13 15:56:15,647 - INFO - Getting results for site 349...
+2015-03-13 15:56:15,648 - INFO - Finished inference for site 349. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:52:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 395
+	MCMC is deemed to have converged at Fri Mar 13 15:56:15 2015.
+
+2015-03-13 15:58:12,796 - INFO - Getting results for site 351...
+2015-03-13 15:58:12,797 - INFO - Finished inference for site 351. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:54:09 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 772
+	MCMC is deemed to have converged at Fri Mar 13 15:58:12 2015.
+
+2015-03-13 15:59:18,878 - INFO - Getting results for site 350...
+2015-03-13 15:59:18,879 - INFO - Finished inference for site 350. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:53:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 712
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 15:59:17 2015.
+
+2015-03-13 16:00:36,979 - INFO - Getting results for site 353...
+2015-03-13 16:00:36,979 - INFO - Finished inference for site 353. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:56:15 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1373
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:00:35 2015.
+
+2015-03-13 16:00:41,987 - INFO - Getting results for site 346...
+2015-03-13 16:00:41,987 - INFO - Finished inference for site 346. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:50:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 388
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:00:41 2015.
+
+2015-03-13 16:00:47,004 - INFO - Getting results for site 354...
+2015-03-13 16:00:47,004 - INFO - Finished inference for site 354. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:58:12 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 694
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:00:46 2015.
+
+2015-03-13 16:02:01,097 - INFO - Getting results for site 355...
+2015-03-13 16:02:01,097 - INFO - Finished inference for site 355. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:59:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 725
+	MCMC is deemed to have converged at Fri Mar 13 16:02:00 2015.
+
+2015-03-13 16:04:01,249 - INFO - Getting results for site 358...
+2015-03-13 16:04:01,249 - INFO - Finished inference for site 358. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:00:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 538
+	MCMC is deemed to have converged at Fri Mar 13 16:04:00 2015.
+
+2015-03-13 16:04:14,266 - INFO - Getting results for site 356...
+2015-03-13 16:04:14,266 - INFO - Finished inference for site 356. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:00:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1025
+	MCMC is deemed to have converged at Fri Mar 13 16:04:13 2015.
+
+2015-03-13 16:04:33,290 - INFO - Getting results for site 357...
+2015-03-13 16:04:33,291 - INFO - Finished inference for site 357. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:00:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1782
+		There are 12 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:04:32 2015.
+
+2015-03-13 16:06:09,412 - INFO - Getting results for site 359...
+2015-03-13 16:06:09,412 - INFO - Finished inference for site 359. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:02:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 207
+	MCMC is deemed to have converged at Fri Mar 13 16:06:08 2015.
+
+2015-03-13 16:06:33,445 - INFO - Getting results for site 352...
+2015-03-13 16:06:33,446 - INFO - Finished inference for site 352. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:54:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 560
+	MCMC is deemed to have converged at Fri Mar 13 16:06:32 2015.
+
+2015-03-13 16:07:10,492 - INFO - Getting results for site 362...
+2015-03-13 16:07:10,493 - INFO - Finished inference for site 362. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:04:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 324
+	MCMC is deemed to have converged at Fri Mar 13 16:07:10 2015.
+
+2015-03-13 16:07:22,509 - INFO - Getting results for site 361...
+2015-03-13 16:07:22,509 - INFO - Finished inference for site 361. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:04:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 926
+	MCMC is deemed to have converged at Fri Mar 13 16:07:21 2015.
+
+2015-03-13 16:08:17,584 - INFO - Getting results for site 360...
+2015-03-13 16:08:17,584 - INFO - Finished inference for site 360. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:04:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 279
+	MCMC is deemed to have converged at Fri Mar 13 16:08:17 2015.
+
+2015-03-13 16:09:05,647 - INFO - Getting results for site 364...
+2015-03-13 16:09:05,647 - INFO - Finished inference for site 364. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:06:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 305
+	MCMC is deemed to have converged at Fri Mar 13 16:09:04 2015.
+
+2015-03-13 16:09:37,687 - INFO - Getting results for site 365...
+2015-03-13 16:09:37,688 - INFO - Finished inference for site 365. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:07:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 389
+	MCMC is deemed to have converged at Fri Mar 13 16:09:37 2015.
+
+2015-03-13 16:09:41,693 - INFO - Getting results for site 363...
+2015-03-13 16:09:41,693 - INFO - Finished inference for site 363. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:06:08 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 762
+	MCMC is deemed to have converged at Fri Mar 13 16:09:41 2015.
+
+2015-03-13 16:10:19,744 - INFO - Getting results for site 366...
+2015-03-13 16:10:19,744 - INFO - Finished inference for site 366. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:07:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 399
+	MCMC is deemed to have converged at Fri Mar 13 16:10:18 2015.
+
+2015-03-13 16:11:33,838 - INFO - Getting results for site 367...
+2015-03-13 16:11:33,839 - INFO - Finished inference for site 367. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:08:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 573
+	MCMC is deemed to have converged at Fri Mar 13 16:11:33 2015.
+
+2015-03-13 16:12:11,886 - INFO - Getting results for site 369...
+2015-03-13 16:12:11,887 - INFO - Finished inference for site 369. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:09:37 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 203
+	MCMC is deemed to have converged at Fri Mar 13 16:12:11 2015.
+
+2015-03-13 16:12:58,947 - INFO - Getting results for site 370...
+2015-03-13 16:12:58,948 - INFO - Finished inference for site 370. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:09:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 631
+	MCMC is deemed to have converged at Fri Mar 13 16:12:58 2015.
+
+2015-03-13 16:14:26,068 - INFO - Getting results for site 371...
+2015-03-13 16:14:26,069 - INFO - Finished inference for site 371. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:10:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 201
+	MCMC is deemed to have converged at Fri Mar 13 16:14:26 2015.
+
+2015-03-13 16:15:32,153 - INFO - Getting results for site 373...
+2015-03-13 16:15:32,153 - INFO - Finished inference for site 373. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:12:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 302
+	MCMC is deemed to have converged at Fri Mar 13 16:15:31 2015.
+
+2015-03-13 16:16:33,230 - INFO - Getting results for site 374...
+2015-03-13 16:16:33,230 - INFO - Finished inference for site 374. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:12:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 454
+	MCMC is deemed to have converged at Fri Mar 13 16:16:32 2015.
+
+2015-03-13 16:17:35,309 - INFO - Getting results for site 375...
+2015-03-13 16:17:35,309 - INFO - Finished inference for site 375. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:14:26 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 204
+	MCMC is deemed to have converged at Fri Mar 13 16:17:34 2015.
+
+2015-03-13 16:18:16,362 - INFO - Getting results for site 376...
+2015-03-13 16:18:16,363 - INFO - Finished inference for site 376. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:15:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 286
+	MCMC is deemed to have converged at Fri Mar 13 16:18:16 2015.
+
+2015-03-13 16:19:26,453 - INFO - Getting results for site 377...
+2015-03-13 16:19:26,454 - INFO - Finished inference for site 377. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:16:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 300
+	MCMC is deemed to have converged at Fri Mar 13 16:19:25 2015.
+
+2015-03-13 16:19:28,456 - INFO - Getting results for site 368...
+2015-03-13 16:19:28,457 - INFO - Finished inference for site 368. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:09:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 530
+	MCMC is deemed to have converged at Fri Mar 13 16:19:28 2015.
+
+2015-03-13 16:20:24,530 - INFO - Getting results for site 378...
+2015-03-13 16:20:24,530 - INFO - Finished inference for site 378. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:17:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.04 and mean Neff = 393
+	MCMC is deemed to have converged at Fri Mar 13 16:20:24 2015.
+
+2015-03-13 16:21:43,630 - INFO - Getting results for site 379...
+2015-03-13 16:21:43,631 - INFO - Finished inference for site 379. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:18:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 508
+	MCMC is deemed to have converged at Fri Mar 13 16:21:43 2015.
+
+2015-03-13 16:22:17,676 - INFO - Getting results for site 381...
+2015-03-13 16:22:17,676 - INFO - Finished inference for site 381. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:19:28 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 457
+	MCMC is deemed to have converged at Fri Mar 13 16:22:16 2015.
+
+2015-03-13 16:23:36,777 - INFO - Getting results for site 380...
+2015-03-13 16:23:36,777 - INFO - Finished inference for site 380. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:19:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.08 and mean Neff = 125
+	MCMC is deemed to have converged at Fri Mar 13 16:23:35 2015.
+
+2015-03-13 16:24:14,827 - INFO - Getting results for site 383...
+2015-03-13 16:24:14,828 - INFO - Finished inference for site 383. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:21:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 526
+	MCMC is deemed to have converged at Fri Mar 13 16:24:14 2015.
+
+2015-03-13 16:25:18,911 - INFO - Getting results for site 382...
+2015-03-13 16:25:18,913 - INFO - Finished inference for site 382. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:20:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 900
+	MCMC is deemed to have converged at Fri Mar 13 16:25:18 2015.
+
+2015-03-13 16:25:24,921 - INFO - Getting results for site 372...
+2015-03-13 16:25:24,922 - INFO - Finished inference for site 372. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:11:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 408
+	MCMC is deemed to have converged at Fri Mar 13 16:25:24 2015.
+
+2015-03-13 16:26:06,977 - INFO - Getting results for site 328...
+2015-03-13 16:26:06,977 - INFO - Finished inference for site 328. Here is the summary:
+	Beginning MCMC at Fri Mar 13 15:30:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 2.88 and mean Neff = 5
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.00 and mean Neff = 5933
+	MCMC is deemed to have converged at Fri Mar 13 16:26:06 2015.
+
+2015-03-13 16:28:03,127 - INFO - Getting results for site 387...
+2015-03-13 16:28:03,128 - INFO - Finished inference for site 387. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:25:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 373
+	MCMC is deemed to have converged at Fri Mar 13 16:28:02 2015.
+
+2015-03-13 16:28:21,151 - INFO - Getting results for site 388...
+2015-03-13 16:28:21,151 - INFO - Finished inference for site 388. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:25:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 361
+	MCMC is deemed to have converged at Fri Mar 13 16:28:20 2015.
+
+2015-03-13 16:28:35,169 - INFO - Getting results for site 386...
+2015-03-13 16:28:35,169 - INFO - Finished inference for site 386. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:24:14 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 308
+	MCMC is deemed to have converged at Fri Mar 13 16:28:34 2015.
+
+2015-03-13 16:29:02,206 - INFO - Getting results for site 389...
+2015-03-13 16:29:02,207 - INFO - Finished inference for site 389. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:26:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 870
+	MCMC is deemed to have converged at Fri Mar 13 16:29:01 2015.
+
+2015-03-13 16:30:44,337 - INFO - Getting results for site 392...
+2015-03-13 16:30:44,337 - INFO - Finished inference for site 392. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:28:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1653
+	MCMC is deemed to have converged at Fri Mar 13 16:30:43 2015.
+
+2015-03-13 16:30:57,355 - INFO - Getting results for site 390...
+2015-03-13 16:30:57,356 - INFO - Finished inference for site 390. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:28:02 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1079
+	MCMC is deemed to have converged at Fri Mar 13 16:30:57 2015.
+
+2015-03-13 16:31:53,427 - INFO - Getting results for site 393...
+2015-03-13 16:31:53,427 - INFO - Finished inference for site 393. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:29:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 528
+	MCMC is deemed to have converged at Fri Mar 13 16:31:52 2015.
+
+2015-03-13 16:32:23,467 - INFO - Getting results for site 391...
+2015-03-13 16:32:23,467 - INFO - Finished inference for site 391. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:28:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 897
+	MCMC is deemed to have converged at Fri Mar 13 16:32:23 2015.
+
+2015-03-13 16:33:08,526 - INFO - Getting results for site 395...
+2015-03-13 16:33:08,527 - INFO - Finished inference for site 395. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:30:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 4399
+		There are 3 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:33:07 2015.
+
+2015-03-13 16:33:47,576 - INFO - Getting results for site 394...
+2015-03-13 16:33:47,577 - INFO - Finished inference for site 394. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:30:43 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 419
+	MCMC is deemed to have converged at Fri Mar 13 16:33:46 2015.
+
+2015-03-13 16:34:47,654 - INFO - Getting results for site 397...
+2015-03-13 16:34:47,654 - INFO - Finished inference for site 397. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:32:23 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2654
+	MCMC is deemed to have converged at Fri Mar 13 16:34:46 2015.
+
+2015-03-13 16:35:06,680 - INFO - Getting results for site 398...
+2015-03-13 16:35:06,680 - INFO - Finished inference for site 398. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:33:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 3944
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:35:05 2015.
+
+2015-03-13 16:35:46,734 - INFO - Getting results for site 399...
+2015-03-13 16:35:46,734 - INFO - Finished inference for site 399. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:33:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 7038
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:35:45 2015.
+
+2015-03-13 16:35:47,736 - INFO - Getting results for site 396...
+2015-03-13 16:35:47,736 - INFO - Finished inference for site 396. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:31:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 981
+	MCMC is deemed to have converged at Fri Mar 13 16:35:47 2015.
+
+2015-03-13 16:37:27,864 - INFO - Getting results for site 401...
+2015-03-13 16:37:27,865 - INFO - Finished inference for site 401. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:35:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2882
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:37:27 2015.
+
+2015-03-13 16:37:37,879 - INFO - Getting results for site 402...
+2015-03-13 16:37:37,880 - INFO - Finished inference for site 402. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:35:45 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 4698
+	MCMC is deemed to have converged at Fri Mar 13 16:37:36 2015.
+
+2015-03-13 16:38:06,917 - INFO - Getting results for site 403...
+2015-03-13 16:38:06,918 - INFO - Finished inference for site 403. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:35:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1957
+	MCMC is deemed to have converged at Fri Mar 13 16:38:05 2015.
+
+2015-03-13 16:39:39,035 - INFO - Getting results for site 385...
+2015-03-13 16:39:39,036 - INFO - Finished inference for site 385. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:23:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 569
+	MCMC is deemed to have converged at Fri Mar 13 16:39:38 2015.
+
+2015-03-13 16:39:51,052 - INFO - Getting results for site 406...
+2015-03-13 16:39:51,053 - INFO - Finished inference for site 406. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:38:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 4286
+		There are 5 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:39:50 2015.
+
+2015-03-13 16:40:40,116 - INFO - Getting results for site 405...
+2015-03-13 16:40:40,116 - INFO - Finished inference for site 405. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:37:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 5333
+	MCMC is deemed to have converged at Fri Mar 13 16:40:39 2015.
+
+2015-03-13 16:40:56,138 - INFO - Getting results for site 404...
+2015-03-13 16:40:56,138 - INFO - Finished inference for site 404. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:37:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1677
+	MCMC is deemed to have converged at Fri Mar 13 16:40:55 2015.
+
+2015-03-13 16:41:33,186 - INFO - Getting results for site 400...
+2015-03-13 16:41:33,186 - INFO - Finished inference for site 400. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:34:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2991
+	MCMC is deemed to have converged at Fri Mar 13 16:41:32 2015.
+
+2015-03-13 16:42:57,292 - INFO - Getting results for site 407...
+2015-03-13 16:42:57,293 - INFO - Finished inference for site 407. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:39:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1362
+	MCMC is deemed to have converged at Fri Mar 13 16:42:56 2015.
+
+2015-03-13 16:43:35,342 - INFO - Getting results for site 409...
+2015-03-13 16:43:35,342 - INFO - Finished inference for site 409. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:40:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 988
+	MCMC is deemed to have converged at Fri Mar 13 16:43:35 2015.
+
+2015-03-13 16:44:39,423 - INFO - Getting results for site 411...
+2015-03-13 16:44:39,423 - INFO - Finished inference for site 411. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:41:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 435
+	MCMC is deemed to have converged at Fri Mar 13 16:44:38 2015.
+
+2015-03-13 16:45:01,452 - INFO - Getting results for site 410...
+2015-03-13 16:45:01,453 - INFO - Finished inference for site 410. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:40:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 586
+	MCMC is deemed to have converged at Fri Mar 13 16:45:00 2015.
+
+2015-03-13 16:46:08,538 - INFO - Getting results for site 412...
+2015-03-13 16:46:08,539 - INFO - Finished inference for site 412. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:42:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 999
+	MCMC is deemed to have converged at Fri Mar 13 16:46:07 2015.
+
+2015-03-13 16:46:21,555 - INFO - Getting results for site 413...
+2015-03-13 16:46:21,556 - INFO - Finished inference for site 413. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:43:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 627
+	MCMC is deemed to have converged at Fri Mar 13 16:46:21 2015.
+
+2015-03-13 16:47:04,611 - INFO - Getting results for site 414...
+2015-03-13 16:47:04,612 - INFO - Finished inference for site 414. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:44:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 948
+	MCMC is deemed to have converged at Fri Mar 13 16:47:04 2015.
+
+2015-03-13 16:47:46,665 - INFO - Getting results for site 415...
+2015-03-13 16:47:46,666 - INFO - Finished inference for site 415. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:45:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 518
+	MCMC is deemed to have converged at Fri Mar 13 16:47:46 2015.
+
+2015-03-13 16:50:05,842 - INFO - Getting results for site 416...
+2015-03-13 16:50:05,843 - INFO - Finished inference for site 416. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:46:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 737
+	MCMC is deemed to have converged at Fri Mar 13 16:50:05 2015.
+
+2015-03-13 16:51:05,924 - INFO - Getting results for site 418...
+2015-03-13 16:51:05,925 - INFO - Finished inference for site 418. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:47:04 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 499
+		There are 2 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:51:05 2015.
+
+2015-03-13 16:52:04,000 - INFO - Getting results for site 408...
+2015-03-13 16:52:04,000 - INFO - Finished inference for site 408. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:39:50 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1941
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:52:03 2015.
+
+2015-03-13 16:53:08,081 - INFO - Getting results for site 420...
+2015-03-13 16:53:08,082 - INFO - Finished inference for site 420. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:50:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 656
+	MCMC is deemed to have converged at Fri Mar 13 16:53:07 2015.
+
+2015-03-13 16:54:41,199 - INFO - Getting results for site 421...
+2015-03-13 16:54:41,199 - INFO - Finished inference for site 421. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:51:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 847
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:54:41 2015.
+
+2015-03-13 16:54:52,214 - INFO - Getting results for site 422...
+2015-03-13 16:54:52,214 - INFO - Finished inference for site 422. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:52:03 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 551
+	MCMC is deemed to have converged at Fri Mar 13 16:54:51 2015.
+
+2015-03-13 16:57:31,416 - INFO - Getting results for site 417...
+2015-03-13 16:57:31,417 - INFO - Finished inference for site 417. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:46:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 911
+		There are 3 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 16:57:31 2015.
+
+2015-03-13 16:57:40,430 - INFO - Getting results for site 425...
+2015-03-13 16:57:40,430 - INFO - Finished inference for site 425. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:54:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 762
+	MCMC is deemed to have converged at Fri Mar 13 16:57:40 2015.
+
+2015-03-13 17:00:21,638 - INFO - Getting results for site 427...
+2015-03-13 17:00:21,661 - INFO - Finished inference for site 427. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:57:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 631
+	MCMC is deemed to have converged at Fri Mar 13 17:00:21 2015.
+
+2015-03-13 17:00:54,706 - INFO - Getting results for site 384...
+2015-03-13 17:00:54,706 - INFO - Finished inference for site 384. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:22:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.60 and mean Neff = 44
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.01 and mean Neff = 898
+	MCMC is deemed to have converged at Fri Mar 13 17:00:54 2015.
+
+2015-03-13 17:01:20,740 - INFO - Getting results for site 426...
+2015-03-13 17:01:20,741 - INFO - Finished inference for site 426. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:57:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 770
+	MCMC is deemed to have converged at Fri Mar 13 17:01:20 2015.
+
+2015-03-13 17:02:48,853 - INFO - Getting results for site 429...
+2015-03-13 17:02:48,854 - INFO - Finished inference for site 429. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:00:54 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 2296
+	MCMC is deemed to have converged at Fri Mar 13 17:02:48 2015.
+
+2015-03-13 17:03:16,889 - INFO - Getting results for site 430...
+2015-03-13 17:03:16,890 - INFO - Finished inference for site 430. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:01:20 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1721
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:03:15 2015.
+
+2015-03-13 17:05:01,035 - INFO - Getting results for site 428...
+2015-03-13 17:05:01,036 - INFO - Finished inference for site 428. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:00:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 638
+	MCMC is deemed to have converged at Fri Mar 13 17:05:00 2015.
+
+2015-03-13 17:05:16,056 - INFO - Getting results for site 419...
+2015-03-13 17:05:16,057 - INFO - Finished inference for site 419. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:47:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1249
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:05:15 2015.
+
+2015-03-13 17:05:57,110 - INFO - Getting results for site 432...
+2015-03-13 17:05:57,111 - INFO - Finished inference for site 432. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:03:15 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1879
+	MCMC is deemed to have converged at Fri Mar 13 17:05:56 2015.
+
+2015-03-13 17:06:32,155 - INFO - Getting results for site 431...
+2015-03-13 17:06:32,156 - INFO - Finished inference for site 431. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:02:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 675
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:06:31 2015.
+
+2015-03-13 17:07:02,193 - INFO - Getting results for site 424...
+2015-03-13 17:07:02,194 - INFO - Finished inference for site 424. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:54:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 907
+	MCMC is deemed to have converged at Fri Mar 13 17:07:01 2015.
+
+2015-03-13 17:07:19,216 - INFO - Getting results for site 433...
+2015-03-13 17:07:19,217 - INFO - Finished inference for site 433. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:05:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 863
+	MCMC is deemed to have converged at Fri Mar 13 17:07:19 2015.
+
+2015-03-13 17:08:25,301 - INFO - Getting results for site 434...
+2015-03-13 17:08:25,302 - INFO - Finished inference for site 434. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:05:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 404
+	MCMC is deemed to have converged at Fri Mar 13 17:08:24 2015.
+
+2015-03-13 17:09:00,347 - INFO - Getting results for site 435...
+2015-03-13 17:09:00,348 - INFO - Finished inference for site 435. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:05:56 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 448
+	MCMC is deemed to have converged at Fri Mar 13 17:08:59 2015.
+
+2015-03-13 17:09:34,392 - INFO - Getting results for site 438...
+2015-03-13 17:09:34,393 - INFO - Finished inference for site 438. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:07:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1613
+	MCMC is deemed to have converged at Fri Mar 13 17:09:33 2015.
+
+2015-03-13 17:10:16,449 - INFO - Getting results for site 436...
+2015-03-13 17:10:16,449 - INFO - Finished inference for site 436. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:06:31 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 635
+	MCMC is deemed to have converged at Fri Mar 13 17:10:16 2015.
+
+2015-03-13 17:11:10,519 - INFO - Getting results for site 440...
+2015-03-13 17:11:10,519 - INFO - Finished inference for site 440. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:08:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1155
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:11:10 2015.
+
+2015-03-13 17:11:11,521 - INFO - Getting results for site 437...
+2015-03-13 17:11:11,521 - INFO - Finished inference for site 437. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:07:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 943
+	MCMC is deemed to have converged at Fri Mar 13 17:11:10 2015.
+
+2015-03-13 17:11:59,583 - INFO - Getting results for site 439...
+2015-03-13 17:11:59,583 - INFO - Finished inference for site 439. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:08:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 985
+	MCMC is deemed to have converged at Fri Mar 13 17:11:58 2015.
+
+2015-03-13 17:12:50,650 - INFO - Getting results for site 442...
+2015-03-13 17:12:50,650 - INFO - Finished inference for site 442. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:10:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 392
+	MCMC is deemed to have converged at Fri Mar 13 17:12:49 2015.
+
+2015-03-13 17:13:27,697 - INFO - Getting results for site 443...
+2015-03-13 17:13:27,697 - INFO - Finished inference for site 443. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:11:10 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 284
+	MCMC is deemed to have converged at Fri Mar 13 17:13:27 2015.
+
+2015-03-13 17:14:16,762 - INFO - Getting results for site 441...
+2015-03-13 17:14:16,762 - INFO - Finished inference for site 441. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:09:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 372
+	MCMC is deemed to have converged at Fri Mar 13 17:14:16 2015.
+
+2015-03-13 17:14:38,792 - INFO - Getting results for site 444...
+2015-03-13 17:14:38,792 - INFO - Finished inference for site 444. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:11:11 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 687
+	MCMC is deemed to have converged at Fri Mar 13 17:14:38 2015.
+
+2015-03-13 17:15:47,880 - INFO - Getting results for site 423...
+2015-03-13 17:15:47,881 - INFO - Finished inference for site 423. Here is the summary:
+	Beginning MCMC at Fri Mar 13 16:53:07 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1136
+	MCMC is deemed to have converged at Fri Mar 13 17:15:46 2015.
+
+2015-03-13 17:16:55,969 - INFO - Getting results for site 445...
+2015-03-13 17:16:55,970 - INFO - Finished inference for site 445. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:11:58 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 456
+	MCMC is deemed to have converged at Fri Mar 13 17:16:55 2015.
+
+2015-03-13 17:17:06,985 - INFO - Getting results for site 448...
+2015-03-13 17:17:06,985 - INFO - Finished inference for site 448. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:14:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.05 and mean Neff = 236
+	MCMC is deemed to have converged at Fri Mar 13 17:17:06 2015.
+
+2015-03-13 17:18:14,072 - INFO - Getting results for site 447...
+2015-03-13 17:18:14,073 - INFO - Finished inference for site 447. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:13:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 746
+	MCMC is deemed to have converged at Fri Mar 13 17:18:13 2015.
+
+2015-03-13 17:18:18,079 - INFO - Getting results for site 446...
+2015-03-13 17:18:18,079 - INFO - Finished inference for site 446. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:12:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 369
+	MCMC is deemed to have converged at Fri Mar 13 17:18:17 2015.
+
+2015-03-13 17:18:37,103 - INFO - Getting results for site 450...
+2015-03-13 17:18:37,103 - INFO - Finished inference for site 450. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:15:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 208
+	MCMC is deemed to have converged at Fri Mar 13 17:18:36 2015.
+
+2015-03-13 17:19:37,181 - INFO - Getting results for site 451...
+2015-03-13 17:19:37,182 - INFO - Finished inference for site 451. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:16:55 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 462
+	MCMC is deemed to have converged at Fri Mar 13 17:19:36 2015.
+
+2015-03-13 17:21:17,311 - INFO - Getting results for site 452...
+2015-03-13 17:21:17,311 - INFO - Finished inference for site 452. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:17:06 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 207
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:21:16 2015.
+
+2015-03-13 17:21:47,350 - INFO - Getting results for site 455...
+2015-03-13 17:21:47,351 - INFO - Finished inference for site 455. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:18:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 360
+	MCMC is deemed to have converged at Fri Mar 13 17:21:47 2015.
+
+2015-03-13 17:22:33,410 - INFO - Getting results for site 456...
+2015-03-13 17:22:33,411 - INFO - Finished inference for site 456. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:19:36 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 302
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:22:33 2015.
+
+2015-03-13 17:22:41,422 - INFO - Getting results for site 454...
+2015-03-13 17:22:41,422 - INFO - Finished inference for site 454. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:18:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 285
+	MCMC is deemed to have converged at Fri Mar 13 17:22:40 2015.
+
+2015-03-13 17:24:16,547 - INFO - Getting results for site 449...
+2015-03-13 17:24:16,547 - INFO - Finished inference for site 449. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:14:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 427
+	MCMC is deemed to have converged at Fri Mar 13 17:24:16 2015.
+
+2015-03-13 17:24:17,549 - INFO - Getting results for site 457...
+2015-03-13 17:24:17,549 - INFO - Finished inference for site 457. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:21:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 410
+	MCMC is deemed to have converged at Fri Mar 13 17:24:17 2015.
+
+2015-03-13 17:25:08,616 - INFO - Getting results for site 458...
+2015-03-13 17:25:08,616 - INFO - Finished inference for site 458. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:21:47 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 763
+	MCMC is deemed to have converged at Fri Mar 13 17:25:08 2015.
+
+2015-03-13 17:25:13,624 - INFO - Getting results for site 459...
+2015-03-13 17:25:13,624 - INFO - Finished inference for site 459. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:22:33 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03 and mean Neff = 315
+	MCMC is deemed to have converged at Fri Mar 13 17:25:13 2015.
+
+2015-03-13 17:25:41,660 - INFO - Getting results for site 453...
+2015-03-13 17:25:41,660 - INFO - Finished inference for site 453. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:18:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 201
+	MCMC is deemed to have converged at Fri Mar 13 17:25:41 2015.
+
+2015-03-13 17:26:05,692 - INFO - Getting results for site 460...
+2015-03-13 17:26:05,692 - INFO - Finished inference for site 460. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:22:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 594
+	MCMC is deemed to have converged at Fri Mar 13 17:26:05 2015.
+
+2015-03-13 17:26:49,750 - INFO - Getting results for site 461...
+2015-03-13 17:26:49,751 - INFO - Finished inference for site 461. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:24:16 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 937
+	MCMC is deemed to have converged at Fri Mar 13 17:26:49 2015.
+
+2015-03-13 17:26:52,755 - INFO - Getting results for site 462...
+2015-03-13 17:26:52,756 - INFO - Finished inference for site 462. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:24:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1234
+	MCMC is deemed to have converged at Fri Mar 13 17:26:52 2015.
+
+2015-03-13 17:27:19,791 - INFO - Getting results for site 463...
+2015-03-13 17:27:19,792 - INFO - Finished inference for site 463. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:25:08 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 237
+	MCMC is deemed to have converged at Fri Mar 13 17:27:19 2015.
+
+2015-03-13 17:28:17,867 - INFO - Getting results for site 464...
+2015-03-13 17:28:17,867 - INFO - Finished inference for site 464. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:25:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1039
+	MCMC is deemed to have converged at Fri Mar 13 17:28:17 2015.
+
+2015-03-13 17:29:46,982 - INFO - Getting results for site 467...
+2015-03-13 17:29:46,982 - INFO - Finished inference for site 467. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:26:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 629
+	MCMC is deemed to have converged at Fri Mar 13 17:29:46 2015.
+
+2015-03-13 17:30:53,066 - INFO - Getting results for site 469...
+2015-03-13 17:30:53,067 - INFO - Finished inference for site 469. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:27:19 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 246
+	MCMC is deemed to have converged at Fri Mar 13 17:30:52 2015.
+
+2015-03-13 17:31:22,105 - INFO - Getting results for site 466...
+2015-03-13 17:31:22,105 - INFO - Finished inference for site 466. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:26:05 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1357
+	MCMC is deemed to have converged at Fri Mar 13 17:31:21 2015.
+
+2015-03-13 17:31:36,124 - INFO - Getting results for site 468...
+2015-03-13 17:31:36,125 - INFO - Finished inference for site 468. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:26:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 402
+	MCMC is deemed to have converged at Fri Mar 13 17:31:35 2015.
+
+2015-03-13 17:32:50,219 - INFO - Getting results for site 471...
+2015-03-13 17:32:50,220 - INFO - Finished inference for site 471. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:29:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 522
+	MCMC is deemed to have converged at Fri Mar 13 17:32:49 2015.
+
+2015-03-13 17:33:28,269 - INFO - Getting results for site 465...
+2015-03-13 17:33:28,270 - INFO - Finished inference for site 465. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:25:41 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 663
+	MCMC is deemed to have converged at Fri Mar 13 17:33:27 2015.
+
+2015-03-13 17:33:46,293 - INFO - Getting results for site 472...
+2015-03-13 17:33:46,294 - INFO - Finished inference for site 472. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:30:52 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 458
+	MCMC is deemed to have converged at Fri Mar 13 17:33:46 2015.
+
+2015-03-13 17:34:01,314 - INFO - Getting results for site 473...
+2015-03-13 17:34:01,315 - INFO - Finished inference for site 473. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:31:21 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 313
+	MCMC is deemed to have converged at Fri Mar 13 17:34:00 2015.
+
+2015-03-13 17:34:25,347 - INFO - Getting results for site 470...
+2015-03-13 17:34:25,347 - INFO - Finished inference for site 470. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:28:17 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 426
+	MCMC is deemed to have converged at Fri Mar 13 17:34:24 2015.
+
+2015-03-13 17:35:24,424 - INFO - Getting results for site 475...
+2015-03-13 17:35:24,424 - INFO - Finished inference for site 475. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:32:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 367
+	MCMC is deemed to have converged at Fri Mar 13 17:35:24 2015.
+
+2015-03-13 17:35:48,457 - INFO - Getting results for site 476...
+2015-03-13 17:35:48,458 - INFO - Finished inference for site 476. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:33:27 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1925
+	MCMC is deemed to have converged at Fri Mar 13 17:35:47 2015.
+
+2015-03-13 17:35:52,464 - INFO - Getting results for site 474...
+2015-03-13 17:35:52,464 - INFO - Finished inference for site 474. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:31:35 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 415
+	MCMC is deemed to have converged at Fri Mar 13 17:35:51 2015.
+
+2015-03-13 17:36:00,475 - INFO - Getting results for site 478...
+2015-03-13 17:36:00,475 - INFO - Finished inference for site 478. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:34:00 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1619
+	MCMC is deemed to have converged at Fri Mar 13 17:35:59 2015.
+
+2015-03-13 17:36:57,549 - INFO - Getting results for site 477...
+2015-03-13 17:36:57,549 - INFO - Finished inference for site 477. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:33:46 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 1013
+	MCMC is deemed to have converged at Fri Mar 13 17:36:57 2015.
+
+2015-03-13 17:37:42,608 - INFO - Getting results for site 479...
+2015-03-13 17:37:42,608 - INFO - Finished inference for site 479. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:34:25 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 877
+	MCMC is deemed to have converged at Fri Mar 13 17:37:42 2015.
+
+2015-03-13 17:38:35,678 - INFO - Getting results for site 482...
+2015-03-13 17:38:35,679 - INFO - Finished inference for site 482. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:35:51 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 238
+	MCMC is deemed to have converged at Fri Mar 13 17:38:34 2015.
+
+2015-03-13 17:38:49,697 - INFO - Getting results for site 481...
+2015-03-13 17:38:49,697 - INFO - Finished inference for site 481. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:35:48 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.00 and mean Neff = 964
+	MCMC is deemed to have converged at Fri Mar 13 17:38:49 2015.
+
+2015-03-13 17:38:59,710 - INFO - Getting results for site 480...
+2015-03-13 17:38:59,710 - INFO - Finished inference for site 480. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:35:24 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 434
+	MCMC is deemed to have converged at Fri Mar 13 17:38:59 2015.
+
+2015-03-13 17:39:32,754 - INFO - Getting results for site 484...
+2015-03-13 17:39:32,754 - INFO - Finished inference for site 484. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:36:57 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 263
+	MCMC is deemed to have converged at Fri Mar 13 17:39:32 2015.
+
+2015-03-13 17:39:54,784 - INFO - Getting results for site 483...
+2015-03-13 17:39:54,784 - INFO - Finished inference for site 483. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:35:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02 and mean Neff = 251
+	MCMC is deemed to have converged at Fri Mar 13 17:39:54 2015.
+
+2015-03-13 17:40:40,846 - INFO - Getting results for site 485...
+2015-03-13 17:40:40,846 - INFO - Finished inference for site 485. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:37:42 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 563
+	MCMC is deemed to have converged at Fri Mar 13 17:40:40 2015.
+
+2015-03-13 17:41:13,889 - INFO - Getting results for site 486...
+2015-03-13 17:41:13,890 - INFO - Finished inference for site 486. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:38:34 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 299
+	MCMC is deemed to have converged at Fri Mar 13 17:41:13 2015.
+
+2015-03-13 17:41:38,922 - INFO - Getting results for site 488...
+2015-03-13 17:41:38,923 - INFO - Finished inference for site 488. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:38:59 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 498
+	MCMC is deemed to have converged at Fri Mar 13 17:41:38 2015.
+
+2015-03-13 17:42:18,975 - INFO - Getting results for site 490...
+2015-03-13 17:42:18,975 - INFO - Finished inference for site 490. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:39:54 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 379
+	MCMC is deemed to have converged at Fri Mar 13 17:42:18 2015.
+
+2015-03-13 17:43:40,079 - INFO - Getting results for site 489...
+2015-03-13 17:43:40,080 - INFO - Finished inference for site 489. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:39:32 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 620
+	MCMC is deemed to have converged at Fri Mar 13 17:43:39 2015.
+
+2015-03-13 17:44:45,165 - INFO - Getting results for site 494...
+2015-03-13 17:44:45,165 - INFO - Finished inference for site 494. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:42:18 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 746
+	MCMC is deemed to have converged at Fri Mar 13 17:44:44 2015.
+
+2015-03-13 17:45:01,187 - INFO - Getting results for site 492...
+2015-03-13 17:45:01,187 - INFO - Finished inference for site 492. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:41:13 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 331
+	MCMC is deemed to have converged at Fri Mar 13 17:45:01 2015.
+
+2015-03-13 17:46:01,264 - INFO - Getting results for site 487...
+2015-03-13 17:46:01,265 - INFO - Finished inference for site 487. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:38:49 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 691
+	MCMC is deemed to have converged at Fri Mar 13 17:46:01 2015.
+
+2015-03-13 17:46:02,266 - INFO - Getting results for site 495...
+2015-03-13 17:46:02,266 - INFO - Finished inference for site 495. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:43:39 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 700
+	MCMC is deemed to have converged at Fri Mar 13 17:46:01 2015.
+
+2015-03-13 17:46:16,284 - INFO - Getting results for site 493...
+2015-03-13 17:46:16,284 - INFO - Finished inference for site 493. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:41:38 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 456
+	MCMC is deemed to have converged at Fri Mar 13 17:46:16 2015.
+
+2015-03-13 17:47:52,406 - INFO - Getting results for site 497...
+2015-03-13 17:47:52,407 - INFO - Finished inference for site 497. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:45:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 396
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:47:51 2015.
+
+2015-03-13 17:51:23,678 - INFO - Getting results for site 491...
+2015-03-13 17:51:23,678 - INFO - Finished inference for site 491. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:40:40 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 557
+	MCMC is deemed to have converged at Fri Mar 13 17:51:23 2015.
+
+2015-03-13 17:53:44,856 - INFO - Getting results for site 496...
+2015-03-13 17:53:44,857 - INFO - Finished inference for site 496. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:44:44 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 503
+	MCMC is deemed to have converged at Fri Mar 13 17:53:43 2015.
+
+2015-03-13 17:58:06,229 - INFO - Getting results for site 498...
+2015-03-13 17:58:06,230 - INFO - Finished inference for site 498. Here is the summary:
+	Beginning MCMC at Fri Mar 13 17:46:01 2015
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01 and mean Neff = 938
+		There are 1 characters where R is nan
+	MCMC is deemed to have converged at Fri Mar 13 17:58:05 2015.
+
+2015-03-13 17:58:06,600 - INFO - Now writing preferences to /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output//PR8_replicate_3_prefs.txt
+
+2015-03-13 17:58:06,706 - INFO - Successful completion of dms_inferprefs at Fri Mar 13 17:58:06 2015
