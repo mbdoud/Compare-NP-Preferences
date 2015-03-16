@@ -66,11 +66,43 @@ Description of the analysis and results
 Making alignments
 ~~~~~~~~~~~~~~~~~
 
+For each amplicon (*DNA*, *mutDNA*, *virus*, *mutvirus*) of each replicate (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*), the master script ``run_mapmuts.py`` calls the `mapmuts`_ script ``mapmuts_makealignments.py`` which aligns paired reads to each other and to a reference sequence. The parameters for **r1files**, **r2files**, and **a1file** are unique to each sample, and **generange** and **fullgenefile** are unique to each homolog. The following alignment parameters are common to all samples (See the `mapmuts documentation`_ for a full description of the alignment method and these parameters):
+
+  * maxa2m 1
+  * maxa1m 1
+  * minq 25
+  * minoverlap 100
+  * maxgenem 10
+  * maxrm 1
+  * maxn 5
+
+Alignments of paired reads to the reference sequences that meet these criteria are saved in subdirectories of the `mapmuts`_ output directory in the form ``/mapmuts_output/replicate/amplicon/replicate_amplicon_alignments.txt.gz``. ``mapmuts_alignmentsummaryplot.py`` makes a summary plot of the number of read pairs aligned, as well as the number of read pairs that fail to pass various criteria, for each sample:
+
+.. figure:: /mapmuts_output/mapmuts_plots/alignmentsummaryplot.jpg
+  :width: 25%
+  :align: center
+  :alt: alignmentsummaryplot.jpg
+
+Only the read pairs that met all alignment criteria are used in the subsequent analysis.
+
+
+
 Parsing mutations
 ~~~~~~~~~~~~~~~~~
 
+``run_mapmuts.py`` calls the `mapmuts`_ script ``mapmuts_parsecounts.py`` to parse each sample's ``_alignments.txt.gz`` file and count and classify observed mutations within the coding region of the gene (See the `mapmuts documentation`_ for a complete description of this script). The parameters **r1exclude** and **r2exclude** are set to ``1 2 3 4 5 6 7 8 9 10 11 12 13 14 15`` for all samples to ignore the first 15 base-pairs of each read from the subsequent analysis since these positions in the reads typically have higher error rates. For each sample, the parsed mutations are summarized in counts files (``*_ntcounts.txt``, ``*_codoncounts.txt``, ``*_aacounts.txt``) that list the number of times each character (nt, codon, or codon translated to amino-acid) is observed at each position. The mutation frequencies for the four amplicons in  *Aichi68C_replicate_1* shown below are representative of the five replicates sequenced and show the introduction of multi-nucleotide mutations during codon mutagenesis and purifying selection against stop codons and nonsynonymous mutations during reverse genetics rescue of mutant viruses:
+
+.. figure:: mapmuts_output/Aichi68C_replicate_1/parsesummary_codon_types_and_nmuts.jpg
+  :width: 25%
+  :align: center
+  :alt: Aichi68C_replicate_1/parsesummary_codon_types_and_nmuts.jpg
+
+
 Inferring site-specific amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+``run_dmstools.py`` calls the `dms_tools`_ script ``dms_inferprefs.py`` to infer site-specific amino-acid preferences for each replicate experiment (*PR8_replicate_1*, *PR8_replicate_2*, *PR8_replicate_3*, *Aichi68C_replicate_1*, *Aichi68C_replicate_2*). The `mapmuts`_ analysis described above summarized deep mutational scanning sequencing data into ``*_codoncounts.txt`` files for the *DNA*, *virus*, *mutDNA*, and *mutvirus* amplicons within each replicate. These codoncounts files are used as pre-selection counts (*mutDNA*), post-selection counts (*mutvirus*), pre-selection error counts (*DNA*), and post-selection error counts (*virus*) in the `algorithm to infer site-specific preferences`_ described in the `dms_tools documentation`_.
+
 
 Calculating and visualizing correlations in amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,7 +127,10 @@ Analyzing performance of amino-acid preference-based substitution models
 
 
 .. _`mapmuts`: https://github.com/jbloom/mapmuts
+.. _`mapmuts documentation`: http://jbloom.github.io/mapmuts/
 .. _`dms_tools`: https://github.com/jbloom/dms_tools
+.. _`algorithm to infer site-specific preferences`: http://jbloom.github.io/dms_tools/inferprefs_algorithm.html
+.. _`dms_tools documentation`: http://jbloom.github.io/dms_tools/
 .. _`Python`: http://www.python.org/
 .. _`phyloExpCM`: https://github.com/jbloom/phyloExpCM
 .. _`previously published`: http://dx.doi.org/10.1093/molbev/msu173
