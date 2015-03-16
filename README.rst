@@ -146,6 +146,14 @@ Quantifying differences in preferences between two groups of replicate experimen
 
 Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. The analysis in ``compare_prefs.py`` quantifies this site-specific experimental noise and accounts for it when quantifying the changes in preferences observed between homologs.
 
+.. figure:: compare_prefs_output/Aichi1968_previous_study_vs_Aichi1968_current_study/Scatter_RNA_Variable.jpg
+  :scale: 50%
+  :align: center
+
+.. figure:: compare_prefs_output/Aichi1968_vs_PR1934/Scatter_RNA_Variable.jpg
+  :scale: 50%
+  :align: center
+
 Generating null models of differences in the measured amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
