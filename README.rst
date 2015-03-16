@@ -157,8 +157,20 @@ Deep mutational scanning is subject to experimental noise, so there is variation
 Generating null models of differences in the measured amino-acid preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. figure:: compare_prefs_output/Aichi1968_previous_study_vs_Aichi1968_current_study/simulation_null/Aichi1968_previous_study_vs_Aichi1968_current_study_simulated_RMSD_distribution.jpg
+  :scale: 50%
+  :align: center
+
+.. figure:: compare_prefs_output/Aichi1968_vs_PR1934/simulation_null/Aichi1968_vs_PR1934_simulated_RMSD_distribution.jpg
+  :scale: 50%
+  :align: center
+
 Analyzing differences in preferences within sites of functional, structural, and evolutionary importance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: compare_prefs_output/RMSD_boxplot.jpg
+  :scale: 50%
+  :align: center
 
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
