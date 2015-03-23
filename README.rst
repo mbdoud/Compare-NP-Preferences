@@ -144,7 +144,13 @@ The above correlations were generated using the mean preferences from each exper
 Quantifying differences in preferences between two groups of replicate experiments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. The analysis in ``compare_prefs.py`` quantifies this site-specific experimental noise and accounts for it when quantifying the changes in preferences observed between homologs.
+Deep mutational scanning is subject to experimental noise, so there is variation in the inferred preferences between biological replicate experiments. This experimental noise is greater at some sites than others. The analysis in ``compare_prefs.py`` quantifies this site-specific experimental noise and accounts for it when quantifying the changes in preferences observed between homologs. This method is desribed in the paper and the source code, and calculates for each site the root mean square distance within replicates of the same homolog (averaged across both homologs, **RMSD_within**) and the root mean square distance between replicates of different homologs (**RMSD_between**). **RMSD_within** provides a statistic for the variability in measurements at a given site, while **RMSD_between** provides a statistic for the observed changes in preference between homologs at a given site. We calculate **RMSD_corrected** by subtracting **RMSD_within** from **RMSD_between** and use it as a quantification of the magnitude of change in preferences between homologs that is not due to experimental noise. This calculation may become more intuitive with the following example sites showing the amino-acid preferences inferred for multiple biological replicates of each homolog:
+
+.. figure:: example_rmsd.jpg
+  :scale: 50%
+  :align: center
+
+The analysis in ``compare_prefs.py`` calculates these RMSD statistics for every site that was mutagenized in our deep mutational scanning experiment (sites 2 through 498). As a control analysis it also calculates these statistics when comparing two independent experiments on Aichi/1968 to each other. The following scatter plots show the distribution of RMSD statistics as calculated in the control Aichi/1968 previous study vs. Aichi/1968 current study analysis, as well as the PR/1934 vs. Aichi/1968 analysis. Each point represents one site in the protein; the higher the point is above the y=x line, the larger the **RMSD_corrected**. Sites in the RNA binding groove are highlighted magenta, and sites with variable amino-acid identity between PR/1934 and Aichi/1968 are highlighted lime.
 
 .. figure:: compare_prefs_output/Aichi1968_previous_study_vs_Aichi1968_current_study/Scatter_RNA_Variable.jpg
   :scale: 50%
