@@ -1,0 +1,4 @@
+heatmap_script_path /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/scripts/correlation_heatmap.py
+preferencefiles_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/
+plot_output_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/correlation_plots
+mapmuts_scripts_directory /fh/fast/bloom_j/grp/mapmuts/scripts

@@ -1,3 +1,7 @@
+*.sbatch
+scripts/temp_config_and_sbatch_files/
+temp_outputtests/
+*.pyc
 Thumbs.db
 dmstools_output/*.sbatch
 sim_*_data/

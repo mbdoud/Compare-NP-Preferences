@@ -1,0 +1,4 @@
+adapter_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/adapter_seqs/
+refseq_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/ref_seqs/
+mapmuts_output_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/
+FASTQ_directory /fh/fast/bloom_j/grp/mapmuts/examples/SRA_NP_comparison_FASTQ/

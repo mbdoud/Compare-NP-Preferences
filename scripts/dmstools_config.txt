@@ -1,0 +1,4 @@
+mapmuts_output_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/mapmuts_output/
+dmstools_output_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/
+previous_aichi_analysis_dir /fh/fast/bloom_j/grp/mapmuts/examples/2013Analysis_Influenza_NP_Aichi68/
+previous_ha_analysis_dir /fh/fast/bloom_j/grp/mapmuts/examples/WSN_HA_2014Analysis/
