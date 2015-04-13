@@ -1,3 +1,5 @@
+Thumbs.db
+dmstools_output/*.sbatch
 sim_*_data/
 calculate_RMSD_randomization_*infile*.txt
 *randomization*RMSD*.txt
