@@ -27,7 +27,7 @@ The analysis pipeline below was performed using the following software:
  * `mapmuts`_ version 1.1
  * `dms_tools`_ version 1.1.2
  * `phyloExpCM`_ version 0.32
- * `HYPHY` version 2.220
+ * `HyPhy` version 2.220
 
 Running the analysis scripts
 ----------------------------
@@ -214,7 +214,7 @@ The ``compare_prefs.py`` script also analyzes the distributions of **RMSD_correc
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``run_phyloanalysis.py`` script uses scripts from the ``phyloExpCM`` and ``HyPhy`` packages to to build site-specific substitution models for influenza nucleoprotein and to calculate the likelihoods of phylogenetic trees.
+The ``run_phyloanalysis.py`` script uses scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build an experimentally informted site-specific substitution model for influenza nucleoprotein and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script can be run by ``python run_phyloanalysis.py phylo_config.txt``).
 
 Analyzing performance of amino-acid preference-based substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
