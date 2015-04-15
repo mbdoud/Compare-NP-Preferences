@@ -1,0 +1,7 @@
+#Summary for tree GY94_Equine.
+#
+#SUBSTITUTION_MODEL, dAIC, LOG_LIKELIHOOD, FREE_PARAMETERS, MAXIMUM_LIKELIHOOD_PARAMETERS, EMPIRICAL_PARAMETERS
+Aichi1968_PR1934_fitbetaHalpernBruno, 0, -2458.09, 5, 5, 0
+PR1934_fitbetaHalpernBruno, 244.08, -2580.13, 5, 5, 0
+Aichi1968_fitbetaHalpernBruno, 337.46, -2626.82, 5, 5, 0
+GY94_CF3x4_omega-global-gamma4_rates-gamma4, 2270.13, -3585.16, 13, 4, 9

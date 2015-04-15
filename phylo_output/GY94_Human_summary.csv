@@ -1,0 +1,7 @@
+#Summary for tree GY94_Human.
+#
+#SUBSTITUTION_MODEL, dAIC, LOG_LIKELIHOOD, FREE_PARAMETERS, MAXIMUM_LIKELIHOOD_PARAMETERS, EMPIRICAL_PARAMETERS
+Aichi1968_PR1934_fitbetaHalpernBruno, 0, -4395.78, 5, 5, 0
+PR1934_fitbetaHalpernBruno, 322.32, -4556.94, 5, 5, 0
+Aichi1968_fitbetaHalpernBruno, 485.66, -4638.61, 5, 5, 0
+GY94_CF3x4_omega-global-gamma4_rates-gamma4, 2582.31, -5678.93, 13, 4, 9

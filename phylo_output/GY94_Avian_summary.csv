@@ -1,0 +1,7 @@
+#Summary for tree GY94_Avian.
+#
+#SUBSTITUTION_MODEL, dAIC, LOG_LIKELIHOOD, FREE_PARAMETERS, MAXIMUM_LIKELIHOOD_PARAMETERS, EMPIRICAL_PARAMETERS
+Aichi1968_PR1934_fitbetaHalpernBruno, 0, -5686.6, 5, 5, 0
+PR1934_fitbetaHalpernBruno, 334.26, -5853.73, 5, 5, 0
+Aichi1968_fitbetaHalpernBruno, 639.02, -6006.11, 5, 5, 0
+GY94_CF3x4_omega-global-gamma4_rates-gamma4, 1730.01, -6543.6, 13, 4, 9

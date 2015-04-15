@@ -1,0 +1,14 @@
+# input file for running script phyloExpCM_ExpModelOptimizeHyphyTree.py for phyloExpCM_ExpModelOptimizeHyphyTree
+fastafile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/phylo_input/Aligned_NPs_Allhosts.fasta
+mutationrates freeparameters
+randomizepreferences False
+treefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/phylo_input/codonphyml_Allhosts_tree.newick
+outfileprefix None
+fitbeta freeparameter
+fixationmodel HalpernBruno
+aapreferences /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/mean_NP_both_homologs_prefs.txt
+siteslist /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/mean_Aichi68_both_studies_prefs.txt
+keeptempfiles False
+scalefactor 10000.0
+hyphypath HYPHYMP CPU=4
+persitelikelihoods True

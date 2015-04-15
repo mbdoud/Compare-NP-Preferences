@@ -1,0 +1,11 @@
+# input file for running script phyloExpCM_optimizeHyphyTree.py for phyloExpCM_optimizeHyphyTree
+fastafile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/phylo_input/Aligned_NPs_Allhosts.fasta
+hyphycmdfile hyphy_cmds.bf
+hyphyoutfile hyphy_output.txt
+hyphytreefile hyphy_tree.newick
+treefile /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/phylo_input/codonphyml_Allhosts_tree.newick
+hyphypath HYPHYMP CPU=1
+siteslist /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/mean_Aichi68_both_studies_prefs.txt
+model GY94_CF3x4_omega-global-gamma4_rates-gamma4
+hyphydistancesfile None
+persitelikelihoods sitelikelihoods.txt

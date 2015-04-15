@@ -1,0 +1,7 @@
+#Summary for tree GY94_Allhosts.
+#
+#SUBSTITUTION_MODEL, dAIC, LOG_LIKELIHOOD, FREE_PARAMETERS, MAXIMUM_LIKELIHOOD_PARAMETERS, EMPIRICAL_PARAMETERS
+Aichi1968_PR1934_fitbetaHalpernBruno, 0, -17507.9, 5, 5, 0
+PR1934_fitbetaHalpernBruno, 700.2, -17858, 5, 5, 0
+Aichi1968_fitbetaHalpernBruno, 1030.2, -18023, 5, 5, 0
+GY94_CF3x4_omega-global-gamma4_rates-gamma4, 1784.7, -18392.2, 13, 4, 9

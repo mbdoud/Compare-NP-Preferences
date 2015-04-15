@@ -1,0 +1,6 @@
+# input file for running script phyloExpCM_SiteLikelihoodComparison.py for phyloExpCM_SiteLikelihoodComparison
+sitelikelihoodfiles codonmodel_optimized_trees/Tree-GY94_Allhosts_Model-Aichi1968_PR1934_fitbetaHalpernBruno/sitelikelihoods.txt codonmodel_optimized_trees/Tree-GY94_Allhosts_Model-Aichi1968_fitbetaHalpernBruno/sitelikelihoods.txt
+modelnames Aichi1968_PR1934 Aichi1968
+dsspfile None
+dsspchain None
+outfileprefix Aichi1968_PR1934_minus_Aichi1968_Allhosts_

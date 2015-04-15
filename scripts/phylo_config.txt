@@ -1,0 +1,1 @@
+base_dir /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison

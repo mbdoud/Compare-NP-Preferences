@@ -1,0 +1,115 @@
+
+Row and/or column partition is empty. All the data will be used by default.
+Model P498xy assigned to TipSeq15_
+Branch parameter of TipSeq15_ set to :0.000104805
+Model P498xy assigned to TipSeq29_
+Branch parameter of TipSeq29_ set to :0.00109427
+Model P498xy assigned to TipSeq26_
+Branch parameter of TipSeq26_ set to :0.000431838
+Model P498xy assigned to TipSeq7_
+Branch parameter of TipSeq7_ set to :9.30049e-05
+Model P498xy assigned to Node22
+Branch parameter of Node22 set to :0.00107913
+Model P498xy assigned to TipSeq23_
+Branch parameter of TipSeq23_ set to :5e-09
+Model P498xy assigned to Node21
+Branch parameter of Node21 set to :0.000533193
+Model P498xy assigned to TipSeq21_
+Branch parameter of TipSeq21_ set to :0.000853132
+Model P498xy assigned to TipSeq12_
+Branch parameter of TipSeq12_ set to :5e-09
+Model P498xy assigned to Node27
+Branch parameter of Node27 set to :0.000426528
+Model P498xy assigned to TipSeq2_
+Branch parameter of TipSeq2_ set to :0.000103163
+Model P498xy assigned to Node26
+Branch parameter of Node26 set to :0.000429879
+Model P498xy assigned to Node20
+Branch parameter of Node20 set to :0.000853827
+Model P498xy assigned to TipSeq18_
+Branch parameter of TipSeq18_ set to :0.00010204
+Model P498xy assigned to Node19
+Branch parameter of Node19 set to :0.000380347
+Model P498xy assigned to TipSeq16_
+Branch parameter of TipSeq16_ set to :0.00240128
+Model P498xy assigned to Node18
+Branch parameter of Node18 set to :0.000197767
+Model P498xy assigned to Node16
+Branch parameter of Node16 set to :0.000391269
+Model P498xy assigned to Node14
+Branch parameter of Node14 set to :0.00010444
+Model P498xy assigned to TipSeq9_
+Branch parameter of TipSeq9_ set to :0.000104532
+Model P498xy assigned to Node13
+Branch parameter of Node13 set to :0.000209652
+Model P498xy assigned to TipSeq5_
+Branch parameter of TipSeq5_ set to :5e-09
+Model P498xy assigned to Node12
+Branch parameter of Node12 set to :0.000743054
+Model P498xy assigned to TipSeq11_
+Branch parameter of TipSeq11_ set to :0.000944019
+Model P498xy assigned to TipSeq1_
+Branch parameter of TipSeq1_ set to :5e-09
+Model P498xy assigned to Node35
+Branch parameter of Node35 set to :0.000211199
+Model P498xy assigned to Node11
+Branch parameter of Node11 set to :0.000333489
+Model P498xy assigned to TipSeq4_
+Branch parameter of TipSeq4_ set to :8.56862e-05
+Model P498xy assigned to Node10
+Branch parameter of Node10 set to :0.0010678
+Model P498xy assigned to TipSeq19_
+Branch parameter of TipSeq19_ set to :5e-09
+Model P498xy assigned to Node9
+Branch parameter of Node9 set to :0.000101422
+Model P498xy assigned to TipSeq10_
+Branch parameter of TipSeq10_ set to :0.000312777
+Model P498xy assigned to Node8
+Branch parameter of Node8 set to :0.000524273
+Model P498xy assigned to TipSeq13_
+Branch parameter of TipSeq13_ set to :0.000518045
+Model P498xy assigned to Node7
+Branch parameter of Node7 set to :0.000938964
+Model P498xy assigned to TipSeq14_
+Branch parameter of TipSeq14_ set to :0.000205019
+Model P498xy assigned to Node6
+Branch parameter of Node6 set to :5e-09
+Model P498xy assigned to TipSeq28_
+Branch parameter of TipSeq28_ set to :0.000309761
+Model P498xy assigned to TipSeq8_
+Branch parameter of TipSeq8_ set to :0.000308435
+Model P498xy assigned to Node43
+Branch parameter of Node43 set to :0.000102622
+Model P498xy assigned to Node5
+Branch parameter of Node5 set to :0.000518613
+Model P498xy assigned to TipSeq20_
+Branch parameter of TipSeq20_ set to :0.000204455
+Model P498xy assigned to Node4
+Branch parameter of Node4 set to :0.000533069
+Model P498xy assigned to TipSeq25_
+Branch parameter of TipSeq25_ set to :0.000102556
+Model P498xy assigned to TipSeq6_
+Branch parameter of TipSeq6_ set to :0.000101517
+Model P498xy assigned to Node47
+Branch parameter of Node47 set to :0.000194325
+Model P498xy assigned to Node3
+Branch parameter of Node3 set to :0.00085491
+Model P498xy assigned to TipSeq27_
+Branch parameter of TipSeq27_ set to :0.00042184
+Model P498xy assigned to TipSeq22_
+Branch parameter of TipSeq22_ set to :0.000104855
+Model P498xy assigned to Node50
+Branch parameter of Node50 set to :0.000740416
+Model P498xy assigned to Node2
+Branch parameter of Node2 set to :0.00197184
+Model P498xy assigned to TipSeq3_
+Branch parameter of TipSeq3_ set to :0.00107536
+Model P498xy assigned to Node1
+Branch parameter of Node1 set to :0.000500163
+Model P498xy assigned to TipSeq17_
+Branch parameter of TipSeq17_ set to :0.00174761
+Model P498xy assigned to TipSeq24_
+Branch parameter of TipSeq24_ set to :0.0016418
+The tips of the tree:tree were matched with the species names from the data as follows {14,28,25,6,22,20,11,1,17,15,8,4,10,0,3,18,9,12,13,27,7,19,24,5,26,21,2,16,23}
+Partition  reversible model flag computed as 1
+Variable 'likelihood' was not initialized prior to being used
