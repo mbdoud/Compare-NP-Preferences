@@ -13,7 +13,7 @@ These scripts perform a comparative analysis of site-specific amino-acid prefere
 Required software
 -----------------
 
-The analysis pipeline below was performed using following software:
+The analysis pipeline below was performed using the following software:
 
  * Platform: Linux-3.13.0-39-generic-x86_64-with-Ubuntu-14.04-trusty
  * Python version: 2.7.6
@@ -77,7 +77,7 @@ Running ``run_phyloanalysis.py``
 
 The configuration file for ``run_phyloanalysis.py`` must contain the following entry:
 
- * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output_dir`` where preference files are saved and the ``/phylo_input`` directory containing phylogenetic tree files.
+ * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``/dmstools_output`` directory where preference files are saved, the ``/phylo_input`` directory containing phylogenetic tree files, and the ``compare_prefs_output/`` directory where the amino-acid preference RMSD analyses where done.
 
 Description of the analysis and results
 ---------------------------------------
