@@ -77,7 +77,7 @@ Running ``run_phyloanalysis.py``
 
 The configuration file for ``run_phyloanalysis.py`` must contain the following entry:
 
- * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``/dmstools_output`` directory where preference files are saved, the ``/phylo_input`` directory containing phylogenetic tree files, and the ``compare_prefs_output/`` directory where the amino-acid preference RMSD analyses where done.
+ * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output`` directory where preference files are saved, the ``phylo_input`` directory containing phylogenetic tree files, and the ``compare_prefs_output`` directory where the amino-acid preference RMSD analyses where done.
 
 Description of the analysis and results
 ---------------------------------------
@@ -213,6 +213,8 @@ The ``compare_prefs.py`` script also analyzes the distributions of **RMSD_correc
 
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``run_phyloanalysis.py`` script uses scripts from the ``phyloExpCM`` and ``HyPhy`` packages to to build site-specific substitution models for influenza nucleoprotein and to calculate the likelihoods of phylogenetic trees.
 
 Analyzing performance of amino-acid preference-based substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
