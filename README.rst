@@ -216,7 +216,11 @@ Using amino-acid preferences to build codon substitution models
 
 The ``run_phyloanalysis.py`` program calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build an experimentally informed site-specific substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``.
 
-.. figure:: phylo_output/Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDcorrected.pdf
+.. figure:: phylo_output/Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDwithin.jpg
+  :scale: 50%
+  :align: center
+
+.. figure:: phylo_output/Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDcorrected.jpg
   :scale: 50%
   :align: center
 
