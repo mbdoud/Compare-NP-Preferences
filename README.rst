@@ -214,7 +214,11 @@ The ``compare_prefs.py`` script also analyzes the distributions of **RMSD_correc
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``run_phyloanalysis.py`` script uses scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build an experimentally informed site-specific substitution model for influenza nucleoprotein and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``.
+The ``run_phyloanalysis.py`` program calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build an experimentally informed site-specific substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``.
+
+.. figure:: compare_prefs_output/RMSD_boxplot.jpg
+  :scale: 50%
+  :align: center
 
 Analyzing performance of amino-acid preference-based substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
