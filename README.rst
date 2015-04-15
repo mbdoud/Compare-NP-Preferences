@@ -27,7 +27,7 @@ The analysis pipeline below was performed using following software:
  * `mapmuts`_ version 1.1
  * `dms_tools`_ version 1.1.2
  * `phyloExpCM`_ version 0.32
-
+ * `HYPHY` version 2.220
 
 Running the analysis scripts
 ----------------------------
