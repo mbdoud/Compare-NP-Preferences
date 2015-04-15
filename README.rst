@@ -13,7 +13,7 @@ These scripts perform a comparative analysis of site-specific amino-acid prefere
 Required software
 -----------------
 
-The analysis pipeline below was performed using following software:
+The analysis pipeline below was performed using the following software:
 
  * Platform: Linux-3.13.0-39-generic-x86_64-with-Ubuntu-14.04-trusty
  * Python version: 2.7.6
@@ -27,7 +27,7 @@ The analysis pipeline below was performed using following software:
  * `mapmuts`_ version 1.1
  * `dms_tools`_ version 1.1.2
  * `phyloExpCM`_ version 0.32
-
+ * `HyPhy` version 2.220
 
 Running the analysis scripts
 ----------------------------
@@ -77,7 +77,7 @@ Running ``run_phyloanalysis.py``
 
 The configuration file for ``run_phyloanalysis.py`` must contain the following entry:
 
- * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output_dir`` where preference files are saved and the ``/phylo_input`` directory containing phylogenetic tree files.
+ * ``basedir`` specifies the path to the base directory for this analysis. This directory should contain the ``dmstools_output`` directory where preference files are saved, the ``phylo_input`` directory containing phylogenetic tree files, and the ``compare_prefs_output`` directory where the amino-acid preference RMSD analyses where done.
 
 Description of the analysis and results
 ---------------------------------------
@@ -213,6 +213,12 @@ The ``compare_prefs.py`` script also analyzes the distributions of **RMSD_correc
 
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``run_phyloanalysis.py`` program calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build an experimentally informed site-specific substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``.
+
+.. figure:: phylo_output/Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDcorrected.pdf
+  :scale: 50%
+  :align: center
 
 Analyzing performance of amino-acid preference-based substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
