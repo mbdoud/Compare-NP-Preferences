@@ -215,7 +215,7 @@ Analyzing performance of experimentally informed amino-acid preference-based sub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``run_phyloanalysis.py`` script calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build a codon substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run with the command::
-    ``python run_phyloanalysis.py phylo_config.txt`` 
+    python run_phyloanalysis.py phylo_config.txt
 
 All output is written to the directory ``phylo_output``. The inputs to this script are sequence alignments, phylogenetic trees, amino-acid preferences, and **RMSD** values.
 
