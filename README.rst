@@ -250,7 +250,7 @@ Optimization results using each substitution model are in the subdirectory ``phy
     
     * ``sitelikelihoods.txt``
 
-After fitting a given phylogenetic tree, the script bins nucleoprotein sites into quintiles based on how much they improved the likelihood in going from the Aichi/1968 substitution model to the Aichi/1968 + PR/1934 substitution model. The changes in per-site likelihood are calculated by calling the script ``phyloExpCM_SiteLikelihoodComparison``. Within each quintile of sites binned by per-site likelihood, the distribution of either per-site **RMSD_within** or **RMSD_corrected** is displayed for those corresponding sites.
+After fitting a given phylogenetic tree, the script bins nucleoprotein sites into quintiles based on how much they improved the likelihood in going from the Aichi/1968 substitution model to the Aichi/1968 + PR/1934 substitution model. The changes in per-site likelihood are calculated by calling the script ``phyloExpCM_SiteLikelihoodComparison`` (see the `phyloExpCM documentation`_ for a full description). Within each quintile of sites binned by per-site likelihood, the distribution of either per-site **RMSD_within** or **RMSD_corrected** is displayed for those corresponding sites.
 
 Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDwithin.pdf
 
@@ -275,7 +275,7 @@ Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDcorrected.pdf
 .. _`dms_tools documentation`: http://jbloom.github.io/dms_tools/
 .. _`Python`: http://www.python.org/
 .. _`phyloExpCM`: https://github.com/jbloom/phyloExpCM/
-.. _`phyloExpCM documentation`: http://http://jbloom.github.io/phyloExpCM/
+.. _`phyloExpCM documentation`: http://jbloom.github.io/phyloExpCM/index.html
 .. _`previously published`: http://dx.doi.org/10.1093/molbev/msu173
 .. _`here`: https://github.com/jbloom/mapmuts/tree/master/examples/2013Analysis_Influenza_NP_Aichi68
 .. _`WSN-HA`: https://github.com/jbloom/mapmuts/tree/master/examples/WSN_HA_2014Analysis
