@@ -234,11 +234,11 @@ The codon substitution models are either site specific and experimentally inform
  
 The following summary output files are written in the directory ``phylo_output``.
 
-    * ``GY94_Allhosts_summary.csv`` 
+    * ``GY94_Allhosts_summary.csv`` Similarly named files will be built for Human, Swine, Equine, and Avian NPs. 
 
-    * ``GY94_Allhosts_summary.tex`` 
+    * ``GY94_Allhosts_summary.tex`` Similarly named files will be built for Human, Swine, Equine, and Avian NPs.
 
-Optimization results using each substitution model are in the subdirectory ``phylo_output/codonmodel_optimized_trees``. Inside this subdirectory are further subdirectories with the results for a given substitution model. The main files are:
+Optimization results using each substitution model are in the subdirectory ``phylo_output/codonmodel_optimized_trees``. Inside this subdirectory are further subdirectories with the results for a given substitution model and a given set of nucleoprotein sequences. The main files are:
 
     * ``optimizedtree.newick`` 
 
