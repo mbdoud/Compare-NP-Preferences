@@ -238,9 +238,9 @@ The codon substitution models are either site specific and experimentally inform
  
 The following summary output files are written in the directory ``phylo_output``.
 
-Here are the results for optimization of the tree built with the *GY94* model in `codonPhyML`_ :
+Here are the results for optimization of the tree built with the *GY94* model in :
 
-    .. include:: GY94_summary.csv
+    .. include:: phylo_output/GY94_Allhosts_summary.csv
        :literal:
 
 
