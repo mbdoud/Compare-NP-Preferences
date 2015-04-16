@@ -214,11 +214,12 @@ The ``compare_prefs.py`` script also analyzes the distributions of **RMSD_correc
 Using amino-acid preferences to build codon substitution models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``run_phyloanalysis.py`` script calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build a codon substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The codon substitution models are either site specific and experimentally informed by nucleoprotein amino-acid preferences (Aichi/1968, PR/1934, Aichi/1968 + PR/1934), or they are non site-specific and use the traditional Goldman-Yang 1994 model. 
+The ``run_phyloanalysis.py`` script calls scripts from the ``phyloExpCM`` and ``HyPhy`` packages to build a codon substitution model for influenza nucleoprotein, and then calculates the likelihood of a nucleoprotein phylogenetic tree given the substitution model. The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``. The inputs to this script are sequence alignments, phylogenetic trees, amino-acid preferences, and **RMSD** values.
+
+The codon substitution models are either site specific and experimentally informed by nucleoprotein amino-acid preferences (Aichi/1968, PR/1934, Aichi/1968 + PR/1934), or they are non site-specific and use the traditional Goldman-Yang 1994 model. Branch lengths and any other model parameters are optimized on a fixed nucleoprotein tree topology using ``HyPhy``. Optimization results for each substitution model are in the subdirectory ``codonmodel_optimized_trees`` found in the directory ``phylo_output``
 
 After fitting a given phylogenetic tree, the script bins nucleoprotein sites into quintiles based on how much they improved the likelihood in going from the Aichi/1968 substitution model to the Aichi/1968 + PR/1934 substitution model. Within each quintile, the distribution of either per-site **RMSD_within** or **RMSD_corrected** is displayed for the corresponding sites.
 
-The script is run as ``python run_phyloanalysis.py phylo_config.txt`` and all output is written to the directory ``phylo_output``. The main inputs to this script are the phylogenetic trees and the amino-acid preferences.
 
 .. figure:: phylo_output/Aichi1968_PR1934_minus_Aichi1968_Allhosts_binnedlikelihood_RMSDwithin.jpg
   :scale: 50%
