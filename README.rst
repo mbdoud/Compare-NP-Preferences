@@ -222,9 +222,9 @@ All output is written to the directory ``phylo_output``. The inputs to this scri
 
 The following input files are required. 
 
-    * ``Aligned_NPs_Allhosts.fasta`` is a FASTA formatted sequence alignment for nucleoproteins from human, swine, equine and avian hosts. This file is located in the directory ``phylo_output``. Similarly named sequence alignment files should exist for Human, Swine, Equine, and Avian NPs. 
+    * ``Aligned_NPs_Allhosts.fasta`` is a FASTA formatted sequence alignment for nucleoproteins from human, swine, equine and avian hosts. This file is located in the directory ``phylo_input``. Similarly named sequence alignment files should exist for Human, Swine, Equine, and Avian NPs. 
     
-    * ``codonphyml_Allhosts_tree.newick`` is a Newick-format phylogenetic tree  built using codonPhyML from the sequence alignment in ``Aligned_NPs_Allhosts.fasta``. This file is located in the directory ``phylo_output``. Similarly named phylogenetic tree files should exist for Human, Swine, Equine, and Avian NPs. 
+    * ``codonphyml_Allhosts_tree.newick`` is a Newick-format phylogenetic tree  built using codonPhyML from the sequence alignment in ``Aligned_NPs_Allhosts.fasta``. This file is located in the directory ``phylo_input``. Similarly named phylogenetic tree files should exist for Human, Swine, Equine, and Avian NPs. 
     
     * ``mean_Aichi68_both_studies_prefs.txt`` is the average of the site-specific amino-acid preferences from the current and previous Aichi/1968 mutational scanning experiments. This file is located in the directory ``dmstools_output``.
     
