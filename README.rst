@@ -241,7 +241,10 @@ The following summary output files are written in the directory ``phylo_output``
 Here are the results for optimization of the tree built with the *GY94* model in :
 
     .. include:: phylo_output/GY94_Allhosts_summary.csv
-       :literal:
+     :literal:
+
+
+
 
 
     * ``GY94_Allhosts_summary.csv`` Similarly named files will be built for Human, Swine, Equine, and Avian NPs. 
