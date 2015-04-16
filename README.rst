@@ -243,6 +243,8 @@ Here are the results for optimization of the tree built with the *GY94* model in
 .. include:: phylo_output/GY94_Allhosts_summary.csv
   :literal:
 
+.. literalinclude:: phylo_output/GY94_Allhosts_summary.csv
+
     * ``GY94_Allhosts_summary.csv`` Similarly named files will be built for Human, Swine, Equine, and Avian NPs. 
 
     * ``GY94_Allhosts_summary.tex`` Similarly named files will be built for Human, Swine, Equine, and Avian NPs.
