@@ -774,5 +774,56 @@ def WriteReplicateMeasurementPrefs( list_of_preffiles, sites, aas=mapmuts.sequti
 
 
         
+def BenjaminiHochbergCorrection(pvals, fdr):
+    '''Perform multiple hypothesis testing correction using the Benjamini-Hochberg procedure
+    to control the false discovery rate (proportion of rejected null hypotheses expected to be 
+    falsely rejected).
+
+    Calling arguments:
+
+    `pvals` : a list of tuples of (site, p-value) corresponding to the p-values obtained for 
+    each site tested.
+
+    `fdr` : the desired false discovery rate
+
+    Returns a list of sites where the null hypothesis can be rejected under the specified
+    false discovery rate.
+    '''
+
+    num_tests = len(pvals)
+
+    # sort site hypothesis tests by increasing p-values
+    sorted_tests = sorted(pvals, key=lambda tup: tup[1])
+
+    # find maximum rank for which p <= (rank/num_tests)*FDR
+    max_rank = 0
+    for rank, test in enumerate(sorted_tests):
+        rank = rank + 1 # site rank, beginning with 1 for site with smallest p-value (there is no rank #0)
+        BH_threshold = fdr*float(rank)/num_tests
+        if test[1] <= BH_threshold: # test is in the form (site, p-value)
+            assert rank > max_rank
+            max_rank = rank
+
+    # collect sites with significant ranks:
+    significant_sites = []
+    for rank, test in enumerate(sorted_tests):
+        rank = rank + 1 # site rank, beginning with 1 for site with smallest p-value
+        if rank <= max_rank:
+            significant_sites.append(int(test[0]))
+
+    return significant_sites
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

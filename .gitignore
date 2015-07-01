@@ -1,3 +1,4 @@
+*DS_Store*
 *.sbatch
 scripts/temp_config_and_sbatch_files/
 temp_outputtests/
@@ -11,5 +12,4 @@ calculate_RMSD_randomization_*infile*.txt
 *_unaligned.fasta.gz
 slurm-*
 sbatch_*
-.DS_Store
 FASTQ_files/

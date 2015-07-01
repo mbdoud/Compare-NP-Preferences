@@ -261,9 +261,9 @@ def main():
     # The script can use existing simulation and randomization data if 
     # it has already been generated in the appropriate output directory
     # by setting do_simulations and/or do_randomizations to False.
-    do_simulations = True
+    do_simulations = False
     number_of_simulated_experiments = 1000
-    do_randomizations = True
+    do_randomizations = False
 
     logfile = "%s/compare_preferences_log.txt" % output_directory
     logout = open(logfile, 'w')
@@ -299,15 +299,21 @@ def main():
 
 
     # Because the WSN-HA preference files don't contain a preference for site 1, we need to
-    # make PR8-NP files that are stripped of site 1 preferences to allow taking the means of the two
-    # while simulating data for the null model comparing PR8-NP to WSN-HA. We also need to strip sites beyond 498
+    # make NP files that are stripped of site 1 preferences to allow taking the means of the two
+    # while simulating data for the null model comparing NP to WSN-HA. We also need to strip sites beyond 498
     # from the WSN-HA files.
     PR8_preference_files_stripped = []
     for f in PR8_preference_files:
         these_prefs = rmsdtools.ReadDMSToolsFormattedPrefsToMMFormattedDict(preferencefiles_dir+f)
         rmsdtools.WriteEquilFreqs(these_prefs, aas, sites, "%s/%s_stripped"%(preferencefiles_dir,f))
         PR8_preference_files_stripped.append("%s_stripped"%f)
-    
+
+    Aichi68_preference_files_stripped = []
+    for f in Aichi68A_preference_files + Aichi68B_preference_files + Aichi68C_preference_files:
+        these_prefs = rmsdtools.ReadDMSToolsFormattedPrefsToMMFormattedDict(preferencefiles_dir+f)
+        rmsdtools.WriteEquilFreqs(these_prefs, aas, sites, "%s/%s_stripped"%(preferencefiles_dir,f))
+        Aichi68_preference_files_stripped.append("%s_stripped"%f)
+
     WSN_HA_preference_files_stripped = []
     for f in WSN_HA_files:
         these_prefs = rmsdtools.ReadDMSToolsFormattedPrefsToMMFormattedDict(preferencefiles_dir+f)
@@ -322,6 +328,7 @@ def main():
     Aichi68_AllMeasurements_group = ('Aichi/1968', Aichi68A_preference_files + Aichi68B_preference_files + Aichi68C_preference_files)
     WSN_HA_group = ('HA', WSN_HA_preference_files_stripped)
     PR8_group_stripped = ('PR/1934', PR8_preference_files_stripped)
+    Aichi68_group_stripped = ('Aichi/1968', Aichi68_preference_files_stripped)
 
     # Now define the specific comparisons to make between groups. 
     # These comparisons are defined as a list of tuples in the form of (group1, group2):
@@ -331,7 +338,7 @@ def main():
     # The third is a comparison between PR8 NP and the non-homologous WSN/1933(H1N1) HA.
     comparisons = [ (Aichi68_previousstudy_group, Aichi68_currentstudy_group),
                     (Aichi68_AllMeasurements_group, PR8_group),
-                    (PR8_group_stripped, WSN_HA_group) ]
+                    (Aichi68_group_stripped, WSN_HA_group) ]
 
     logout.write("Running compare_preferences with the following options:\n")
     logout.write("Using distance function %s\n" % distance_function)
@@ -722,16 +729,13 @@ def main():
         # move up directory
         os.chdir(this_comparison_subdir)
 
-        # Now parse sites with significant p-values from either or both null distributions:
-        alpha = 0.05
-        p_threshold = alpha / len(sites) # Bonferroni correction
-        sim_sig_sites = []
-        rand_sig_sites = []
-        for site in sites:
-            if randomization_p_vals[str(site)] < p_threshold:
-                rand_sig_sites.append(site)
-            if simulation_p_vals[str(site)] < p_threshold:
-                sim_sig_sites.append(site)
+
+
+        # Using the Benjamini-Hochberg (BH) procedure to control the False Discovery Rate (FDR),
+        # enumerate the significant sites using a FDR = 5% using each null distribution (simulation or randomization)
+        rand_sig_sites = rmsdtools.BenjaminiHochbergCorrection(randomization_p_vals.items(), 0.05)
+        sim_sig_sites = rmsdtools.BenjaminiHochbergCorrection(simulation_p_vals.items(), 0.05)
+
         sig_both = list( set(sim_sig_sites) & set(rand_sig_sites) ) # significant under both null models
         sig_both.sort()
         sig_either = list ( set(sim_sig_sites) | set(rand_sig_sites) ) # significant under either null model
@@ -742,6 +746,9 @@ def main():
         variable_sig.sort()
         variable_nonsig = [s for s in variable_sites if s not in sig_either] # which variable sites are non-significant
         sig_nonvariable = [s for s in sig_either if s not in variable_sites] # which significant sites are conserved
+
+
+
         outfile_name = 'summary_significantsites_%s.txt' % (pathlabel)
         fileout = open(outfile_name, 'w')
         fileout.write("Sites significant using both null distributions:\n")
