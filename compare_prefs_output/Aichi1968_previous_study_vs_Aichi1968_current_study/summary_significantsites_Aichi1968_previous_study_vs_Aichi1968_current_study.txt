@@ -1,15 +1,15 @@
 Sites significant using both null distributions:
 
 Sites significant using either null distribution:
-175, 287, 364, 439, 
+20, 62, 83, 88, 175, 202, 221, 274, 287, 364, 439, 475, 483, 493, 
 Sites significant only under simulation null (and not under randomization):
-175, 287, 364, 439, 
+439, 175, 364, 287, 493, 83, 274, 202, 475, 88, 483, 221, 62, 20, 
 Sites significant only under randomization null (and not under simulation):
 
 
 
 All sites significant under simulation null:
-175, 287, 364, 439, 
+439, 175, 364, 287, 493, 83, 274, 202, 475, 88, 483, 221, 62, 20, 
 
 
 All sites significant under randomization null:
@@ -25,4 +25,4 @@ Variable sites with non-significant RMSD_corrected:
 
 
 Significant RMSD sites that are conserved between strains:
-175, 287, 364, 439, 
+20, 62, 83, 88, 175, 202, 221, 274, 287, 364, 439, 475, 483, 493, 

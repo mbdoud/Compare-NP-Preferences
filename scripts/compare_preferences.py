@@ -261,9 +261,9 @@ def main():
     # The script can use existing simulation and randomization data if 
     # it has already been generated in the appropriate output directory
     # by setting do_simulations and/or do_randomizations to False.
-    do_simulations = False
+    do_simulations = True
     number_of_simulated_experiments = 1000
-    do_randomizations = False
+    do_randomizations = True
 
     logfile = "%s/compare_preferences_log.txt" % output_directory
     logout = open(logfile, 'w')

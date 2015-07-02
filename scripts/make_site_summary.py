@@ -184,7 +184,7 @@ def MakeSiteSummaryFigure(site, output_dir):
     tex_file_out.close()
 
     # compile the tex to pdf
-    RunScript(output_dir+'/intermediates/', 'pdf-%d' % site, 'pdflatex', [texfile_name, '-output-directory', outputdir], False, 1)
+    RunScript(output_dir+'/intermediates/', 'pdf-%d' % site, 'pdflatex', [texfile_name, '-output-directory', output_dir], False, 1)
 
 
 ###################################################################################
