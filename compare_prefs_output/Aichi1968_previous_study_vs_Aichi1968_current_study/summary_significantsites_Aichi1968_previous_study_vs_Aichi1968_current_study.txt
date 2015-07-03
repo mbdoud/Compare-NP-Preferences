@@ -16,7 +16,7 @@ All sites significant under randomization null:
 
 
 
-Variable sites with significant RMSD_corrected:
+Variable sites with significant (using either null) RMSD_corrected:
 
 
 
@@ -24,5 +24,33 @@ Variable sites with non-significant RMSD_corrected:
 34, 98, 101, 102, 109, 146, 194, 217, 236, 253, 257, 293, 305, 334, 348, 353, 372, 373, 408, 411, 422, 423, 430, 442, 450, 452, 455, 456, 470, 473, 
 
 
-Significant RMSD sites that are conserved between strains:
+Significant (using either null) RMSD sites that are conserved between strains:
 20, 62, 83, 88, 175, 202, 221, 274, 287, 364, 439, 475, 483, 493, 
+
+Tests for clustering of significant sites:
+Of the top 0 sites with largest preference shifts (null hypotheses rejected using exact randomization),
+0 of these sites are resolved in the crystal structure and tested for spatial clustering here.
+the median distance to nearest neighbor among these sites is nan,
+the median distance to nearest neighbor among 1000 random draws of 0 sites is nan,
+the one-sided Mann-Whitney U Test P-value comparing these distributions is 0.000000
+
+Of the top 14 sites with largest preference shifts (null hypotheses rejected using simulation),
+10 of these sites are resolved in the crystal structure and tested for spatial clustering here.
+the median distance to nearest neighbor among these sites is 17.103849,
+the median distance to nearest neighbor among 1000 random draws of 10 sites is 11.376545,
+the one-sided Mann-Whitney U Test P-value comparing these distributions is 0.026821
+
+
+Test for distance of significant sites to variable sites:
+Of the top 0 sites with largest preference shifts (null hypotheses rejected using exact randomization),
+0 of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.
+the median distance to nearest variable site among these sites is nan,
+the median distance to nearest variable site among 1000 random draws of 0 sites is nan,
+the one-sided Mann-Whitney U Test P-value comparing these distribution is 0.000000
+
+Of the top 14 sites with largest preference shifts (null hypotheses rejected using simulation),
+10 of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.
+the median distance to nearest variable site among these sites is 6.990192,
+the median distance to nearest variable site among 1000 random draws of 10 sites is 7.723499,
+the one-sided Mann-Whitney U Test P-value comparing these distribution is 0.363099
+

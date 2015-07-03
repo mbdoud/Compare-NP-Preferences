@@ -16,7 +16,7 @@ All sites significant under randomization null:
 149, 208, 360, 87, 317, 295, 273, 2, 391, 196, 366, 160, 343, 357, 174, 487, 330, 110, 477, 204, 355, 80, 241, 177, 183, 298, 325, 465, 335, 348, 320, 247, 152, 243, 107, 163, 195, 395, 379, 336, 471, 190, 322, 354, 7, 436, 362, 413, 414, 429, 281, 270, 488, 394, 365, 267, 166, 345, 203, 95, 351, 311, 344, 334, 6, 198, 108, 332, 352, 423, 8, 140, 435, 310, 331, 374, 249, 402, 309, 307, 245, 349, 134, 69, 242, 192, 115, 66, 390, 324, 296, 118, 131, 380, 116, 262, 77, 272, 464, 263, 250, 339, 81, 148, 161, 207, 399, 97, 425, 371, 384, 291, 280, 76, 194, 215, 233, 340, 458, 426, 106, 94, 329, 117, 261, 72, 20, 40, 275, 377, 393, 120, 167, 301, 282, 469, 434, 461, 84, 159, 315, 151, 59, 419, 312, 319, 109, 144, 269, 361, 363, 78, 440, 417, 147, 410, 185, 475, 271, 468, 284, 137, 143, 359, 82, 342, 437, 35, 392, 132, 369, 29, 213, 156, 259, 400, 302, 398, 229, 364, 293, 93, 411, 252, 19, 304, 154, 112, 333, 246, 323, 150, 191, 386, 119, 217, 170, 180, 368, 199, 74, 85, 58, 98, 244, 5, 367, 266, 130, 193, 42, 443, 353, 378, 255, 219, 46, 385, 75, 63, 236, 447, 256, 164, 492, 104, 483, 91, 168, 308, 13, 135, 430, 472, 490, 433, 496, 50, 462, 105, 67, 389, 444, 202, 129, 38, 45, 237, 341, 83, 327, 172, 314, 418, 181, 125, 102, 448, 441, 478, 141, 57, 401, 188, 457, 452, 253, 480, 347, 358, 48, 44, 206, 453, 288, 484, 187, 470, 146, 113, 238, 424, 24, 486, 73, 279, 11, 494, 373, 88, 158, 153, 22, 189, 27, 70, 210, 489, 165, 326, 122, 31, 482, 228, 121, 491, 474, 449, 62, 212, 397, 428, 179, 338, 173, 405, 17, 184, 445, 171, 176, 276, 466, 37, 30, 226, 498, 227, 23, 71, 412, 39, 235, 32, 55, 350, 313, 26, 225, 65, 221, 186, 216, 381, 136, 463, 60, 138, 420, 427, 438, 268, 254, 139, 51, 274, 200, 479, 54, 442, 481, 321, 476, 230, 406, 25, 292, 41, 64, 182, 218, 382, 114, 337, 234, 220, 43, 388, 223, 277, 89, 421, 155, 416, 92, 21, 145, 14, 318, 258, 34, 485, 124, 450, 231, 287, 4, 264, 214, 446, 52, 248, 316, 240, 305, 169, 175, 299, 375, 283, 303, 387, 99, 47, 56, 356, 455, 495, 431, 49, 18, 460, 372, 12, 111, 209, 439, 28, 456, 9, 257, 403, 473, 251, 493, 454, 224, 86, 197, 101, 370, 201, 33, 16, 346, 286, 383, 
 
 
-Variable sites with significant RMSD_corrected:
+Variable sites with significant (using either null) RMSD_corrected:
 34, 98, 101, 102, 109, 146, 194, 217, 236, 253, 257, 293, 305, 334, 348, 353, 372, 373, 411, 422, 423, 430, 442, 450, 452, 455, 456, 470, 473, 
 
 
@@ -24,5 +24,33 @@ Variable sites with non-significant RMSD_corrected:
 408, 
 
 
-Significant RMSD sites that are conserved between strains:
+Significant (using either null) RMSD sites that are conserved between strains:
 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 35, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 97, 99, 103, 104, 105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 128, 129, 130, 131, 132, 134, 135, 136, 137, 138, 139, 140, 141, 143, 144, 145, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 212, 213, 214, 215, 216, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 254, 255, 256, 258, 259, 260, 261, 262, 263, 264, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 290, 291, 292, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 349, 350, 351, 352, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 409, 410, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 424, 425, 426, 427, 428, 429, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 443, 444, 445, 446, 447, 448, 449, 451, 453, 454, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 471, 472, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 498, 
+
+Tests for clustering of significant sites:
+Of the top 447 sites with largest preference shifts (null hypotheses rejected using exact randomization),
+393 of these sites are resolved in the crystal structure and tested for spatial clustering here.
+the median distance to nearest neighbor among these sites is 3.406557,
+the median distance to nearest neighbor among 1000 random draws of 393 sites is 3.434772,
+the one-sided Mann-Whitney U Test P-value comparing these distributions is 0.244833
+
+Of the top 482 sites with largest preference shifts (null hypotheses rejected using simulation),
+425 of these sites are resolved in the crystal structure and tested for spatial clustering here.
+the median distance to nearest neighbor among these sites is 3.421264,
+the median distance to nearest neighbor among 1000 random draws of 425 sites is 3.414878,
+the one-sided Mann-Whitney U Test P-value comparing these distributions is 0.421013
+
+
+Test for distance of significant sites to variable sites:
+Of the top 447 sites with largest preference shifts (null hypotheses rejected using exact randomization),
+366 of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.
+the median distance to nearest variable site among these sites is 7.726346,
+the median distance to nearest variable site among 1000 random draws of 366 sites is 7.723499,
+the one-sided Mann-Whitney U Test P-value comparing these distribution is 0.426546
+
+Of the top 482 sites with largest preference shifts (null hypotheses rejected using simulation),
+397 of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.
+the median distance to nearest variable site among these sites is 7.725426,
+the median distance to nearest variable site among 1000 random draws of 397 sites is 7.723499,
+the one-sided Mann-Whitney U Test P-value comparing these distribution is 0.450828
+
