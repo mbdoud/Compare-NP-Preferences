@@ -11,12 +11,14 @@ Each line of the configuration file should have a pathname and a path, separated
 
 preferencefiles_dir: path to the preference files made by ``dms_tools``. likely ends in '/dmstools_output/'
 calculate_rmsd_script_path: path to ``calculate_rmsd.py``, which is called by this script.
+pdb_file_path: path to ``2IQH_monomerC.pdb`` for calculating distances between sites
 output_directory: path to a directory for output from this script. Will be created if it doesn't already exist.
 
 example config file:
 
 preferencefiles_dir  /home/user/NP_analysis/dmstools_output/
 calculate_rmsd_script_path /home/user/NP_analysis/scripts/calculate_rmsd.py
+pdb_file_path /home/user/NP_analysis/2IQH_monomerC.pdb
 output_directory /home/user/NP_analysis/compare_prefs_output/
 
 Description of the analysis
@@ -247,6 +249,8 @@ def main():
     print "Using calculate_rmsd_script_path %s" % calculate_rmsd_script_path
     output_directory = mapmuts.io.ParseStringValue(d, 'output_directory')
     print "Using output_directory %s" % output_directory
+    pdb_file_path = mapmuts.io.ParseStringValue(d, 'pdb_file_path')
+    print "Using pdb_file_path %s" % pdb_file_path
 
     # seed the random number generator used to simulate preferences
     # by drawing from the Dirichlet distribution
@@ -261,9 +265,9 @@ def main():
     # The script can use existing simulation and randomization data if 
     # it has already been generated in the appropriate output directory
     # by setting do_simulations and/or do_randomizations to False.
-    do_simulations = True
+    do_simulations = False
     number_of_simulated_experiments = 1000
-    do_randomizations = True
+    do_randomizations = False
 
     logfile = "%s/compare_preferences_log.txt" % output_directory
     logout = open(logfile, 'w')
@@ -747,8 +751,17 @@ def main():
         variable_nonsig = [s for s in variable_sites if s not in sig_either] # which variable sites are non-significant
         sig_nonvariable = [s for s in sig_either if s not in variable_sites] # which significant sites are conserved
 
+        # test clustering between significant sites found with either randomization or simulation nulls:
+        cluster_test_rand_sig_sites = rmsdtools.TestSiteClustering(rand_sig_sites, pdbfile=pdb_file_path)
+        cluster_test_sim_sig_sites = rmsdtools.TestSiteClustering(sim_sig_sites, pdbfile=pdb_file_path)
 
+        # test distances to variable sites for significant sites found with either randomization or simulation nulls:
+        proximity_to_variable_test_rand_sig_sites = rmsdtools.TestSiteProximityToVariableSites(rand_sig_sites, pdbfile=pdb_file_path)
+        proximity_to_variable_test_sim_sig_sites = rmsdtools.TestSiteProximityToVariableSites(sim_sig_sites, pdbfile=pdb_file_path)
 
+        # output summary of significant sites under both null distributions and results of statistical tests for
+        # clustering of those sites in the NP crystal structure and distances of those sites which are evolutionarily conserved 
+        # to evolutionarily variable sites
         outfile_name = 'summary_significantsites_%s.txt' % (pathlabel)
         fileout = open(outfile_name, 'w')
         fileout.write("Sites significant using both null distributions:\n")
@@ -769,16 +782,43 @@ def main():
         fileout.write("\n\n\nAll sites significant under randomization null:\n")
         for s in rand_sig_sites:
             fileout.write("%d, " % int(s))
-        fileout.write("\n\n\nVariable sites with significant RMSD_corrected:\n")
+        fileout.write("\n\n\nVariable sites with significant (using either null) RMSD_corrected:\n")
         for s in variable_sig:
             fileout.write("%d, " % int(s))
         fileout.write("\n\n\nVariable sites with non-significant RMSD_corrected:\n")
         for s in variable_nonsig:
             fileout.write("%d, " % int(s))
-        fileout.write("\n\n\nSignificant RMSD sites that are conserved between strains:\n")
+        fileout.write("\n\n\nSignificant (using either null) RMSD sites that are conserved between strains:\n")
         for s in sig_nonvariable:
             fileout.write("%d, " % int(s))
-        fileout.write("\n")
+        fileout.write("\n\n")
+
+        fileout.write("Tests for clustering of significant sites:\n")
+        fileout.write("Of the top %d sites with largest preference shifts (null hypotheses rejected using exact randomization),\n" % len(rand_sig_sites))
+        fileout.write("%d of these sites are resolved in the crystal structure and tested for spatial clustering here.\n" % cluster_test_rand_sig_sites[0])
+        fileout.write("the median distance to nearest neighbor among these sites is %f,\n" % cluster_test_rand_sig_sites[1])
+        fileout.write("the median distance to nearest neighbor among 1000 random draws of %d sites is %f,\n" % (cluster_test_rand_sig_sites[0], cluster_test_rand_sig_sites[2]))
+        fileout.write("the one-sided Mann-Whitney U Test P-value comparing these distributions is %f\n\n" % cluster_test_rand_sig_sites[3])
+
+        fileout.write("Of the top %d sites with largest preference shifts (null hypotheses rejected using simulation),\n" % len(sim_sig_sites))
+        fileout.write("%d of these sites are resolved in the crystal structure and tested for spatial clustering here.\n" % cluster_test_sim_sig_sites[0])
+        fileout.write("the median distance to nearest neighbor among these sites is %f,\n" % cluster_test_sim_sig_sites[1])
+        fileout.write("the median distance to nearest neighbor among 1000 random draws of %d sites is %f,\n" % (cluster_test_sim_sig_sites[0], cluster_test_sim_sig_sites[2]))
+        fileout.write("the one-sided Mann-Whitney U Test P-value comparing these distributions is %f\n\n\n" % cluster_test_sim_sig_sites[3])
+
+        fileout.write("Test for distance of significant sites to variable sites:\n")
+        fileout.write("Of the top %d sites with largest preference shifts (null hypotheses rejected using exact randomization),\n" % len(rand_sig_sites))
+        fileout.write("%d of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.\n" % proximity_to_variable_test_rand_sig_sites[0])
+        fileout.write("the median distance to nearest variable site among these sites is %f,\n" % proximity_to_variable_test_rand_sig_sites[1])
+        fileout.write("the median distance to nearest variable site among 1000 random draws of %d sites is %f,\n" % (proximity_to_variable_test_rand_sig_sites[0],proximity_to_variable_test_rand_sig_sites[2]))
+        fileout.write("the one-sided Mann-Whitney U Test P-value comparing these distribution is %f\n\n" % proximity_to_variable_test_rand_sig_sites[3])
+
+        fileout.write("Of the top %d sites with largest preference shifts (null hypotheses rejected using simulation),\n" % len(sim_sig_sites))
+        fileout.write("%d of these sites are evolutionarily conserved between PR/1934 and Aichi/1968 and are resolved in the crystal structure and tested here.\n" % proximity_to_variable_test_sim_sig_sites[0])
+        fileout.write("the median distance to nearest variable site among these sites is %f,\n" % proximity_to_variable_test_sim_sig_sites[1])
+        fileout.write("the median distance to nearest variable site among 1000 random draws of %d sites is %f,\n" % (proximity_to_variable_test_sim_sig_sites[0],proximity_to_variable_test_sim_sig_sites[2]))
+        fileout.write("the one-sided Mann-Whitney U Test P-value comparing these distribution is %f\n\n" % proximity_to_variable_test_sim_sig_sites[3])
+
         fileout.close()
 
 
