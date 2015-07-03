@@ -1,4 +1,4 @@
 preferencefiles_dir  /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/dmstools_output/
-mapmuts_scripts_directory /fh/fast/bloom_j/grp/mapmuts/scripts/
 calculate_rmsd_script_path /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/scripts/calculate_rmsd.py
+pdb_file_path /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/scripts/2IQH_monomerC.pdb
 output_directory /fh/fast/bloom_j/grp/mapmuts/examples/2015_NP_homolog_comparison/compare_prefs_output/
