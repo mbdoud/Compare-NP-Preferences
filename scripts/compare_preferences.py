@@ -833,7 +833,7 @@ def main():
             fileout = open(outfile_name, 'w')
 
             # Header:
-            fileout.write("Site, Amino Acid, RMSD_between, RMSD_within, RMSD_corrected, Significant, PR/1934 Preferences, Aichi/1968 Preferences\n")
+            fileout.write("Site, Amino Acid, RMSD_between, RMSD_within, RMSD_corrected, Significant by Randomization, Significant by Simulation, PR/1934 Preferences, Aichi/1968 Preferences\n")
             for s in sites:
                 # site:
                 fileout.write("%s, " % (s) )
@@ -848,10 +848,17 @@ def main():
                 fileout.write("%.3f, " % (this_comparison_data['rmsds_within'][str(s)]))
                 #RMSD_corrected:
                 fileout.write("%.3f, " % (this_comparison_data['rmsds_corrected'][str(s)]))
-                if s in sig_either:
+
+                if s in rand_sig_sites:
                     fileout.write("*, ")
                 else:
                     fileout.write(", ")
+
+                if s in sim_sig_sites:
+                    fileout.write("*, ")
+                else:
+                    fileout.write(", ")
+
                 # PR8 prefs:
                 sorted_prefs = sorted([p for p in mean_PR8_prefs_dict[s].items() if 'PI_' in p[0]], key=operator.itemgetter(1), reverse=True)
                 preference_sum = 0
